@@ -1,0 +1,258 @@
+---
+title: "R Notebook"
+#output: html_notebook
+---
+
+Import Standard Libraries:
+```{r}
+library(dplyr)
+library(tidyverse)
+library(ggplot2)
+```
+
+Import Dataframe & Simplify Column Names, Alphabetize by City:
+```{r}
+df = read.csv('WV1.csv')
+colnames(df) = clean_col_names
+
+df = df[order(df$City),]
+write.csv(df, 'clean_columns.csv')
+
+```
+
+Basic View of the df, 10 'core' variables: 
+```{r}
+View(df)
+```
+
+Alphabetical Order of City:
+```{r}
+df$City = df$City[order(df$City)]
+```
+
+```{r}
+df[order(df$City),]
+```
+
+
+View the saved corresponding csv file: 
+```{r}
+clean = read.csv('clean_columns.csv')
+clean
+```
+```{r}
+clean_col_names = colnames(clean)[2:14]
+clean_col_names
+```
+
+Transpose it:
+```{r}
+cleant = t(clean)
+View(cleant)
+```
+
+Cross-check the row names of choice: 
+```{r}
+rownames(cleant)[5:14]
+```
+
+Transpose the df:
+```{r}
+dft = t(df)
+```
+
+View the transposed df: 
+```{r}
+View(dft)
+```
+
+```{r}
+t(df)
+```
+
+```{r}
+rownames(t(df))
+```
+
+```{r}
+rownames(t(df))[4:13]
+```
+
+```{r}
+View(df)
+```
+
+Create new dataframe for extended title & extended x-axis:
+```{r}
+
+x_axis = df[1,]
+x_axis[1,] = c('Ranking', 'City', 'Country', 'Wifi Speed', 'Co-Working Spaces', 'Coffee', 'Taxi', 'Beer', 'Studio Rentals', 'Meals At Local Restaurant', 'Sunshine Hours', 'Attractions On Tripadvisor', 'Instagramability')
+x_axis[2,] = c('Ranking', 'City', 'Country', 'Average Wifi Speed (Mbps Per Second)', 'Number Of Co-Working Spaces', 'Average Price Per Cup (US$)', 'Average Fare Per Km (US$)', 'Average Price Per Glass (US$)', 'Average 1 BR Rental For 1 Month (US$)', 'Average Price Per Meal (US$)', 'Average Annual Hours', 'Number Of Attractions', 'Number Of Photos with # (in Millions)')
+
+write.csv(x_axis, 'x_axis4.csv')
+  
+```
+
+View it:
+```{r}
+View(x_axis['Co_Work'])
+```
+
+```{r}
+dfUSD = df %>%
+  mutate(Coffee=Coffee*1.3, Taxi=Taxi*1.3, Beer=Beer*1.3/2, Rent=Rent*1.3, 
+         Meal=Meal*1.3, Insta=Insta/1000000, .keep = c("unused"))
+
+is.num = sapply(dfUSD, is.numeric)
+dfUSD[is.num] = lapply(dfUSD[is.num], round, 2)
+
+write.csv(dfUSD, 'clean_USD2.csv')
+
+#view(dfUSD)
+
+```
+
+```{r}
+View(dfUSD)
+```
+
+
+
+
+
+```{r}
+ggplot(df, aes(Rent)) + geom_density()
+```
+```{r}
+ggplot(clean, aes(Rent)) + geom_density()
+```
+
+```{r}
+clean %>%
+  ggplot(aes(Rent)) + geom_density()
+```
+
+
+
+```{r}
+df %>%
+  select(City, Wifi) #%>%
+  #ggplot() + geom_bar()
+  #filter(City == 'Singapore') %>%
+  #pivot_longer(cols=City)
+
+#select(df, Wifi)
+#filter(df, City=='Singapore')
+```
+
+```{r}
+#filter(df, City == 'Singapore')
+#filter(df, Wifi > 55)
+```
+
+
+```{r}
+library(data.table)
+dft = transpose(df)
+rownames(dft) = colnames(df)
+colnames(dft) = slice(dft,3)
+dft
+```
+
+```{r}
+class(dft)
+```
+
+```{r}
+dft = slice(dft, 5:14)
+```
+
+
+```{r}
+class(dft)
+```
+
+```{r}
+dft = mutate_all(dft, function(x) as.numeric(as.character(x)))
+write.csv(dft, 'CityComp.csv')
+
+```
+
+
+```{r}
+dft = dft %>%
+  select("Abu Dhabi", "Singapore") 
+
+```
+
+```{r}
+dft$'Difference (City1 - City2)' = (dft$`Abu Dhabi`-dft$Singapore)
+dft
+```
+
+```{r}
+citycomp = read_csv('CityComp.csv')
+```
+
+
+```{r}
+citycomp[1] = c('Average Wifi Speed (Mbps Per Second)', 'Number Of Co-Working Spaces', 'Coffee: Average Price Per Cup (US$)', 'Taxi: Average Fare Per Km (US$)', 'Beer: Average Price Per Glass (US$)', 'Average 1 BR Rental For 1 Month (US$)', 'Local Restaurant: Average Price Per Meal (US$)', 'Sunshine: Average Annual Hours', 'Tripadvisor: Number Of Attractions', 'Instagram: Number Of Photos with # (in Millions)')
+```
+
+
+```{r}
+colnames(citycomp)[1] = "Parameter"
+```
+
+
+```{r}
+citycomp
+```
+
+
+```{r}
+x_axis[2,] = c('Ranking', 'City', 'Country', 'Average Wifi Speed (Mbps Per Second)', 'Number Of Co-Working Spaces', 'Average Price Per Cup (US$)', 'Average Fare Per Km (US$)', 'Average Price Per Glass (US$)', 'Average 1 BR Rental For 1 Month (US$)', 'Average Price Per Meal (US$)', 'Average Annual Hours', 'Number Of Attractions', 'Number Of Photos with # (in Millions)')
+```
+
+
+```{r}
+citycomp_bar = citycomp %>%
+      rename(Parameter = 1) %>%
+      select(Parameter, Bangkok, Singapore) %>%
+      mutate('Difference (City1 - City2)' = Bangkok - Singapore) 
+
+citycomp_bar
+```
+
+```{r}
+    barplot(citycomp_bar$Bangkok, citycomp_bar$Singapore, position='dodge')
+```
+
+```{r}
+
+counts = citycomp_bar %>%
+  filter(Wifi) 
+
+
+#ggplot(citycomp_bar) + geom_bar(aes(y=Parameter, x=Singapore))
+```
+
+
+
+
+
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+

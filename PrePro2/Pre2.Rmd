@@ -1,0 +1,98 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+citycomp = read_csv('CityComp2.csv')
+```
+
+```{r}
+citycomp
+```
+
+```{r}
+citycomp$Parameter
+```
+
+
+
+```{r}
+c1 = c(9)
+c2 = c(18)
+cc = cbind(c1,c2)
+barplot(cc)
+```
+
+
+```{r}
+citycomp_bar = citycomp %>%
+  select(Parameter, Bangkok, Singapore) %>%
+  filter(row_number()==1) 
+
+citycomp_bar
+```
+
+```{r}
+trial = citycomp_bar %>%
+  pivot_longer(
+    cols = c(Bangkok, Singapore),
+    names_to = "City",
+    values_to = "Wifi_Speed"
+  ) %>%
+  ggplot((aes(fill=City, y=Wifi_Speed, x=City))) + 
+  geom_bar(position='dodge', stat='identity') + 
+  ggtitle(citycomp_bar$Parameter[1]) +
+  theme_bw() +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+```{r}
+trial
+```
+
+```{r}
+trial = citycomp_bar %>%
+  pivot_longer(
+    cols = c(Bangkok, Singapore),
+    names_to = "City",
+    values_to = "Wifi_Speed")
+```
+
+```{r}
+trial$Parameter[1]
+```
+
+
+
+```{r}
+ggplot(trial, aes(fill=City, y=Values, x=Parameter)) + geom_bar(position='dodge', stat='identity')
+```
+
+```{r}
+my_table = table(citycomp_bar$Singapore)
+my_table
+```
+
+```{r}
+barplot(citycomp_bar, main = "Trial", col = rainbow(2))
+```
+
+
+
+
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+

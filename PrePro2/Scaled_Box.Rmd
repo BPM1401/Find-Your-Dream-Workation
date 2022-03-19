@@ -1,0 +1,175 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+library(ggplot2)
+ggplot(mpg, aes(class, hwy)) + geom_boxplot()
+```
+
+```{r}
+View(mpg)
+```
+
+```{r}
+class(mpg)
+```
+
+
+```{r}
+library(readr)
+box = read_csv('CityComp3.csv')
+
+```
+
+```{r}
+class(box)
+```
+
+```{r}
+View(box)
+```
+
+```{r}
+library(tidyr)
+box2 = pivot_longer(box, cols=3:149, names_to = 'City')
+View(box2)
+```
+
+```{r}
+ggplot(box2, aes(Parameter, value)) + geom_boxplot()
+```
+
+```{r}
+pre_scale = read_csv('clean_USD2.csv')
+pre_scale
+```
+
+```{r}
+pre_scale[c(5:14)]
+```
+
+```{r}
+names = colnames(pre_scale[c(5:14)])
+names
+```
+
+
+
+```{r}
+post_scaled = lapply(pre_scale[c(5:14)], function(x) c(scale(x)))
+post_scaled
+```
+
+```{r}
+scaled = cbind(x=pre_scale[,3], y=post_scaled)
+scaled
+```
+
+```{r}
+library(data.table)
+wrong_names = colnames(scaled[c(2:11)])
+setnames(scaled, old = c(wrong_names), new = c(names))
+View(scaled)
+scaled
+```
+
+```{r}
+write.csv(scaled, 'Scaled.csv')
+```
+
+
+
+```{r}
+scaled_longer = pivot_longer(scaled, cols=2:11, names_to = 'Parameter', values_to = "Z_Scores")
+scaled_longer
+View(scaled_longer)
+
+```
+
+```{r}
+write.csv(scaled_longer, 'Scaled_Box.csv')
+```
+
+
+```{r}
+g = ggplot(scaled_longer, aes(Parameter, Z_Scores)) + geom_boxplot(outlier.color = 'black', outlier.shape = 1)
+g
+```
+
+```{r}
+g + geom_jitter(alpha=0.15)
+```
+
+```{r}
+library(dplyr)
+Para = scaled_longer %>%
+  filter(City=='Singapore') %>%
+  pull(Parameter)
+```
+
+```{r}
+Z = scaled_longer %>%
+  filter(City=='Singapore') %>%
+  pull(Z_Scores)
+```
+
+```{r}
+c(Para)
+```
+
+```{r}
+c(Z)
+```
+
+```{r}
+g2 = g + geom_point(data=data.frame(x=factor(c(Para)), y=c(Z)),
+               aes(x=x, y=y),
+               color='red1')
+
+g2
+```
+
+```{r}
+Z2 = scaled_longer %>%
+  filter(City=='New York') %>%
+  pull(Z_Scores)
+
+Z2
+```
+
+```{r}
+g3 = g2 + geom_point(data=data.frame(x=factor(c(Para)), y=c(Z2)),
+               aes(x=x, y=y),
+               color='blue')
+
+g3
+```
+
+
+
+```{r}
+box3 = pivot_longer(scaled, cols=2:149, names_to = 'City')
+View(box2)
+```
+
+
+
+
+
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+

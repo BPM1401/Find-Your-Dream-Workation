@@ -1,0 +1,48 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+library(readr)
+citycomp = read_csv('CityComp2.csv')
+```
+
+```{r}
+citycomp$Parameter = c('Wifi Speed (Mbps)', 'Co-Working Spaces', 'Coffee', 'Taxi', 'Beer', 'Rentals', 'Meals',
+                       'Sunshine Hours', 'TripAdvisor Attractions', 'Instagrammability')
+```
+
+
+```{r}
+citycomp = select(citycomp, -1)
+
+```
+
+```{r}
+write.csv(citycomp, 'CityComp3.csv')
+```
+
+```{r}
+trial = read_csv('CityComp3.csv')
+```
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+trial
+```
+
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
