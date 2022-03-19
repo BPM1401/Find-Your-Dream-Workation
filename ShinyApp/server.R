@@ -2,6 +2,14 @@
 # Define server logic required to create density plots for Parameters
 shinyServer(function(input, output) {
   
+  output$Geo <- renderPlot({
+    ggplot() +
+      geom_polygon(data = map_world, aes(x = long, y = lat, group = group)) +
+      geom_point(data = city, aes(x = lng, y = lat), color = 'red') + 
+      ggtitle("World Map Highlighting 147 Cities") + 
+      theme(plot.title = element_text(hjust=0.5, size=20, face='bold', color='red'))
+  }, height = 600, width = 900)
+  
   output$Dist <- renderPlot({
     
     x = df %>%

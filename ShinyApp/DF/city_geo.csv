@@ -1,0 +1,148 @@
+"","City","Country.x","Continent","Region","lat","lng"
+"1","Tokyo","Japan","Asia","East Asia & Pacific",35.6897,139.6922
+"2","Jakarta","Indonesia","Asia","East Asia & Pacific",-6.2146,106.8451
+"3","Mumbai","India","Asia","South Asia",18.9667,72.8333
+"4","Manila","Philippines","Asia","East Asia & Pacific",14.6,120.9833
+"5","Shanghai","China","Asia","East Asia & Pacific",31.1667,121.4667
+"6","São Paulo","Brazil","Americas","Latin America & Caribbean",-23.5504,-46.6339
+"7","Mexico City","Mexico","Americas","Latin America & Caribbean",19.4333,-99.1333
+"8","Beijing","China","Asia","East Asia & Pacific",39.905,116.3914
+"9","New York","United States","Americas","North America",40.6943,-73.9249
+"10","Moscow","Russia","Europe","Europe & Central Asia",55.7558,37.6178
+"11","Bangkok","Thailand","Asia","East Asia & Pacific",13.75,100.5167
+"12","Buenos Aires","Argentina","Americas","Latin America & Caribbean",-34.5997,-58.3819
+"13","Istanbul","Turkey","Asia","Europe & Central Asia",41.01,28.9603
+"14","Ho Chi Minh City","Vietnam","Asia","East Asia & Pacific",10.8167,106.6333
+"15","Los Angeles","United States","Americas","North America",34.1139,-118.4068
+"16","Rio de Janeiro","Brazil","Americas","Latin America & Caribbean",-22.9083,-43.1964
+"17","Paris","France","Europe","Europe & Central Asia",48.8566,2.3522
+"18","London","United Kingdom","Europe","Europe & Central Asia",51.5072,-0.1275
+"19","Lima","Peru","Americas","Latin America & Caribbean",-12.05,-77.0333
+"20","Chicago","United States","Americas","North America",41.8373,-87.6862
+"21","Kuala Lumpur","Malaysia","Asia","East Asia & Pacific",3.1478,101.6953
+"22","Hanoi","Vietnam","Asia","East Asia & Pacific",21.0245,105.8412
+"23","Hong Kong","Hong Kong","Asia","East Asia & Pacific",22.305,114.185
+"24","Santiago","Chile","Americas","Latin America & Caribbean",-33.45,-70.6667
+"25","Miami","United States","Americas","North America",25.7839,-80.2102
+"26","Madrid","Spain","Europe","Europe & Central Asia",40.4167,-3.7167
+"27","Singapore","Singapore","Asia","East Asia & Pacific",1.3,103.8
+"28","Houston","United States","Americas","North America",29.7863,-95.3889
+"29","Toronto","Canada","Americas","North America",43.7417,-79.3733
+"30","Sydney","Australia","Oceania","East Asia & Pacific",-33.865,151.2094
+"31","Melbourne","Australia","Oceania","East Asia & Pacific",-37.8136,144.9631
+"32","Boston","United States","Americas","North America",42.3188,-71.0846
+"33","Barcelona","Spain","Europe","Europe & Central Asia",41.3825,2.1769
+"34","Johannesburg","South Africa","Africa","Sub-Saharan Africa",-26.2044,28.0416
+"35","Phoenix","United States","Americas","North America",33.5722,-112.0891
+"36","Berlin","Germany","Europe","Europe & Central Asia",52.5167,13.3833
+"37","San Francisco","United States","Americas","North America",37.7562,-122.443
+"38","San Diego","United States","Americas","North America",32.8312,-117.1225
+"39","Kuwait City","Kuwait","Asia","Middle East & North Africa",29.375,47.98
+"40","Kyiv","Ukraine","Europe","Europe & Central Asia",50.45,30.5236
+"41","Rome","Italy","Europe","Europe & Central Asia",41.8931,12.4828
+"42","La Paz","Bolivia","Americas","Latin America & Caribbean",-16.4942,-68.1475
+"43","Manchester","United Kingdom","Europe","Europe & Central Asia",53.4794,-2.2453
+"44","Taipei","Taiwan","Asia","East Asia & Pacific",25.0478,121.5319
+"45","Brisbane","Australia","Oceania","East Asia & Pacific",-27.4678,153.0281
+"46","Dubai","United Arab Emirates","Asia","Middle East & North Africa",25.2697,55.3094
+"47","Vancouver","Canada","Americas","North America",49.25,-123.1
+"48","Phnom Penh","Cambodia","Asia","East Asia & Pacific",11.5696,104.921
+"49","Las Vegas","United States","Americas","North America",36.2333,-115.2654
+"50","Portland","United States","Americas","North America",45.5372,-122.65
+"51","Perth","Australia","Oceania","East Asia & Pacific",-31.9522,115.8589
+"52","Quito","Ecuador","Americas","Latin America & Caribbean",-0.2186,-78.5097
+"53","Minsk","Belarus","Europe","Europe & Central Asia",53.9022,27.5618
+"54","Vienna","Austria","Europe","Europe & Central Asia",48.2083,16.3731
+"55","Bucharest","Romania","Europe","Europe & Central Asia",44.4,26.0833
+"56","Hamburg","Germany","Europe","Europe & Central Asia",53.55,10
+"57","Warsaw","Poland","Europe","Europe & Central Asia",52.2167,21.0333
+"58","Budapest","Hungary","Europe","Europe & Central Asia",47.4983,19.0408
+"59","Brussels","Belgium","Europe","Europe & Central Asia",50.8333,4.3333
+"60","Munich","Germany","Europe","Europe & Central Asia",48.1372,11.5755
+"61","Auckland","New Zealand","Oceania","East Asia & Pacific",-36.85,174.7833
+"62","Muscat","Oman","Asia","Middle East & North Africa",23.6139,58.5922
+"63","Belgrade","Serbia","Europe","Europe & Central Asia",44.8167,20.4667
+"64","Milan","Italy","Europe","Europe & Central Asia",45.4669,9.19
+"65","Sofia","Bulgaria","Europe","Europe & Central Asia",42.6979,23.3217
+"66","Adelaide","Australia","Oceania","East Asia & Pacific",-34.9289,138.6011
+"67","Montevideo","Uruguay","Americas","Latin America & Caribbean",-34.8667,-56.1667
+"68","Doha","Qatar","Asia","Middle East & North Africa",25.3,51.5333
+"69","Calgary","Canada","Americas","North America",51.05,-114.0667
+"70","Dublin","Ireland","Europe","Europe & Central Asia",53.3497,-6.2603
+"71","Dakar","Senegal","Africa","Sub-Saharan Africa",14.7319,-17.4572
+"72","Cologne","Germany","Europe","Europe & Central Asia",50.9422,6.9578
+"73","Edmonton","Canada","Americas","North America",53.5344,-113.4903
+"74","Cartagena","Colombia","Americas","Latin America & Caribbean",10.4236,-75.5253
+"75","New Orleans","United States","Americas","North America",30.0687,-89.9288
+"76","Arequipa","Peru","Americas","Latin America & Caribbean",-16.3988,-71.5369
+"77","Abu Dhabi","United Arab Emirates","Asia","Middle East & North Africa",24.4781,54.3686
+"78","Ottawa","Canada","Americas","North America",45.4247,-75.695
+"79","Glasgow","United Kingdom","Europe","Europe & Central Asia",55.8609,-4.2514
+"80","Kathmandu","Nepal","Asia","South Asia",27.7167,85.3667
+"81","Stockholm","Sweden","Europe","Europe & Central Asia",59.3294,18.0686
+"82","Naples","Italy","Europe","Europe & Central Asia",40.8333,14.25
+"83","Marrakech","Morocco","Africa","Middle East & North Africa",31.6295,-7.9811
+"84","Marseille","France","Europe","Europe & Central Asia",43.2964,5.37
+"85","Liverpool","United Kingdom","Europe","Europe & Central Asia",53.4,-2.9833
+"86","Amsterdam","Netherlands","Europe","Europe & Central Asia",52.3667,4.8833
+"87","Valencia","Spain","Europe","Europe & Central Asia",39.47,-0.3764
+"88","Zagreb","Croatia","Europe","Europe & Central Asia",45.8,15.95
+"89","Vientiane","Laos","Asia","East Asia & Pacific",17.9667,102.6
+"90","Frankfurt","Germany","Europe","Europe & Central Asia",50.1136,8.6797
+"91","Colombo","Sri Lanka","Asia","South Asia",6.9167,79.8333
+"92","Oslo","Norway","Europe","Europe & Central Asia",59.9111,10.7528
+"93","Athens","Greece","Europe","Europe & Central Asia",37.9842,23.7281
+"94","Helsinki","Finland","Europe","Europe & Central Asia",60.1756,24.9342
+"95","Stuttgart","Germany","Europe","Europe & Central Asia",48.7761,9.1775
+"96","Rotterdam","Netherlands","Europe","Europe & Central Asia",51.9225,4.4792
+"97","Riga","Latvia","Europe","Europe & Central Asia",56.9475,24.1069
+"98","Copenhagen","Denmark","Europe","Europe & Central Asia",55.6761,12.5689
+"99","Vilnius","Lithuania","Europe","Europe & Central Asia",54.6833,25.2833
+"100","Dresden","Germany","Europe","Europe & Central Asia",51.05,13.74
+"101","Hannover","Germany","Europe","Europe & Central Asia",52.3744,9.7386
+"102","Lyon","France","Europe","Europe & Central Asia",45.76,4.84
+"103","Lisbon","Portugal","Europe","Europe & Central Asia",38.7452,-9.1604
+"104","Edinburgh","United Kingdom","Europe","Europe & Central Asia",55.953,-3.189
+"105","Tallinn","Estonia","Europe","Europe & Central Asia",59.4372,24.745
+"106","Cape Town","South Africa","Africa","Sub-Saharan Africa",-33.925,18.425
+"107","Florence","Italy","Europe","Europe & Central Asia",43.7714,11.2542
+"108","Beirut","Lebanon","Asia","Middle East & North Africa",33.8869,35.5131
+"109","Pokhara","Nepal","Asia","South Asia",28.2097,83.9853
+"110","Belfast","United Kingdom","Europe","Europe & Central Asia",54.5964,-5.93
+"111","Oaxaca","Mexico","Americas","Latin America & Caribbean",17.0833,-96.75
+"112","Ljubljana","Slovenia","Europe","Europe & Central Asia",46.05,14.5167
+"113","Bordeaux","France","Europe","Europe & Central Asia",44.84,-0.58
+"114","Porto","Portugal","Europe","Europe & Central Asia",41.1495,-8.6108
+"115","Geneva","Switzerland","Europe","Europe & Central Asia",46.2,6.15
+"116","Split","Croatia","Europe","Europe & Central Asia",43.51,16.45
+"117","Salzburg","Austria","Europe","Europe & Central Asia",47.7972,13.0477
+"118","Siem Reap","Cambodia","Asia","East Asia & Pacific",13.3622,103.8597
+"119","New Delhi","India","Asia","South Asia",28.7,77.2
+"120","Chiang Mai","Thailand","Asia","East Asia & Pacific",18.7889,98.9833
+"121","Phuket","Thailand","Asia","East Asia & Pacific",7.8881,98.3975
+"122","Faro","Portugal","Europe","Europe & Central Asia",37.0161,-7.935
+"123","Dubrovnik","Croatia","Europe","Europe & Central Asia",42.6403,18.1083
+"124","Valletta","Malta","Europe","Middle East & North Africa",35.8978,14.5125
+"125","Krakow","Poland","Europe","Europe & Central Asia",50.0496,19.9445
+"126","Prague","Czech Republic","Europe","Europe & Central Asia",50.0736,14.4185
+"127","Hoi An","Vietnam","Asia","East Asia & Pacific",15.8794,108.335
+"128","Seoul","South Korea","Asia","East Asia & Pacific",37.5326,127.024
+"129","Medellin","Colombia","Americas","Latin America & Caribbean",6.2308,-75.59
+"130","Malaga","Spain","Europe","Europe & Central Asia",36.7194,-4.42
+"131","Seville","Spain","Europe","Europe & Central Asia",37.3925,-5.994
+"132","Osaka","Japan","Asia","East Asia & Pacific",34.6723,135.4848
+"133","Montreal","Canada","Americas","North America",45.5088,-73.5616
+"134","Washington DC","United States","Americas","North America",38.8892,-77.0506
+"135","Xi'an","China","Asia","East Asia & Pacific",34.3415,108.9401
+"136","Yangon","Burma/Myanmar","Asia","East Asia & Pacific",16.8713,96.1993
+"137","Kyoto","Japan","Asia","East Asia & Pacific",34.7433,135.769
+"138","Cancun","Mexico","Americas","Latin America & Caribbean",21.1742,-86.8465
+"139","Palma de Mallorca","Spain","Europe","Europe & Central Asia",39.5716,2.6505
+"140","Honolulu","Hawaii","Americas","North America",21.2806,-157.8354
+"141","Hvar","Croatia","Europe","Europe & Central Asia",43.1731,16.4463
+"142","Dusseldorf","Germany","Europe","Europe & Central Asia",51.2333,6.7833
+"143","San Jose","Costa Rica","Americas","Latin America & Caribbean",9.9347,-84.0875
+"144","St. Petersburg","Russia","Europe","Europe & Central Asia",59.9375,30.3086
+"145","Tel Aviv","Israel","Asia","Middle East & North Africa",32.1093,34.8554
+"146","Zurich","Switzerland","Europe","Europe & Central Asia",47.4515,8.545
+"147","Reykjavik","Iceland","Europe","Europe & Central Asia",64.1282,-21.8277

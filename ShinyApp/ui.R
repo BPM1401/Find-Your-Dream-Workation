@@ -6,6 +6,18 @@ shinyUI(
         titlePanel(h1("Find Your Ideal Workation")),
         
         tabsetPanel(
+            
+            tabPanel("Macro Overview",
+                mainPanel(
+                    
+                    fluidRow(strong(h3("Compare 147 Cities Across 10 Parameters", align='center')),
+                             column(width = 6, align='center',
+                                    plotOutput(outputId = "Geo", width="100%")),
+                             column(width = 6, align='center',
+                                    selectizeInput(inputId = "GeoPara",
+                                                   label = div(style = "font-size:20px", "The 10 Parameters"),
+                                                   choices = rownames(t(df))[5:14]))))),
+                                    
             tabPanel("Parameter Distribution",
                      sidebarLayout(
                          sidebarPanel(
@@ -156,7 +168,7 @@ shinyUI(
                                               value=25, 
                                               min=1, 
                                               max=150, 
-                                              step=1),
+                                              step=1)
                                  
                          ),
                          
