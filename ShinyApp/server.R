@@ -6,9 +6,36 @@ shinyServer(function(input, output) {
     ggplot() +
       geom_polygon(data = map_world, aes(x = long, y = lat, group = group)) +
       geom_point(data = city, aes(x = lng, y = lat), color = 'red') + 
-      ggtitle("World Map Highlighting 147 Cities") + 
-      theme(plot.title = element_text(hjust=0.5, size=20, face='bold', color='red'))
-  }, height = 600, width = 900)
+      ggtitle("147 Cities") + 
+      theme(plot.title = element_text(hjust=0.5, size=21, face='bold', color='red')) +
+      theme(axis.text.x=element_blank(), axis.ticks.x=element_blank()) +
+      theme(axis.text.y=element_blank(), axis.ticks.y=element_blank()) +
+      theme(axis.title.x=element_blank()) +
+      theme(axis.title.y = element_blank())
+  }, height = 500, width = 750)
+  
+  output$Box_Para <- renderPlot({
+    
+    box_title = x_axis %>%
+      select(.data[[input$GeoPara]]) %>%
+      filter(row_number()==1)
+    
+    x_long = x_axis %>%
+      select(.data[[input$GeoPara]]) %>%
+      filter(row_number()==2)
+    
+    ggplot(df, aes(x=df[,input$GeoPara])) + 
+      geom_boxplot(color="blue", outlier.color = "blue", outlier.size = 2) +
+      theme(axis.text.y=element_blank(), axis.ticks.y=element_blank()) +
+      ggtitle(box_title) +
+      theme(plot.title=element_text(hjust=0.5, size=20)) +
+      labs(x=x_long) + 
+      theme(axis.title.x=element_text(size=20)) +
+      theme(axis.text.x=element_text(size=20)) + 
+      scale_x_continuous(expand = c(0.13, 0))
+    
+  })
+  
   
   output$Dist <- renderPlot({
     

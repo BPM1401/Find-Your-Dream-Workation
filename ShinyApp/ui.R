@@ -3,24 +3,45 @@
 shinyUI(
     
     fluidPage(
-        titlePanel(h1("Find Your Ideal Workation")),
+        titlePanel(h1("Where is YOUR ideal Workation?")),
         
         tabsetPanel(
             
-            tabPanel("Macro Overview",
+            tabPanel("Overview",
                 mainPanel(
                     
-                    fluidRow(strong(h3("Compare 147 Cities Across 10 Parameters", align='center')),
-                             column(width = 6, align='center',
-                                    plotOutput(outputId = "Geo", width="100%")),
-                             column(width = 6, align='center',
+                    fluidRow(
+                        align = "center",
+                        h1("Fuse 147 Cities Across 10 Parameters"),
+                        width=12),
+                    fluidRow(
+                             column(width = 5, align='center',
+                                    plotOutput(outputId = "Geo", width="80%")),
+                             column(width = 7, align='center',
                                     selectizeInput(inputId = "GeoPara",
-                                                   label = div(style = "font-size:20px", "The 10 Parameters"),
-                                                   choices = rownames(t(df))[5:14]))))),
+                                                   label = div(style = "font-size:20px;",
+                                                               style = "color: blue;",
+                                                               "10 Parameters"),
+                                                   choices = rownames(t(df))[5:14]),
+                                    tags$head(tags$style(HTML(".selectize-input {height: 40px;
+                                                              width: 300px; font-size: 20px}"))),
+                                    tags$style("[type = 'number'] {height: 40px;
+                                                              width: 300px; font-size: 20px}"),
+                                    plotOutput(outputId = "Box_Para", width="50%"))
                                     
-            tabPanel("Parameter Distribution",
+                                    ),
+                    HTML(
+                        paste(
+                            h1("Let's find your IDEAL Workation!")))
+                )),
+                                    
+            tabPanel("Your City vs Median",
                      sidebarLayout(
                          sidebarPanel(
+                             
+                             selectizeInput(inputId = 'Ci',
+                                            label = 'City',
+                                            choices = df$City),
                              
                              selectizeInput(inputId = "Para",
                                             label = "Parameter",
@@ -30,9 +51,7 @@ shinyUI(
                              #              label = strong("Show My City"),
                              #              value = FALSE),
                              
-                             selectizeInput(inputId = 'Ci',
-                                            label = 'City',
-                                            choices = df$City),
+                             
                              
                              numericInput(inputId = 'Top',
                                           label = 'Ranking: High To Low',

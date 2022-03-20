@@ -17,5 +17,5 @@ citycomp = read_csv(file='./DF/CityComp3.csv')
 scaled_longer = read_csv(file='./DF/Scaled_Box.csv')
 index = read.csv(file='./DF/Index.csv')
 map_world = map_data('world')
-city_geo = read.csv(file='./DF/city_geo.csv')
+city = read.csv(file='./DF/city_geo.csv')
 
