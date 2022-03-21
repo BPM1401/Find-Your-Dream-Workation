@@ -7,7 +7,23 @@ shinyUI(
         
         tabsetPanel(
             
-            tabPanel("Overview",
+            tabPanel("Motivation",
+                     mainPanel(
+                         HTML('<center><img src="W1.png" width="50%"></center>'),
+                     column(12,
+                        checkboxInput("McK", label = "The Future Of Work",
+                                      value=FALSE, width='600px'),  
+                         align = 'center',
+                        tags$style(type = 'text/css', "label {font-size:25px}") 
+                     ),
+                     
+                     conditionalPanel(
+                         condition = "input.McK == true",
+                         HTML('<center><img src="McK.png" width="40%"></center>'))
+                     )
+                     ),
+            
+            tabPanel("The 10 Parameters",
                 mainPanel(
                     
                     fluidRow(
@@ -30,7 +46,9 @@ shinyUI(
                                     plotOutput(outputId = "Box_Para", width="50%"))
                                     
                                     ),
-                    HTML('<center><img src="W1.png" width="50%"></center>')
+                
+                    
+                    
                 )),
                                     
             tabPanel("1 City vs 1 Parameter",
@@ -97,37 +115,38 @@ shinyUI(
                                label = 'City2',
                                choices = colnames(citycomp)[3:149]),
                 
-                checkboxGroupInput("my_choices", "Parameter",
+                checkboxGroupInput("my_choices", "Parameter (Select 1 or All)",
                                    choices = c("Wifi", "Co-Working", "Coffee", "Taxi",
                                                "Beer", "Rentals", "Meals", "Sun",
                                                "Fun", 'Insta', 'All'))),
                 
                 mainPanel(
-                        fluidRow(h3("Comparing 2 Cities Across Parameters", align='center'),
+                    
+                        fluidRow(h2("Comparing 2 Cities Across Parameters", align='center'),
                             column(width = 3, align='center',
                                    conditionalPanel(
-                                       condition = "input.my_choices == 'Wifi'",
+                                       condition = "input.my_choices == 'Wifi' || input.my_choices == 'All'",
                                    plotOutput(outputId = "Bar1", width="90%"))),
                                    
                             column(width = 3, align='center',
                                    conditionalPanel(
-                                       condition = "input.my_choices == 'Co-Working'",
+                                       condition = "input.my_choices == 'Co-Working' || input.my_choices == 'All'",
                                    plotOutput(outputId = "Bar2", width="90%"))),
                             
                             column(width = 3, align='center',
                                    conditionalPanel(
-                                       condition = "input.my_choices == 'Coffee'",
+                                       condition = "input.my_choices == 'Coffee' || input.my_choices == 'All'",
                                    plotOutput(outputId = "Bar3", width="90%"))),
                                    
                             column(width = 3, align='center',
                                    conditionalPanel(
-                                       condition = "input.my_choices == 'Taxi'",
+                                       condition = "input.my_choices == 'Taxi' || input.my_choices == 'All'",
                                    plotOutput(outputId = "Bar4", width="90%")))),
                         
                         fluidRow( 
                             column(width = 3, align='center',
                                    conditionalPanel(
-                                       condition = "input.my_choices == 'Beer'",
+                                       condition = "input.my_choices == 'Beer' || input.my_choices == 'All'",
                                    plotOutput(outputId = "Bar5", width="90%"))),
                             
                             column(width = 6, align='center', 
@@ -136,28 +155,28 @@ shinyUI(
                             
                             column(width = 3, align='center',
                                    conditionalPanel(
-                                       condition = "input.my_choices == 'Rentals'",
+                                       condition = "input.my_choices == 'Rentals' || input.my_choices == 'All'",
                                    plotOutput(outputId = "Bar6", width="90%")))),
                         
                         fluidRow(
                             column(width = 3, align='center',
                                    conditionalPanel(
-                                       condition = "input.my_choices == 'Meals'",
+                                       condition = "input.my_choices == 'Meals' || input.my_choices == 'All'",
                                    plotOutput(outputId = "Bar7", width="90%"))),
                             
                             column(width = 3, align='center',
                                    conditionalPanel(
-                                       condition = "input.my_choices == 'Sun'",
+                                       condition = "input.my_choices == 'Sun' || input.my_choices == 'All'",
                                    plotOutput(outputId = "Bar8", width="90%"))),
                             
                             column(width = 3, align='center',
                                    conditionalPanel(
-                                       condition = "input.my_choices == 'Fun'",
+                                       condition = "input.my_choices == 'Fun' || input.my_choices == 'All'",
                                    plotOutput(outputId = "Bar9", width="90%"))),
                             
                             column(width = 3, align='center',
                                    conditionalPanel(
-                                       condition = "input.my_choices == 'Insta'",
+                                       condition = "input.my_choices == 'Insta' || input.my_choices == 'All'",
                                    plotOutput(outputId = "Bar10", width="90%")))),
                         
                         ))),

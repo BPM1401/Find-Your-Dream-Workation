@@ -2,6 +2,10 @@
 # Define server logic required to create density plots for Parameters
 shinyServer(function(input, output) {
   
+  
+
+  
+    
   output$Geo <- renderPlot({
     ggplot() +
       geom_polygon(data = map_world, aes(x = long, y = lat, group = group)) +
@@ -28,10 +32,10 @@ shinyServer(function(input, output) {
       geom_boxplot(color="blue", outlier.color = "blue", outlier.size = 2) +
       theme(axis.text.y=element_blank(), axis.ticks.y=element_blank()) +
       ggtitle(box_title) +
-      theme(plot.title=element_text(hjust=0.5, size=20)) +
+      theme(plot.title=element_text(hjust=0.5, size=20, color='blue')) +
       labs(x=x_long) + 
-      theme(axis.title.x=element_text(size=20)) +
-      theme(axis.text.x=element_text(size=20)) + 
+      theme(axis.title.x=element_text(size=20, color='blue')) +
+      theme(axis.text.x=element_text(size=20, color='blue')) + 
       scale_x_continuous(expand = c(0.13, 0))
     
   })
