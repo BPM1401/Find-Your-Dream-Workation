@@ -2,10 +2,6 @@
 # Define server logic required to create density plots for Parameters
 shinyServer(function(input, output) {
   
-  
-
-  
-    
   output$Geo <- renderPlot({
     ggplot() +
       geom_polygon(data = map_world, aes(x = long, y = lat, group = group)) +
