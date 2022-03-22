@@ -23,16 +23,18 @@ shinyUI(
                      )
                      ),
             
-            tabPanel("The 10 Parameters",
+            tabPanel("147 Cities & 10 Parameters",
                 mainPanel(
                     
                     fluidRow(
                         align = "center",
-                        h1("Fuse 147 Cities Across 10 Parameters"),
+                        h3("Fuse 147 Cities Across 10 Parameters"),
                         width=12),
                     fluidRow(
-                             column(width = 5, align='center',
-                                    plotOutput(outputId = "Geo", width="80%")),
+                             column(
+                                 h4("The 147 Cities"),
+                                 width = 5, align='center',
+                                    leafletOutput(outputId = "Geo2", width="110%")),
                              column(width = 7, align='center',
                                     selectizeInput(inputId = "GeoPara",
                                                    label = div(style = "font-size:20px;",

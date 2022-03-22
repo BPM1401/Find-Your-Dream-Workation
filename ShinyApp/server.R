@@ -2,6 +2,16 @@
 # Define server logic required to create density plots for Parameters
 shinyServer(function(input, output) {
   
+  output$Geo2 <- renderLeaflet({
+    
+    leaflet(city) %>% addTiles() %>% addCircleMarkers(data=cg, radius=3, 
+                                                    color = "red", opacity = 0.8,
+                                                    popup = cg$City,
+                                                    clusterOptions = markerClusterOptions())
+    
+  })
+  
+  
   output$Geo <- renderPlot({
     ggplot() +
       geom_polygon(data = map_world, aes(x = long, y = lat, group = group)) +
