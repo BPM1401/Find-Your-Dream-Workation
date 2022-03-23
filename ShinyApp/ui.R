@@ -91,7 +91,9 @@ shinyUI(
                              column(
                                 # h4("The 147 Cities"),
                                  width = 12, align='center',
-                                    leafletOutput(outputId = "Geo2", width="100%")),
+                                    leafletOutput(outputId = "Geo2", width="100%"),
+                                    p(),
+                                    tableOutput(outputId = "MapTable")),
                                     ),
                 )),
                                     

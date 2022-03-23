@@ -2,14 +2,29 @@
 # Define server logic required to create density plots for Parameters
 shinyServer(function(input, output) {
   
+  
+  citylbl <- reactiveValues(clickedMarker=NULL)
   output$Geo2 <- renderLeaflet({
     
-    leaflet(city) %>% addTiles() %>% addCircleMarkers(data=cg, radius=3, 
+    leaflet(city) %>% addTiles() %>% addCircleMarkers(data=city, layerId = city$City,
+                                                      radius=3, 
                                                     color = "red", opacity = 0.8,
-                                                    popup = cg$City,
+                                                    popup = city$City,
                                                     clusterOptions = markerClusterOptions())
     
   })
+  
+  observeEvent(input$Geo2_marker_click,{
+    print("observed map_marker_click")
+    citylbl$clickedMarker <- input$Geo2_marker_click
+    print(citylbl$clickedMarker)
+    output$MapTable <- renderTable({
+      return(citycompgeo[, c("Parameter", citylbl$clickedMarker$id)]
+      )
+    })
+  })
+  
+
   
   
   output$Geo <- renderPlot({
