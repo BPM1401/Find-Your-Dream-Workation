@@ -23,19 +23,10 @@ shinyUI(
                      )
                      ),
             
-            tabPanel("147 Cities & 10 Parameters",
-                mainPanel(
-                    
-                    fluidRow(
-                        align = "center",
-                        h3("Fuse 147 Cities Across 10 Parameters"),
-                        width=12),
-                    fluidRow(
-                             column(
-                                 h4("The 147 Cities"),
-                                 width = 5, align='center',
-                                    leafletOutput(outputId = "Geo2", width="110%")),
-                             column(width = 7, align='center',
+            tabPanel("10 Parameters",
+                     mainPanel(
+                         fluidRow(
+                                 column(width = 12, align='center',
                                     selectizeInput(inputId = "GeoPara",
                                                    label = div(style = "font-size:20px;",
                                                                style = "color: blue;",
@@ -46,11 +37,64 @@ shinyUI(
                                     tags$style("[type = 'number'] {height: 40px;
                                                               width: 300px; font-size: 20px}"),
                                     plotOutput(outputId = "Box_Para", width="50%"))
-                                    
+                         ),
+                         
+                         fluidRow(
+                         column(12,
+                                checkboxInput("Facet", label = "View All",
+                                              value=FALSE, width='600px'),  
+                                align = 'center')
+                         ),
+                         
+                         
+                         conditionalPanel(
+                             condition = "input.Facet == true",
+                             
+                             fluidRow(
+                             column(width = 3, align='center', plotOutput(outputId = "Facet1", width="90%", height="150px")),
+                             column(width = 3, align='center', plotOutput(outputId = "Facet2", width="90%", height="150px")),
+                             column(width = 3, align='center', plotOutput(outputId = "Facet3", width="90%", height="150px")),
+                             column(width = 3, align='center', plotOutput(outputId = "Facet4", width="90%", height="150px"))),
+                             
+                             fluidRow(
+                             column(width = 3, align='center', plotOutput(outputId = "Facet5", width="90%", height="150px")),   
+                             column(width = 3, align='center', plotOutput(outputId = "Facet6", width="90%", height="150px")),
+                             column(width = 3, align='center', plotOutput(outputId = "Facet7", width="90%", height="150px")),
+                             column(width = 3, align='center', plotOutput(outputId = "Facet8", width="90%", height="150px"))),
+                             
+                             fluidRow(
+                             column(width = 3),   
+                             column(width = 3, align='center', plotOutput(outputId = "Facet9", width="90%", height="150px")),   
+                             column(width = 3, align='center', plotOutput(outputId = "Facet10", width="90%", height="150px")),
+                             column(width = 3), 
+                             )
+                             
+                             
+                             )
+                             
+                             
+                             
+                             )
+                         
+                         
+                         
+                         ),
+                         
+                     
+            
+            tabPanel("147 Cities",
+                mainPanel(
+                    
+                    fluidRow(
+                        align = "center",
+                        h3("Fuse 147 Cities Across 10 Parameters"),
+                        width=12),
+                    fluidRow(
+                             column(
+                                 h4("The 147 Cities"),
+                                 width = 12, align='center',
+                                    leafletOutput(outputId = "Geo2", width="100%")),
                                     ),
-                
-                    
-                    
                 )),
                                     
             tabPanel("1 City vs 1 Parameter",

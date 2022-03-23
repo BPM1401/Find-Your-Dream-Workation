@@ -46,6 +46,240 @@ shinyServer(function(input, output) {
     
   })
   
+  output$Facet1 <- renderPlot({
+    
+    box_title = x_axis %>%
+      select(Wifi) %>%
+      filter(row_number()==1)
+    
+    x_long = x_axis %>%
+      select(Wifi) %>%
+      filter(row_number()==2)
+    
+    ggplot(df, aes(x=Wifi)) + 
+      geom_boxplot(color="blue", outlier.color = "blue", outlier.size = 1) +
+      theme(axis.text.y=element_blank(), axis.ticks.y=element_blank()) +
+      ggtitle(box_title) +
+      theme(plot.title=element_text(hjust=0.5, size=16, color='black')) +
+      labs(x=x_long) + 
+      theme(axis.title.x=element_text(size=12, color='black')) +
+      theme(axis.text.x=element_text(size=9, color='blue')) + 
+      scale_x_continuous(expand = c(0.13, 0))
+    
+    
+  })
+  
+  output$Facet2 <- renderPlot({
+    
+    box_title = x_axis %>%
+      select(Co_Work) %>%
+      filter(row_number()==1)
+    
+      x_long = x_axis %>%
+        select(Co_Work) %>%
+        filter(row_number()==2)
+    
+    ggplot(df, aes(x=Co_Work)) + 
+      geom_boxplot(color="blue", outlier.color = "blue", outlier.size = 1) +
+      theme(axis.text.y=element_blank(), axis.ticks.y=element_blank()) +
+      ggtitle(box_title) +
+      theme(plot.title=element_text(hjust=0.5, size=16, color='black')) +
+      labs(x=x_long) + 
+      theme(axis.title.x=element_text(size=12, color='black')) +
+      theme(axis.text.x=element_text(size=9, color='blue')) + 
+      scale_x_continuous(expand = c(0.13, 0))
+    
+    
+  })
+  
+  output$Facet3 <- renderPlot({
+    
+    box_title = x_axis %>%
+      select(Coffee) %>%
+      filter(row_number()==1)
+    
+    x_long = x_axis %>%
+      select(Coffee) %>%
+      filter(row_number()==2)
+    
+    ggplot(df, aes(x=Coffee)) + 
+      geom_boxplot(color="blue", outlier.color = "blue", outlier.size = 1) +
+      theme(axis.text.y=element_blank(), axis.ticks.y=element_blank()) +
+      ggtitle(box_title) +
+      theme(plot.title=element_text(hjust=0.5, size=16, color='black')) +
+      labs(x=x_long) + 
+      theme(axis.title.x=element_text(size=12, color='black')) +
+      theme(axis.text.x=element_text(size=9, color='blue')) + 
+      scale_x_continuous(expand = c(0.13, 0))
+    
+    
+  })
+  
+  output$Facet4 <- renderPlot({
+    
+    box_title = x_axis %>%
+      select(Taxi) %>%
+      filter(row_number()==1)
+    
+    x_long = x_axis %>%
+      select(Taxi) %>%
+      filter(row_number()==2)
+    
+    ggplot(df, aes(x=Taxi)) + 
+      geom_boxplot(color="blue", outlier.color = "blue", outlier.size = 1) +
+      theme(axis.text.y=element_blank(), axis.ticks.y=element_blank()) +
+      ggtitle(box_title) +
+      theme(plot.title=element_text(hjust=0.5, size=16, color='black')) +
+      labs(x=x_long) + 
+      theme(axis.title.x=element_text(size=12, color='black')) +
+      theme(axis.text.x=element_text(size=9, color='blue')) + 
+      scale_x_continuous(expand = c(0.13, 0))
+    
+    
+  })
+  
+  output$Facet5 <- renderPlot({
+    
+    box_title = x_axis %>%
+      select(Beer) %>%
+      filter(row_number()==1)
+    
+    x_long = x_axis %>%
+      select(Beer) %>%
+      filter(row_number()==2)
+    
+    ggplot(df, aes(x=Beer)) + 
+      geom_boxplot(color="blue", outlier.color = "blue", outlier.size = 1) +
+      theme(axis.text.y=element_blank(), axis.ticks.y=element_blank()) +
+      ggtitle(box_title) +
+      theme(plot.title=element_text(hjust=0.5, size=16, color='black')) +
+      labs(x=x_long) + 
+      theme(axis.title.x=element_text(size=12, color='black')) +
+      theme(axis.text.x=element_text(size=9, color='blue')) + 
+      scale_x_continuous(expand = c(0.13, 0))
+    
+    
+  })
+  
+  output$Facet6 <- renderPlot({
+    
+    box_title = x_axis %>%
+      select(Rent) %>%
+      filter(row_number()==1)
+    
+    x_long = x_axis %>%
+      select(Rent) %>%
+      filter(row_number()==2)
+    
+    ggplot(df, aes(x=Rent)) + 
+      geom_boxplot(color="blue", outlier.color = "blue", outlier.size = 1) +
+      theme(axis.text.y=element_blank(), axis.ticks.y=element_blank()) +
+      ggtitle(box_title) +
+      theme(plot.title=element_text(hjust=0.5, size=16, color='black')) +
+      labs(x=x_long) + 
+      theme(axis.title.x=element_text(size=12, color='black')) +
+      theme(axis.text.x=element_text(size=9, color='blue')) + 
+      scale_x_continuous(expand = c(0.13, 0))
+    
+    
+  })
+  
+  output$Facet7 <- renderPlot({
+    
+    box_title = x_axis %>%
+      select(Meal) %>%
+      filter(row_number()==1)
+    
+    x_long = x_axis %>%
+      select(Meal) %>%
+      filter(row_number()==2)
+    
+    ggplot(df, aes(x=Meal)) + 
+      geom_boxplot(color="blue", outlier.color = "blue", outlier.size = 1) +
+      theme(axis.text.y=element_blank(), axis.ticks.y=element_blank()) +
+      ggtitle(box_title) +
+      theme(plot.title=element_text(hjust=0.5, size=16, color='black')) +
+      labs(x=x_long) + 
+      theme(axis.title.x=element_text(size=12, color='black')) +
+      theme(axis.text.x=element_text(size=9, color='blue')) + 
+      scale_x_continuous(expand = c(0.13, 0))
+    
+    
+  })
+  
+  output$Facet8 <- renderPlot({
+    
+    box_title = x_axis %>%
+      select(Sun) %>%
+      filter(row_number()==1)
+    
+    x_long = x_axis %>%
+      select(Sun) %>%
+      filter(row_number()==2)
+    
+    ggplot(df, aes(x=Sun)) + 
+      geom_boxplot(color="blue", outlier.color = "blue", outlier.size = 1) +
+      theme(axis.text.y=element_blank(), axis.ticks.y=element_blank()) +
+      ggtitle(box_title) +
+      theme(plot.title=element_text(hjust=0.5, size=16, color='black')) +
+      labs(x=x_long) + 
+      theme(axis.title.x=element_text(size=12, color='black')) +
+      theme(axis.text.x=element_text(size=9, color='blue')) + 
+      scale_x_continuous(expand = c(0.13, 0))
+    
+    
+  })
+  
+  output$Facet9 <- renderPlot({
+    
+    box_title = x_axis %>%
+      select(Fun) %>%
+      filter(row_number()==1)
+    
+    x_long = x_axis %>%
+      select(Fun) %>%
+      filter(row_number()==2)
+    
+    ggplot(df, aes(x=Fun)) + 
+      geom_boxplot(color="blue", outlier.color = "blue", outlier.size = 1) +
+      theme(axis.text.y=element_blank(), axis.ticks.y=element_blank()) +
+      ggtitle(box_title) +
+      theme(plot.title=element_text(hjust=0.5, size=16, color='black')) +
+      labs(x=x_long) + 
+      theme(axis.title.x=element_text(size=12, color='black')) +
+      theme(axis.text.x=element_text(size=9, color='blue')) + 
+      scale_x_continuous(expand = c(0.13, 0))
+    
+    
+  })
+  
+  output$Facet10 <- renderPlot({
+    
+    box_title = x_axis %>%
+      select(Insta) %>%
+      filter(row_number()==1)
+    
+    x_long = x_axis %>%
+      select(Insta) %>%
+      filter(row_number()==2)
+    
+    ggplot(df, aes(x=Insta)) + 
+      geom_boxplot(color="blue", outlier.color = "blue", outlier.size = 1) +
+      theme(axis.text.y=element_blank(), axis.ticks.y=element_blank()) +
+      ggtitle(box_title) +
+      theme(plot.title=element_text(hjust=0.5, size=16, color='black')) +
+      labs(x=x_long) + 
+      theme(axis.title.x=element_text(size=12, color='black')) +
+      theme(axis.text.x=element_text(size=9, color='blue')) + 
+      scale_x_continuous(expand = c(0.13, 0))
+    
+    
+  })
+  
+  
+  
+  
+  
   
   output$Dist <- renderPlot({
     
