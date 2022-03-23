@@ -49,6 +49,20 @@ shinyServer(function(input, output) {
       select(.data[[input$GeoPara]]) %>%
       filter(row_number()==2)
     
+    
+    min_x = min(df[,input$GeoPara])
+    min_city = df %>% filter(.data[[input$GeoPara]] == min(.data[[input$GeoPara]])) %>%
+      select(City) %>% pull()
+    
+    max_x = max(df[,input$GeoPara])
+    max_city = df %>% filter(.data[[input$GeoPara]] == max(.data[[input$GeoPara]])) %>%
+      select(City) %>% pull()
+    
+    med_x = median(df[,input$GeoPara])
+    med_city = df %>% filter(.data[[input$GeoPara]] == median(.data[[input$GeoPara]])) %>%
+      select(City) %>% pull()
+    
+    
     ggplot(df, aes(x=df[,input$GeoPara])) + 
       geom_boxplot(color="blue", outlier.color = "blue", outlier.size = 2) +
       theme(axis.text.y=element_blank(), axis.ticks.y=element_blank()) +
@@ -57,7 +71,16 @@ shinyServer(function(input, output) {
       labs(x=x_long) + 
       theme(axis.title.x=element_text(size=20, color='blue')) +
       theme(axis.text.x=element_text(size=20, color='blue')) + 
-      scale_x_continuous(expand = c(0.13, 0))
+      scale_x_continuous(expand = c(0.13, 0)) +
+      geom_text(x=max_x, y=0.16, label = max_x, size=8) + 
+      geom_text(x=max_x, y=0.22, label = max_city, size=8) +
+      geom_text(x=max_x, y=0.10, label = "(max)", size=6) +
+      geom_text(x=min_x, y=-0.10, label = "(min)", size=6) +
+      geom_text(x=min_x, y=-0.16, label = min_x, size=8) +
+      geom_text(x=min_x, y=-0.22, label = min_city[1], size=8) +
+      geom_text(x=med_x*1.15, y=-0.06, label=med_x, size=8) + 
+      geom_text(x=med_x*1.15, y=0.06, label=med_city[1], size=8) +
+      geom_text(x=med_x*1.15, y=0.00, label="(median)", size=6)
     
   })
   
