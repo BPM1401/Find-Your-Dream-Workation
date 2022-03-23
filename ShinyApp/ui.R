@@ -10,16 +10,24 @@ shinyUI(
             tabPanel("Motivation",
                      mainPanel(
                          HTML('<center><img src="W1.png" width="50%"></center>'),
-                     column(12,
-                        checkboxInput("McK", label = "The Future Of Work",
-                                      value=FALSE, width='600px'),  
-                         align = 'center',
-                        tags$style(type = 'text/css', "label {font-size:25px}") 
-                     ),
+                     column(6,
+                        checkboxInput("F", label = "Remote-Work: Biggest Legacy Of Covid-19 (Forbes)",
+                                      value=FALSE, width='700px'), align='center'),
+                     column(6,
+                        checkboxInput("McK", label = "No Loss In Productivity Across Sector (McKinsey)",
+                                      value=FALSE, width='600px'), align='center', 
+                                      tags$style(type = 'text/css', "label {font-size:25px}")),
                      
-                     conditionalPanel(
-                         condition = "input.McK == true",
-                         HTML('<center><img src="McK.png" width="40%"></center>'))
+                     fluidRow(
+                         column(width = 6, align = 'center',
+                                conditionalPanel(
+                                    condition = "input.F == true",
+                                    HTML('<center><img src="S.png" width="70%" height="600px"></center>'))),
+                         
+                         column(width = 6, align = 'center',
+                                conditionalPanel(
+                                    condition = "input.McK == true",
+                                    HTML('<center><img src="McK.png" width="60%" height="600px"></center>'))))
                      )
                      ),
             
@@ -67,17 +75,7 @@ shinyUI(
                              column(width = 3, align='center', plotOutput(outputId = "Facet9", width="90%", height="150px")),   
                              column(width = 3, align='center', plotOutput(outputId = "Facet10", width="90%", height="150px")),
                              column(width = 3), 
-                             )
-                             
-                             
-                             )
-                             
-                             
-                             
-                             )
-                         
-                         
-                         
+                             )))
                          ),
                          
                      
@@ -87,11 +85,11 @@ shinyUI(
                     
                     fluidRow(
                         align = "center",
-                        h3("Fuse 147 Cities Across 10 Parameters"),
+                        h3("Pick YOUR City!"),
                         width=12),
                     fluidRow(
                              column(
-                                 h4("The 147 Cities"),
+                                # h4("The 147 Cities"),
                                  width = 12, align='center',
                                     leafletOutput(outputId = "Geo2", width="100%")),
                                     ),
