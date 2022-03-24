@@ -38,23 +38,48 @@ shinyUI(
                                     selectizeInput(inputId = "GeoPara",
                                                    label = div(style = "font-size:20px;",
                                                                style = "color: blue;",
-                                                               "10 Parameters"),
+                                                               "Pick YOUR Parameter!"),
                                                    choices = rownames(t(df))[5:14]),
                                     tags$head(tags$style(HTML(".selectize-input {height: 40px;
                                                               width: 300px; font-size: 20px}"))),
                                     tags$style("[type = 'number'] {height: 40px;
                                                               width: 300px; font-size: 20px}"),
-                                    plotOutput(outputId = "Box_Para", width="50%"))
+                                    plotOutput(outputId = "Box_Para", width="60%")),
                          ),
                          
                          fluidRow(
-                         column(12,
-                                checkboxInput("Facet", label = "View All",
+                         column(3),     
+                         column(3,
+                                checkboxInput("Outs", label = "View Outliers",
                                               value=FALSE, width='600px'),  
-                                align = 'center')
+                                align = 'center'),
+                         column(3,
+                                checkboxInput("Facet", label = "View All Box Plots",
+                                              value=FALSE, width='600px'),  
+                                align = 'center'),
+                         column(3)
                          ),
                          
                          
+                         conditionalPanel(
+                             condition = "input.Outs == true",
+                             
+                             fluidRow(
+                             column(width = 2, align='center', tableOutput(outputId = "outwifi")),
+                             column(width = 2, align='center', tableOutput(outputId = "outCo")),
+                             column(width = 2, align='center', tableOutput(outputId = "outCoffee")),
+                             column(width = 2, align='center', tableOutput(outputId = "outTaxi")),
+                             column(width = 2, align='center', tableOutput(outputId = "outBeer")),
+                             column(width = 2, align='center', tableOutput(outputId = "outRent"))),
+                             
+                             fluidRow(
+                             column(width=2),     
+                             column(width = 2, align='center', tableOutput(outputId = "outMeal")),   
+                             column(width = 2, align='center', tableOutput(outputId = "outSun")),
+                             column(width = 2, align='center', tableOutput(outputId = "outFun")),
+                             column(width = 2, align='center', tableOutput(outputId = "outInsta")),
+                             column(width=2))),
+                             
                          conditionalPanel(
                              condition = "input.Facet == true",
                              
@@ -85,7 +110,7 @@ shinyUI(
                     
                     fluidRow(
                         align = "center",
-                        h3("Pick YOUR City!"),
+                        h3("CLICK On Your City!"),
                         width=12),
                     fluidRow(
                              column(

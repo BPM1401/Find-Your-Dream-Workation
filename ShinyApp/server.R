@@ -72,17 +72,143 @@ shinyServer(function(input, output) {
       theme(axis.title.x=element_text(size=20, color='blue')) +
       theme(axis.text.x=element_text(size=20, color='blue')) + 
       scale_x_continuous(expand = c(0.13, 0)) +
-      geom_text(x=max_x, y=0.16, label = max_x, size=8) + 
-      geom_text(x=max_x, y=0.22, label = max_city, size=8) +
-      geom_text(x=max_x, y=0.10, label = "(max)", size=6) +
-      geom_text(x=min_x, y=-0.10, label = "(min)", size=6) +
-      geom_text(x=min_x, y=-0.16, label = min_x, size=8) +
-      geom_text(x=min_x, y=-0.22, label = min_city[1], size=8) +
-      geom_text(x=med_x*1.15, y=-0.06, label=med_x, size=8) + 
-      geom_text(x=med_x*1.15, y=0.06, label=med_city[1], size=8) +
-      geom_text(x=med_x*1.15, y=0.00, label="(median)", size=6)
+      geom_text(x=max_x, y=0.14, label = max_x, size=5) + 
+      geom_text(x=max_x, y=0.18, label = max_city, size=5) +
+      geom_text(x=max_x, y=0.10, label = "(max)", size=4) +
+      geom_text(x=min_x, y=-0.18, label = "(min)", size=4) +
+      geom_text(x=min_x, y=-0.14, label = min_x, size=5) +
+      geom_text(x=min_x, y=-0.10, label = min_city[1], size=5) +
+      geom_text(x=med_x*1.08, y=0.00, label=med_x, size=5) + 
+      geom_text(x=med_x*1.08, y=0.04, label=med_city[1], size=5) +
+      geom_text(x=med_x*1.08, y=-0.04, label="(median)", size=4)
     
   })
+  
+  output$outwifi <- renderTable({
+    
+    is_outlier = function(x) {
+      return(x < quantile(x, 0.25) - 1.5 * IQR(x) | x > quantile(x, 0.75) + 1.5 * IQR(x))
+    }
+    
+    df %>% 
+      mutate(Outlier = ifelse(is_outlier(df[,'Wifi']), df[,'City'], 'False')) %>%
+      filter(Outlier!='False') %>%
+      select(City,Wifi) %>%
+      arrange(desc(Wifi))
+
+  })
+  
+  output$outCo <- renderTable({
+    
+    is_outlier = function(x) {
+      return(x < quantile(x, 0.25) - 1.5 * IQR(x) | x > quantile(x, 0.75) + 1.5 * IQR(x))
+    }
+    
+    df %>% 
+      mutate(Outlier = ifelse(is_outlier(df[,'Co_Work']), df[,'City'], 'False')) %>%
+      filter(Outlier!='False') %>%
+      select(City,Co_Work) %>%
+      arrange(desc(Co_Work))
+    
+  })
+  
+  output$outCoffee <- renderTable({
+    is_outlier = function(x) {
+      return(x < quantile(x, 0.25) - 1.5 * IQR(x) | x > quantile(x, 0.75) + 1.5 * IQR(x))
+    }
+    
+    df %>% 
+      mutate(Outlier = ifelse(is_outlier(df[,'Coffee']), df[,'City'], 'False')) %>%
+      filter(Outlier!='False') %>%
+      select(City,Coffee) %>%
+      arrange(desc(Coffee))
+  })
+  
+  output$outTaxi <- renderTable({
+    is_outlier = function(x) {
+      return(x < quantile(x, 0.25) - 1.5 * IQR(x) | x > quantile(x, 0.75) + 1.5 * IQR(x))
+    }
+    
+    df %>% 
+      mutate(Outlier = ifelse(is_outlier(df[,'Taxi']), df[,'City'], 'False')) %>%
+      filter(Outlier!='False') %>%
+      select(City,Taxi) %>%
+      arrange(desc(Taxi))
+  })
+  
+  output$outBeer <- renderTable({
+    is_outlier = function(x) {
+      return(x < quantile(x, 0.25) - 1.5 * IQR(x) | x > quantile(x, 0.75) + 1.5 * IQR(x))
+    }
+    
+    df %>% 
+      mutate(Outlier = ifelse(is_outlier(df[,'Beer']), df[,'City'], 'False')) %>%
+      filter(Outlier!='False') %>%
+      select(City,Beer) %>%
+      arrange(desc(Beer))
+  })
+  
+  output$outRent <- renderTable({
+    is_outlier = function(x) {
+      return(x < quantile(x, 0.25) - 1.5 * IQR(x) | x > quantile(x, 0.75) + 1.5 * IQR(x))
+    }
+    
+    df %>% 
+      mutate(Outlier = ifelse(is_outlier(df[,'Rent']), df[,'City'], 'False')) %>%
+      filter(Outlier!='False') %>%
+      select(City,Rent) %>%
+      arrange(desc(Rent))
+  })
+  
+  output$outMeal <- renderTable({
+    is_outlier = function(x) {
+      return(x < quantile(x, 0.25) - 1.5 * IQR(x) | x > quantile(x, 0.75) + 1.5 * IQR(x))
+    }
+    
+    df %>% 
+      mutate(Outlier = ifelse(is_outlier(df[,'Meal']), df[,'City'], 'False')) %>%
+      filter(Outlier!='False') %>%
+      select(City,Meal) %>%
+      arrange(desc(Meal))
+  })
+  
+  output$outSun <- renderTable({
+    is_outlier = function(x) {
+      return(x < quantile(x, 0.25) - 1.5 * IQR(x) | x > quantile(x, 0.75) + 1.5 * IQR(x))
+    }
+    
+    df %>% 
+      mutate(Outlier = ifelse(is_outlier(df[,'Sun']), df[,'City'], 'False')) %>%
+      filter(Outlier!='False') %>%
+      select(City,Sun) %>%
+      arrange(desc(Sun))
+  })
+  
+  output$outFun <- renderTable({
+    is_outlier = function(x) {
+      return(x < quantile(x, 0.25) - 1.5 * IQR(x) | x > quantile(x, 0.75) + 1.5 * IQR(x))
+    }
+    
+    df %>% 
+      mutate(Outlier = ifelse(is_outlier(df[,'Fun']), df[,'City'], 'False')) %>%
+      filter(Outlier!='False') %>%
+      select(City,Fun) %>%
+      arrange(desc(Fun))
+  })
+  
+  output$outInsta <- renderTable({
+    is_outlier = function(x) {
+      return(x < quantile(x, 0.25) - 1.5 * IQR(x) | x > quantile(x, 0.75) + 1.5 * IQR(x))
+    }
+    
+    df %>% 
+      mutate(Outlier = ifelse(is_outlier(df[,'Insta']), df[,'City'], 'False')) %>%
+      filter(Outlier!='False') %>%
+      select(City,Insta) %>%
+      arrange(desc(Insta))
+  })
+  
+  
   
   output$Facet1 <- renderPlot({
     
