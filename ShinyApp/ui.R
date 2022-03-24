@@ -112,14 +112,20 @@ shinyUI(
                         align = "center",
                         h3("CLICK On Your City!"),
                         width=12),
+                    
                     fluidRow(
-                             column(
-                                # h4("The 147 Cities"),
-                                 width = 12, align='center',
-                                    leafletOutput(outputId = "Geo2", width="100%"),
-                                    p(),
+                            column(width=12, align='center',
+                                    leafletOutput(outputId = "Geo2", width="100%"))),
+                    
+                    fluidRow(
+                            column(width=12, align='center',
+                                   selectizeInput(inputId = "Para2",
+                                                  label = "Parameter",
+                                                  choices = rownames(t(df))[5:14])),
+                            column(width=3, align='center',
                                     tableOutput(outputId = "MapTable")),
-                                    ),
+                            column(width=9, align='center',
+                                    plotOutput(outputId = "Dist2")))
                 )),
                                     
             tabPanel("1 City vs 1 Parameter",

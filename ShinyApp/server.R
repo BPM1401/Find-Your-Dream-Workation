@@ -22,6 +22,40 @@ shinyServer(function(input, output) {
       return(citycompgeo[, c("Parameter", citylbl$clickedMarker$id)]
       )
     })
+    
+    output$Dist2 <- renderPlot({
+      
+      x = df %>%
+        filter(df$City == citylbl$clickedMarker$id) %>%
+        select(input$Para2) %>%
+        pull()
+      
+      med_city2 = df %>% filter(.data[[input$Para2]] == median(.data[[input$Para2]])) %>%
+        select(City) %>% pull()
+      
+      
+      ggplot(df, aes(df[,input$Para2])) +
+        geom_density() + 
+        geom_vline(aes(xintercept=median(df[,input$Para2]), color="Median"),
+                   linetype='dashed', size=1.5) +
+        geom_vline(aes(xintercept=x, color='City'), linetype='dashed', size=1.5) +
+        annotate("label",x=median(df[,input$Para2]), y=-Inf, 
+                 label=paste0(med_city2[1], " = ", as.character(median(df[,input$Para2]))), 
+                 size=7, vjust='inward') +
+        annotate("label",x=x, y=Inf, label=paste0(citylbl$clickedMarker$id, " = ", as.character(x)), size=7, vjust='inward') +
+        labs(title=x_axis[1,input$Para2], x=x_axis[2,input$Para2], y='Density') +
+        scale_color_manual(name="Vertical Markers", values=c(Median='blue', City='red')) +
+        theme(plot.title = element_text(hjust=0.5, size=24)) +
+        theme(legend.text=element_text(size=19)) + 
+        theme(legend.title=element_text(size=19)) +
+        theme(axis.title.x = element_text(size=17)) +
+        theme(axis.title.y = element_text(size=17)) + 
+        theme(axis.text.x = element_text(size=13)) +
+        scale_x_discrete(expand=c(0.09,0.09))
+      #theme(plot.margin = margin(0,-0.5,0,0, "cm"))
+    }
+    )
+    
   })
   
 
