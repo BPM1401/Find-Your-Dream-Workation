@@ -337,6 +337,20 @@ shinyUI(
                              
                              tableOutput(outputId = "Index_Ranking"))
                          
+                     )),
+            
+            tabPanel("Checkbox Index",
+                fluidPage(
+                         checkboxGroupInput("checkGroup", label = h3("Indicate Your Priorities:"), 
+                                            choices = list("Wifi" = 1, "Co_Work" = 2, "Coffee" = 3,
+                                                           "Taxi" = 4, "Beer" = 5, "Rent" = 6,
+                                                           "Meal" = 7, "Sun" = 8, "Fun" = 9,
+                                                           "Insta" = 10)#,
+                                            
+                             #tableOutput(outputId = "Index_Ranking_2")
+                         
+                     )
                      ))
+            
             
 )))
