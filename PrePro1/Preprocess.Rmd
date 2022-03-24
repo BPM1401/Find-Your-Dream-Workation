@@ -10,39 +10,35 @@ library(tidyverse)
 library(ggplot2)
 ```
 
-Import Dataframe & Simplify Column Names, Alphabetize by City:
+Read & View Original Kaggle DF: 
 ```{r}
 df = read.csv('WV1.csv')
+View(df)
+```
+
+Read CSV With Clean Col Names: 
+```{r}
+clean = read.csv('clean_columns.csv')
+View(clean)
+```
+
+Extract Clean Col Names:
+```{r}
+clean_col_names = colnames(clean)[2:14]
+clean_col_names
+```
+
+Apply Clean Col Names to Original DF, Alphabetize by City, Save as "clean_columns.csv"
+```{r}
 colnames(df) = clean_col_names
 
 df = df[order(df$City),]
 write.csv(df, 'clean_columns.csv')
-
 ```
 
 Basic View of the df, 10 'core' variables: 
 ```{r}
 View(df)
-```
-
-Alphabetical Order of City:
-```{r}
-df$City = df$City[order(df$City)]
-```
-
-```{r}
-df[order(df$City),]
-```
-
-
-View the saved corresponding csv file: 
-```{r}
-clean = read.csv('clean_columns.csv')
-clean
-```
-```{r}
-clean_col_names = colnames(clean)[2:14]
-clean_col_names
 ```
 
 Transpose it:
@@ -116,7 +112,25 @@ write.csv(dfUSD, 'clean_USD2.csv')
 View(dfUSD)
 ```
 
+Change Beijing Wifi to 37 from 2
+```{r}
+dfUSD[9,4] = 37
+```
 
+Change Shanghai Wifi to 39 from 2
+```{r}
+dfUSD[122,4] = 39
+```
+
+View Changes:
+```{r}
+View(dfUSD)
+```
+
+Save to USD3. 
+```{r}
+write.csv(dfUSD, 'clean_USD3.csv')
+```
 
 
 
