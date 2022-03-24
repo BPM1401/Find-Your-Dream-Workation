@@ -38,7 +38,7 @@ shinyUI(
                                     selectizeInput(inputId = "GeoPara",
                                                    label = div(style = "font-size:20px;",
                                                                style = "color: blue;",
-                                                               "Pick YOUR Parameter!"),
+                                                               "Select A Parameter!"),
                                                    choices = rownames(t(df))[5:14]),
                                     tags$head(tags$style(HTML(".selectize-input {height: 40px;
                                                               width: 300px; font-size: 20px}"))),

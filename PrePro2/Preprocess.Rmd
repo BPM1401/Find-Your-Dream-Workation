@@ -40,6 +40,7 @@ View the saved corresponding csv file:
 clean = read.csv('clean_columns.csv')
 clean
 ```
+
 ```{r}
 clean_col_names = colnames(clean)[2:14]
 clean_col_names
@@ -79,6 +80,12 @@ rownames(t(df))[4:13]
 ```
 
 ```{r}
+df = read.csv('WV1.csv')
+colnames(df) = clean_col_names
+```
+
+
+```{r}
 View(df)
 ```
 
@@ -87,9 +94,9 @@ Create new dataframe for extended title & extended x-axis:
 
 x_axis = df[1,]
 x_axis[1,] = c('Ranking', 'City', 'Country', 'Wifi Speed', 'Co-Working Spaces', 'Coffee', 'Taxi', 'Beer', 'Studio Rentals', 'Meals At Local Restaurant', 'Sunshine Hours', 'Attractions On Tripadvisor', 'Instagramability')
-x_axis[2,] = c('Ranking', 'City', 'Country', 'Average Wifi Speed (Mbps Per Second)', 'Number Of Co-Working Spaces', 'Average Price Per Cup (US$)', 'Average Fare Per Km (US$)', 'Average Price Per Glass (US$)', 'Average 1 BR Rental For 1 Month (US$)', 'Average Price Per Meal (US$)', 'Average Annual Hours', 'Number Of Attractions', 'Number Of Photos with # (in Millions)')
+x_axis[2,] = c('Ranking', 'City', 'Country', 'Average Wifi Speed (MegaBytes Per Second)', 'Number Of Co-Working Spaces', 'Average Price Per Cup (US$)', 'Average Fare Per Km (US$)', 'Average Price Per Glass (US$)', 'Average 1 BR Rental For 1 Month (US$)', 'Average Price Per Meal (US$)', 'Average Annual Hours', 'Number Of Attractions', 'Number Of Photos with # (in Millions)')
 
-write.csv(x_axis, 'x_axis4.csv')
+write.csv(x_axis, 'x_axis5.csv')
   
 ```
 
