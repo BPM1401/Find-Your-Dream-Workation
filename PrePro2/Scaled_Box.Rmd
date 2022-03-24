@@ -46,7 +46,7 @@ ggplot(box2, aes(Parameter, value)) + geom_boxplot()
 ```
 
 ```{r}
-pre_scale = read_csv('clean_USD2.csv')
+pre_scale = read_csv('clean_USD3.csv')
 pre_scale
 ```
 
@@ -80,7 +80,7 @@ scaled
 ```
 
 ```{r}
-write.csv(scaled, 'Scaled.csv')
+write.csv(scaled, 'Scaled2.csv')
 ```
 
 
@@ -93,7 +93,7 @@ View(scaled_longer)
 ```
 
 ```{r}
-write.csv(scaled_longer, 'Scaled_Box.csv')
+write.csv(scaled_longer, 'Scaled_Box2.csv')
 ```
 
 

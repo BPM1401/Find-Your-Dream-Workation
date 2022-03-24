@@ -5,7 +5,7 @@ output: html_notebook
 
 ```{r}
 library(readr)
-scaled_new = read_csv('Scaled.csv')
+scaled_new = read_csv('Scaled2.csv')
 ```
 
 ```{r}
@@ -26,7 +26,7 @@ View(index)
 ```
 
 ```{r}
-write.csv(index, 'Index.csv')
+write.csv(index, 'Index2.csv')
 ```
 
 
