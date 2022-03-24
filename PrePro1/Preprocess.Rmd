@@ -132,6 +132,40 @@ Save to USD3.
 write.csv(dfUSD, 'clean_USD3.csv')
 ```
 
+Make same changes to CityComp3:
+```{r}
+CC3 = read_csv('CC3.csv')
+```
+
+```{r}
+View(CC3)
+```
+
+```{r}
+CC3[1,11] = 37
+```
+
+```{r}
+CC3[1,124] = 39
+```
+
+```{r}
+View(CC3)
+```
+
+```{r}
+CC3 = CC3[,-1]
+```
+
+```{r}
+View(CC3)
+```
+
+```{r}
+write.csv(CC3, 'CityComp5.csv')
+```
+
+
 
 
 ```{r}

@@ -12,7 +12,7 @@ library(tidyverse)
 
 df = read.csv(file='./DF/clean_USD3.csv')
 x_axis = read.csv(file='./DF/x_axis4.csv')
-citycomp = read_csv(file='./DF/CityComp3.csv')
+citycomp = read_csv(file='./DF/CityComp5.csv')
 scaled_longer = read_csv(file='./DF/Scaled_Box.csv')
 index = read.csv(file='./DF/Index.csv')
 map_world = map_data('world')
