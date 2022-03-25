@@ -38,48 +38,112 @@ shinyUI(
                                     selectizeInput(inputId = "GeoPara",
                                                    label = div(style = "font-size:20px;",
                                                                style = "color: blue;",
-                                                               "Select A Parameter!"),
+                                                               "Select Your Parameter"),
                                                    choices = rownames(t(df))[5:14]),
                                     tags$head(tags$style(HTML(".selectize-input {height: 40px;
                                                               width: 300px; font-size: 20px}"))),
                                     tags$style("[type = 'number'] {height: 40px;
                                                               width: 300px; font-size: 20px}"),
-                                    plotOutput(outputId = "Box_Para", width="60%")),
+                                    plotOutput(outputId = "Box_Para", width="60%"))
+                                 
                          ),
                          
+                         br(),
+                         
                          fluidRow(
-                         column(3),     
-                         column(3,
-                                checkboxInput("Outs", label = "View Outliers",
-                                              value=FALSE, width='600px'),  
-                                align = 'center'),
-                         column(3,
+                         column(4,
+                                checkboxInput("Prior", label = "Set Your Priorities",
+                                              value=FALSE, width='600px'),
+                                align='center'),
+                         
+                         column(4,
                                 checkboxInput("Facet", label = "View All Box Plots",
                                               value=FALSE, width='600px'),  
                                 align = 'center'),
-                         column(3)
+                         
+                         column(4,
+                                checkboxInput("Outs", label = "View Outliers",
+                                              value=FALSE, width='600px'),  
+                                align = 'center'),
                          ),
                          
                          
-                         conditionalPanel(
-                             condition = "input.Outs == true",
+                         
+                    conditionalPanel(
+                           condition = "input.Prior == true",  
+                           
+                           fluidRow(
+                               column(width = 3, align='center', 
+                                      sliderInput(inputId = 'WifiScore', label = 'Wifi Speed', 
+                                                  min=0, max=100,
+                                                  value=50, 
+                                                  step=1)),
+                               
+                               column(width = 3, align='center', 
+                                      sliderInput(inputId = 'CoWorkScore', label = 'Co-Working Spaces', 
+                                                  min=0, max=100,
+                                                  value=50, 
+                                                  step=1)),
+                               
+                               column(width = 3, align='center', 
+                                      sliderInput(inputId = 'CoffeeScore', label = 'Coffee', 
+                                                  min=0, max=100,
+                                                  value=50, 
+                                                  step=1)),
+                               
+                               column(width = 3, align='center', 
+                                      sliderInput(inputId = 'TaxiScore', label = 'Taxi', 
+                                                  min=0, max=100,
+                                                  value=50, 
+                                                  step=1))
+                               ),
+                           
+                           fluidRow(
+                               column(width = 3, align='center', 
+                                      sliderInput(inputId = 'BeerScore', label = 'Beer', 
+                                                  min=0, max=100,
+                                                  value=50, 
+                                                  step=1)),
+                               
+                               column(width = 3, align='center', 
+                                      sliderInput(inputId = 'RentScore', label = 'Rent', 
+                                                  min=0, max=100,
+                                                  value=50, 
+                                                  step=1)),
+                               
+                               column(width = 3, align='center', 
+                                      sliderInput(inputId = 'MealScore', label = 'Meals', 
+                                                  min=0, max=100,
+                                                  value=50, 
+                                                  step=1)),
+                               
+                               column(width = 3, align='center', 
+                                      sliderInput(inputId = 'SunScore', label = 'Sunshine Hours', 
+                                                  min=0, max=100,
+                                                  value=50, 
+                                                  step=1))
+                           ),
+                           
+                           
+                           fluidRow(
+                               column(width = 3),
+                               column(width = 3, align='center', 
+                                      sliderInput(inputId = 'FunScore', label = 'TripAdvisor Attractions', 
+                                                  min=0, max=100,
+                                                  value=50, 
+                                                  step=1)),
+                               
+                               column(width = 3, align='center', 
+                                      sliderInput(inputId = 'IntaScore', label = 'Instagrammability', 
+                                                  min=0, max=100,
+                                                  value=50, 
+                                                  step=1))
+                               
                              
-                             fluidRow(
-                             column(width = 2, align='center', tableOutput(outputId = "outwifi")),
-                             column(width = 2, align='center', tableOutput(outputId = "outCo")),
-                             column(width = 2, align='center', tableOutput(outputId = "outCoffee")),
-                             column(width = 2, align='center', tableOutput(outputId = "outTaxi")),
-                             column(width = 2, align='center', tableOutput(outputId = "outBeer")),
-                             column(width = 2, align='center', tableOutput(outputId = "outRent"))),
-                             
-                             fluidRow(
-                             column(width=2),     
-                             column(width = 2, align='center', tableOutput(outputId = "outMeal")),   
-                             column(width = 2, align='center', tableOutput(outputId = "outSun")),
-                             column(width = 2, align='center', tableOutput(outputId = "outFun")),
-                             column(width = 2, align='center', tableOutput(outputId = "outInsta")),
-                             column(width=2))),
-                             
+                           )),
+                          
+                         br(),          
+                    
                          conditionalPanel(
                              condition = "input.Facet == true",
                              
@@ -100,10 +164,31 @@ shinyUI(
                              column(width = 3, align='center', plotOutput(outputId = "Facet9", width="90%", height="150px")),   
                              column(width = 3, align='center', plotOutput(outputId = "Facet10", width="90%", height="150px")),
                              column(width = 3), 
-                             )))
-                         ),
+                             )),
+                    
+                         br(),
+                    
+                         conditionalPanel(
+                             condition = "input.Outs == true",
+                             
+                             fluidRow(
+                                 column(width = 2, align='center', tableOutput(outputId = "outwifi")),
+                                 column(width = 2, align='center', tableOutput(outputId = "outCo")),
+                                 column(width = 2, align='center', tableOutput(outputId = "outCoffee")),
+                                 column(width = 2, align='center', tableOutput(outputId = "outTaxi")),
+                                 column(width = 2, align='center', tableOutput(outputId = "outBeer")),
+                                 column(width = 2, align='center', tableOutput(outputId = "outRent"))),
+                             
+                             fluidRow(
+                                 column(width=2),     
+                                 column(width = 2, align='center', tableOutput(outputId = "outMeal")),   
+                                 column(width = 2, align='center', tableOutput(outputId = "outSun")),
+                                 column(width = 2, align='center', tableOutput(outputId = "outFun")),
+                                 column(width = 2, align='center', tableOutput(outputId = "outInsta")),
+                                 column(width=2)))
                          
-                     
+                         
+                         )),
             
             tabPanel("147 Cities",
                 mainPanel(
