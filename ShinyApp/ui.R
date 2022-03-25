@@ -190,6 +190,10 @@ shinyUI(
                          
                          )),
             
+            tabPanel("Your Dream Workation",
+                     mainPanel(leafletOutput(outputId = "Geo3"))),
+            
+            
             tabPanel("147 Cities",
                 mainPanel(
                     
@@ -417,7 +421,7 @@ shinyUI(
                                  
                                  numericInput(inputId = 'Rankers',
                                               label = 'Ranked Cities: How Many?',
-                                              value=25, 
+                                              value=5, 
                                               min=1, 
                                               max=150, 
                                               step=1)

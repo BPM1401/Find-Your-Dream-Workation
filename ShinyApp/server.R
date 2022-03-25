@@ -14,6 +14,17 @@ shinyServer(function(input, output) {
     
   })
   
+  output$Geo3 <- renderLeaflet({
+    
+    leaflet(city) %>% addTiles() %>% addCircleMarkers(data=city, layerId = city$City,
+                                                      radius=3, 
+                                                      color = "red", opacity = 0.8,
+                                                      popup = city$City,
+                                                      clusterOptions = markerClusterOptions())
+    
+  })
+  
+  
   observeEvent(input$Geo2_marker_click,{
     print("observed map_marker_click")
     citylbl$clickedMarker <- input$Geo2_marker_click
@@ -774,6 +785,71 @@ shinyServer(function(input, output) {
     g3
     
   })
+  
+  output$Geo3 <- renderLeaflet({
+    
+    P1 = index %>%
+      select(Wifi)*input$WifiScore
+    
+    P2 = index %>%
+      select(Co_Work)*input$CoWorkScore
+    
+    P3 = index %>%
+      select(Coffee)*input$CoffeeScore
+    
+    P4 = index %>%
+      select(Taxi)*input$TaxiScore
+    
+    P5 = index %>%
+      select(Beer)*input$BeerScore
+    
+    P6 = index %>%
+      select(Rent)*input$RentScore
+    
+    P7 = index %>%
+      select(Meal)*input$MealScore
+    
+    P8 = index %>%
+      select(Sun)*input$SunScore
+    
+    P9 = index %>%
+      select(Fun)*input$FunScore
+    
+    P10 = index %>%
+      select(Insta)*input$IntaScore
+    
+    wtd_ind2 = cbind(P1,P2,P3,P4,P5,P6,P7,P8,P9,P10)
+    
+    Your_Ind2 = wtd_ind2 %>%
+      mutate(index_value2 = rowSums(.)) %>%
+      pull(index_value2)
+    
+    Your_Index2 = round(Your_Ind2, digits=2)
+    
+    ctry_rank = cbind(index$City, Your_Index2)
+    colnames(ctry_rank) = c('City', 'Your Index')
+    jointdataset = merge(city, ctry_rank, by = 'City') %>%
+      head(5)
+    
+    leaflet(jointdataset) %>% addTiles('CartoDB') %>% addCircleMarkers(data=jointdataset, layerId = jointdataset$City,
+                                                      radius=3, 
+                                                      color = "red", opacity = 0.8,
+                                                      popup = jointdataset$City,
+                                                      clusterOptions = markerClusterOptions())
+  
+    
+      
+  
+
+ #   ordered_index = ctry_rank[order(desc(Your_Index2)),c(1,2)] #%>%
+        #head(input$Rankers)
+    
+    
+    
+  })  
+  
+  
+  
   
   output$Index_Ranking <- renderTable({
     
