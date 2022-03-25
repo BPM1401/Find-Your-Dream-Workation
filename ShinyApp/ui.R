@@ -31,7 +31,8 @@ shinyUI(
                      )
                      ),
             
-            tabPanel("10 Parameters",
+                    
+            tabPanel("Your Priorities",
                      mainPanel(
                          fluidRow(
                                  column(width = 12, align='center',
@@ -64,7 +65,7 @@ shinyUI(
                          column(4,
                                 checkboxInput("Outs", label = "View Outliers",
                                               value=FALSE, width='600px'),  
-                                align = 'center'),
+                                align = 'center')
                          ),
                          
                          
@@ -73,73 +74,44 @@ shinyUI(
                            condition = "input.Prior == true",  
                            
                            fluidRow(
-                               column(width = 3, align='center', 
-                                      sliderInput(inputId = 'WifiScore', label = 'Wifi Speed', 
-                                                  min=0, max=100,
-                                                  value=50, 
-                                                  step=1)),
+                               column(width = 3, align='center',
+                                      uiOutput('slider1')),
                                
-                               column(width = 3, align='center', 
-                                      sliderInput(inputId = 'CoWorkScore', label = 'Co-Working Spaces', 
-                                                  min=0, max=100,
-                                                  value=50, 
-                                                  step=1)),
+                               column(width = 3, align='center',
+                                      uiOutput('slider3')),
                                
-                               column(width = 3, align='center', 
-                                      sliderInput(inputId = 'CoffeeScore', label = 'Coffee', 
-                                                  min=0, max=100,
-                                                  value=50, 
-                                                  step=1)),
+                               column(width = 3, align='center',
+                                      uiOutput('slider5')),
                                
-                               column(width = 3, align='center', 
-                                      sliderInput(inputId = 'TaxiScore', label = 'Taxi', 
-                                                  min=0, max=100,
-                                                  value=50, 
-                                                  step=1))
+                               column(width = 3, align='center',
+                                      uiOutput('slider7'))
                                ),
                            
                            fluidRow(
-                               column(width = 3, align='center', 
-                                      sliderInput(inputId = 'BeerScore', label = 'Beer', 
-                                                  min=0, max=100,
-                                                  value=50, 
-                                                  step=1)),
+                               column(width = 3, align='center',
+                                      uiOutput('slider9')),
                                
-                               column(width = 3, align='center', 
-                                      sliderInput(inputId = 'RentScore', label = 'Rent', 
-                                                  min=0, max=100,
-                                                  value=50, 
-                                                  step=1)),
+                               column(width = 3, align='center',
+                                      uiOutput('slider11')),
                                
-                               column(width = 3, align='center', 
-                                      sliderInput(inputId = 'MealScore', label = 'Meals', 
-                                                  min=0, max=100,
-                                                  value=50, 
-                                                  step=1)),
+                               column(width = 3, align='center',
+                                      uiOutput('slider13')),
                                
-                               column(width = 3, align='center', 
-                                      sliderInput(inputId = 'SunScore', label = 'Sunshine Hours', 
-                                                  min=0, max=100,
-                                                  value=50, 
-                                                  step=1))
+                               column(width = 3, align='center',
+                                      uiOutput('slider15'))
                            ),
                            
                            
                            fluidRow(
-                               column(width = 3),
-                               column(width = 3, align='center', 
-                                      sliderInput(inputId = 'FunScore', label = 'TripAdvisor Attractions', 
-                                                  min=0, max=100,
-                                                  value=50, 
-                                                  step=1)),
+                               column(width = 3), 
                                
-                               column(width = 3, align='center', 
-                                      sliderInput(inputId = 'IntaScore', label = 'Instagrammability', 
-                                                  min=0, max=100,
-                                                  value=50, 
-                                                  step=1))
+                               column(width = 3, align='center',
+                                      uiOutput('slider17')),
                                
-                             
+                               column(width = 3, align='center',
+                                      uiOutput('slider19')),
+                               
+                               column(width = 3)
                            )),
                           
                          br(),          
@@ -163,7 +135,7 @@ shinyUI(
                              column(width = 3),   
                              column(width = 3, align='center', plotOutput(outputId = "Facet9", width="90%", height="150px")),   
                              column(width = 3, align='center', plotOutput(outputId = "Facet10", width="90%", height="150px")),
-                             column(width = 3), 
+                             column(width = 3)
                              )),
                     
                          br(),
@@ -191,7 +163,57 @@ shinyUI(
                          )),
             
             tabPanel("Your Dream Workation",
-                     mainPanel(leafletOutput(outputId = "Geo3"))),
+                     mainPanel(
+                         fluidRow(leafletOutput(outputId = "Geo3")),
+                         
+                         fluidRow(column(width = 3, align='center', 
+                                         uiOutput('slider2')),
+                                  
+                                  column(width = 3, align='center', 
+                                         uiOutput('slider4')),
+                                  
+                                  column(width = 3, align='center', 
+                                         uiOutput('slider6')),
+                                         
+                                  column(width = 3, align='center',
+                                         uiOutput('slider8'))
+                         ),
+                         
+                         fluidRow(
+                             column(width = 3, align='center',
+                                    uiOutput('slider10')),
+                             
+                             column(width = 3, align='center',
+                                    uiOutput('slider12')),
+                             
+                             column(width = 3, align='center',
+                                    uiOutput('slider14')),
+                             
+                             column(width = 3, align='center',
+                                    uiOutput('slider16'))
+                         ),
+                         
+                         fluidRow(
+                             column(width = 3, align='center',
+                                    checkboxInput("IRank", "Dream Workation Ranking", value=FALSE)),
+                             column(width = 3, align='center',
+                                    uiOutput('slider18')),
+                             column(width = 3, align='center',
+                                    uiOutput('slider20')),
+                             column(width = 3, align='center',
+                                    sliderInput(inputId = "NumCities",
+                                                label = "How Many Cities?",
+                                                min=1, max=147,
+                                                value=10,
+                                                step=1))
+                         ),
+                         
+                         conditionalPanel(
+                            condition = "input.IRank == true",
+                            fluidRow(column(width = 12, align='center',
+                                    tableOutput(outputId = 'Geo3Table'))))
+                         )),
+                        
             
             
             tabPanel("147 Cities",
@@ -363,89 +385,5 @@ shinyUI(
                              mainPanel(
                                  plotOutput(outputId = "Box"))
                                  
-                                )),
-            
-                tabPanel("Your Index",
-                        sidebarLayout(
-                             sidebarPanel(
-                                 
-                                 selectizeInput(inputId = "ParaIndex1",
-                                                label = "Parameter #1 (Wtd 10x)",
-                                                choices = rownames(t(df))[5:14],
-                                                selected = rownames(t(df))[5]),
-                                 
-                                 selectizeInput(inputId = "ParaIndex2",
-                                                label = "Parameter #2 (Wtd 9x)",
-                                                choices = rownames(t(df))[5:14],
-                                                selected = rownames(t(df))[6]),
-                                 
-                                 selectizeInput(inputId = "ParaIndex3",
-                                                label = "Parameter #3 (Wtd 8x)",
-                                                choices = rownames(t(df))[5:14],
-                                                selected = rownames(t(df))[7]),
-                                 
-                                 selectizeInput(inputId = "ParaIndex4",
-                                                label = "Parameter #4 (Wtd 7x)",
-                                                choices = rownames(t(df))[5:14],
-                                                selected = rownames(t(df))[8]),
-                                 
-                                 selectizeInput(inputId = "ParaIndex5",
-                                                label = "Parameter #5 (Wtd 6x)",
-                                                choices = rownames(t(df))[5:14],
-                                                selected = rownames(t(df))[9]),
-                                 
-                                 selectizeInput(inputId = "ParaIndex6",
-                                                label = "Parameter #6 (Wtd 5x)",
-                                                choices = rownames(t(df))[5:14],
-                                                selected = rownames(t(df))[10]),
-                                 
-                                 selectizeInput(inputId = "ParaIndex7",
-                                                label = "Parameter #7 (Wtd 4x)",
-                                                choices = rownames(t(df))[5:14],
-                                                selected = rownames(t(df))[11]),
-                                 
-                                 selectizeInput(inputId = "ParaIndex8",
-                                                label = "Parameter #8 (Wtd 3x)",
-                                                choices = rownames(t(df))[5:14],
-                                                selected = rownames(t(df))[12]),
-                                 
-                                 selectizeInput(inputId = "ParaIndex9",
-                                                label = "Parameter #9 (Wtd 2x)",
-                                                choices = rownames(t(df))[5:14],
-                                                selected = rownames(t(df))[13]),
-                                 
-                                 selectizeInput(inputId = "ParaIndex10",
-                                                label = "Parameter #10 (Wtd 1x)",
-                                                choices = rownames(t(df))[5:14],
-                                                selected = rownames(t(df))[14]),
-                                 
-                                 numericInput(inputId = 'Rankers',
-                                              label = 'Ranked Cities: How Many?',
-                                              value=5, 
-                                              min=1, 
-                                              max=150, 
-                                              step=1)
-                                 
-                         ),
-                         
-                         mainPanel(
-                             
-                             tableOutput(outputId = "Index_Ranking"))
-                         
-                     )),
-            
-            tabPanel("Checkbox Index",
-                fluidPage(
-                         checkboxGroupInput("checkGroup", label = h3("Indicate Your Priorities:"), 
-                                            choices = list("Wifi" = 1, "Co_Work" = 2, "Coffee" = 3,
-                                                           "Taxi" = 4, "Beer" = 5, "Rent" = 6,
-                                                           "Meal" = 7, "Sun" = 8, "Fun" = 9,
-                                                           "Insta" = 10)#,
-                                            
-                             #tableOutput(outputId = "Index_Ranking_2")
-                         
-                     )
-                     ))
-            
-            
+                                ))
 )))
