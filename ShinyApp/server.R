@@ -118,14 +118,14 @@ shinyServer(function(input, output) {
   output$slider17 <- renderUI({
     slider18.value <- input$FunScore2
     default.slider17 <- if (is.null(slider18.value)) 50 else slider18.value
-    sliderInput(inputId = "FunScore", label = "TripAdvisor Attractions",
+    sliderInput(inputId = "FunScore", label = "Tripadvisor Attractions",
                 min = 0, max = 100, value = default.slider17)
   })
   
   output$slider18 <- renderUI({
     slider17.value <- input$FunScore
     default.slider18 <- if (is.null(slider17.value)) 50 else slider17.value
-    sliderInput(inputId = "FunScore2", label = "TripAdvisor Attractions",
+    sliderInput(inputId = "FunScore2", label = "Tripadvisor Attractions",
                 min = 0, max = 100, value = default.slider18)
   })
   
@@ -1000,6 +1000,10 @@ shinyServer(function(input, output) {
   
   output$Box <- renderPlot({
     
+    scaled_longer$Parameter = factor(scaled_longer$Parameter,
+                                     levels = c('Wifi', 'Co_Work', 'Coffee', 'Taxi', 'Beer',
+                                                'Rent', 'Meal', 'Sun', 'Fun', 'Insta'), ordered = TRUE)
+    
     P = scaled_longer %>%
       filter(City==input$CityBox1) %>%
       pull(Parameter)
@@ -1027,18 +1031,22 @@ shinyServer(function(input, output) {
                          aes(x=x, y=y, col="blue"),
                          size=4, show.legend = TRUE) + 
       scale_color_manual(values = c("red1"="red1", "blue"="blue"), label = c(red1 = input$CityBox1, blue = input$CityBox2)) + 
-      theme(legend.text = element_text(size=25)) + 
-      theme(legend.title = element_text(size=30)) + 
-      labs(color = "City")
+      labs(color = "City") +
+      labs(title = "Scaled Box Plot Across Parameters") + 
+      theme(plot.title = element_text(hjust=0.5, size=30)) +
+      theme(legend.text=element_text(size=24)) + 
+      theme(legend.title=element_text(size=27)) +
+      theme(axis.title.x = element_text(size=25)) +
+      theme(axis.title.y = element_text(size=25)) + 
+      theme(axis.text.x = element_text(size=20)) +
+      theme(axis.text.y = element_text(size=20))
+      
     
     g3
     
   })
   
-  
-  
-  
-  
+
   output$Index_Ranking <- renderTable({
     
     P1 = index %>%
