@@ -162,7 +162,17 @@ View(CC3)
 ```
 
 ```{r}
-write.csv(CC3, 'CityComp5.csv')
+CC3$Parameter = c('Wifi Speed (Mbps)', 'Co-Working Spaces', 'Coffee', 'Taxi', 'Beer', 'Rentals', 'Meals',
+                       'Sunshine Hours', 'Tripadvisor Attractions', 'Instagrammability')
+```
+
+```{r}
+View(CC3)
+```
+
+
+```{r}
+write.csv(CC3, 'CityComp6.csv')
 ```
 
 
