@@ -248,13 +248,19 @@ shinyServer(function(input, output) {
     Your_Index2 = round(Your_Ind2, digits=2)
     
     ctry_rank = cbind(index$City, Your_Index2)
-    colnames(ctry_rank) = c('City', 'Your_Score')
-    jointdataset = merge(city, ctry_rank, by = 'City')
-    jointdataset$Your_Score = as.numeric(jointdataset$Your_Score)
+    colnames(ctry_rank) = c('City', 'Index')
+    jointdataset = merge(city, ctry_rank, by='City')
+    jointdataset = merge(jointdataset, df, by='City')
     
-    jointdataset = jointdataset %>% 
-      arrange(desc(Your_Score)) %>%
-      head(input$NumCities)
+    jointdataset$Index = as.numeric(jointdataset$Index)
+    
+    jointdataset = jointdataset %>%
+      select(City, Country, Wifi, Co_Work, Coffee, Taxi, Beer, Rent, Meal, Sun, Fun, Insta, Index) %>%
+      arrange(desc(Index)) %>%
+      head(input$NumCities) 
+    
+    jointdataset %>%
+      mutate(Rank = 1:nrow(jointdataset), .before = City)
   
   })
   
@@ -732,39 +738,35 @@ shinyServer(function(input, output) {
     
   })
   
-  
-  
-  
-  
-  
-  output$Dist <- renderPlot({
+#  output$Dist <- renderPlot({
+#    
+#    x = df %>%
+#      filter(df$City == input$Ci) %>%
+#      select(input$Para) %>%
+#      pull()
+#    
+#    ggplot(df, aes(df[,input$Para])) +
+#      geom_density() + 
+#      geom_vline(aes(xintercept=median(df[,input$Para]), color="Median"),
+#                 linetype='dashed', size=1.5) +
+#      geom_vline(aes(xintercept=x, color='City'), linetype='dashed', size=1.5) +
+#      annotate("label",x=median(df[,input$Para]), y=-Inf, label=median(df[,input$Para]), 
+#               size=7, vjust='inward') +
+#      annotate("label",x=x, y=Inf, label=paste0(input$Ci, " = ", as.character(x)), size=7, vjust='inward') +
+#      labs(title=x_axis[1,input$Para], x=x_axis[2,input$Para], y='Density') +
+#      scale_color_manual(name="Vertical Markers", values=c(Median='blue', City='red')) +
+#      theme(plot.title = element_text(hjust=0.5, size=24)) +
+#      theme(legend.text=element_text(size=19)) + 
+#      theme(legend.title=element_text(size=19)) +
+#      theme(axis.title.x = element_text(size=17)) +
+#      theme(axis.title.y = element_text(size=17)) + 
+#      theme(axis.text.x = element_text(size=13)) +
+#      scale_x_discrete(expand=c(0.09,0.09))
+#      #theme(plot.margin = margin(0,-0.5,0,0, "cm"))
+#    }
+#  )
+
     
-    x = df %>%
-      filter(df$City == input$Ci) %>%
-      select(input$Para) %>%
-      pull()
-    
-    ggplot(df, aes(df[,input$Para])) +
-      geom_density() + 
-      geom_vline(aes(xintercept=median(df[,input$Para]), color="Median"),
-                 linetype='dashed', size=1.5) +
-      geom_vline(aes(xintercept=x, color='City'), linetype='dashed', size=1.5) +
-      annotate("label",x=median(df[,input$Para]), y=-Inf, label=median(df[,input$Para]), 
-               size=7, vjust='inward') +
-      annotate("label",x=x, y=Inf, label=paste0(input$Ci, " = ", as.character(x)), size=7, vjust='inward') +
-      labs(title=x_axis[1,input$Para], x=x_axis[2,input$Para], y='Density') +
-      scale_color_manual(name="Vertical Markers", values=c(Median='blue', City='red')) +
-      theme(plot.title = element_text(hjust=0.5, size=24)) +
-      theme(legend.text=element_text(size=19)) + 
-      theme(legend.title=element_text(size=19)) +
-      theme(axis.title.x = element_text(size=17)) +
-      theme(axis.title.y = element_text(size=17)) + 
-      theme(axis.text.x = element_text(size=13)) +
-      scale_x_discrete(expand=c(0.09,0.09))
-      #theme(plot.margin = margin(0,-0.5,0,0, "cm"))
-    }
-  )
-  
   output$View <- renderTable({
     df %>%
       select(City, .data[[input$Para]]) %>%

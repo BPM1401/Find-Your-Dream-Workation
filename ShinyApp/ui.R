@@ -216,7 +216,7 @@ shinyUI(
                         
             
             
-            tabPanel("147 Cities",
+            tabPanel("Your City vs Median",
                 mainPanel(
                     
                     fluidRow(
@@ -239,69 +239,71 @@ shinyUI(
                                     plotOutput(outputId = "Dist2")))
                 )),
                                     
-            tabPanel("1 City vs 1 Parameter",
-                     sidebarLayout(
-                         sidebarPanel(
-                             
-                             selectizeInput(inputId = 'Ci',
-                                            label = 'City',
-                                            choices = df$City),
-                             
-                             selectizeInput(inputId = "Para",
-                                            label = "Parameter",
-                                            choices = rownames(t(df))[5:14]),
-                             
-                             checkboxInput("CRank1", "Rank Cities By Parameter", value=FALSE),
-                             
-                             conditionalPanel(
-                                 condition = "input.CRank1 == true",
-                             
-                             numericInput(inputId = 'Top',
-                                          label = 'Ranking: High To Low',
-                                          value=10, 
-                                          min=1, 
-                                          max=75, 
-                                          step=1),
-                             
-                             numericInput(inputId = 'Bot',
-                                          label = 'Ranking: Low To High',
-                                          value = 10, 
-                                          min = 1, 
-                                          max = 75, 
-                                          step = 1)
-                         )),
-                         
-                         mainPanel(
-                                 plotOutput(outputId = "Dist"),
-                                 fluidPage(
-                                     checkboxInput("CRank", "Show Ranking", value=FALSE),
-                                     
-                                     conditionalPanel(
-                                         condition = "input.CRank == true",
-                    
-                                    fluidRow(
-                                        column(width=6, align="center", h3("Ranking: High To Low"), 
-                                                tableOutput(outputId = "View")),
-                                        column(width=3, align="center", h3("Ranking: Low To High"), 
-                                                tableOutput(outputId = "View2")))
-                                    
-                                    ))
-                                 
-                                 ))),
+     #       tabPanel("1 City vs 1 Parameter",
+     #                sidebarLayout(
+     #                    sidebarPanel(
+     #                        
+     #                        selectizeInput(inputId = 'Ci',
+     #                                       label = 'City',
+     #                                       choices = df$City),
+     #                        
+     #                        selectizeInput(inputId = "Para",
+     #                                       label = "Parameter",
+     #                                       choices = rownames(t(df))[5:14]),
+     #                        
+     #                        checkboxInput("CRank1", "Rank Cities By Parameter", value=FALSE),
+     #                        
+     #                        conditionalPanel(
+     #                            condition = "input.CRank1 == true",
+     #                        
+     #                        numericInput(inputId = 'Top',
+     #                                     label = 'Ranking: High To Low',
+     #                                     value=10, 
+     #                                     min=1, 
+     #                                    max=75, 
+     #                                     step=1),
+     #                        
+     #                        numericInput(inputId = 'Bot',
+     #                                     label = 'Ranking: Low To High',
+     #                                    value = 10, 
+     #                                     min = 1, 
+     #                                     max = 75, 
+     #                                     step = 1)
+     #                    )),
+     #                    
+     #                    mainPanel(
+     #                            plotOutput(outputId = "Dist"),
+     #                            fluidPage(
+     #                                checkboxInput("CRank", "Show Ranking", value=FALSE),
+     #                                
+     #                                conditionalPanel(
+     #                                    condition = "input.CRank == true",
+     #               
+     #                               fluidRow(
+     #                                   column(width=6, align="center", h3("Ranking: High To Low"), 
+     #                                           tableOutput(outputId = "View")),
+     #                                   column(width=3, align="center", h3("Ranking: Low To High"), 
+     #                                           tableOutput(outputId = "View2")))
+     #                               
+     #                               ))
+     #                            
+     #                            ))),
                      
                    
-            tabPanel("Compare 2 Cities",
+            tabPanel("Zone In: 2 Cities",
                      sidebarLayout(
                          sidebarPanel(
                              
         
                 selectizeInput(inputId = 'CityComp1',
                                label = 'City1',
-                               choices = colnames(citycomp)[3:149]),
+                               choices = colnames(citycomp)[3:149],
+                               select = 'New York'),
                 
                 selectizeInput(inputId = 'CityComp2',
                                label = 'City2',
-                               choices = colnames(citycomp)[3:149]),
+                               choices = colnames(citycomp)[3:149],
+                               select = 'Singapore'),
                 
                 checkboxGroupInput("my_choices", "Parameter (Select 1 or All)",
                                    choices = c("Wifi", "Co-Working", "Coffee", "Taxi",
@@ -369,17 +371,19 @@ shinyUI(
                         
                         ))),
             
-                tabPanel("Scaled Box",
+                tabPanel("Secret Sauce",
                          sidebarLayout(
                              sidebarPanel(
                                  
                                  selectizeInput(inputId = 'CityBox1',
                                                 label = 'City1',
-                                                choices = colnames(citycomp)[3:149]),
+                                                choices = colnames(citycomp)[3:149],
+                                                select = 'New York'),
                                  
                                  selectizeInput(inputId = 'CityBox2',
                                                 label = 'City2',
-                                                choices = colnames(citycomp)[3:149])
+                                                choices = colnames(citycomp)[3:149],
+                                                select = 'Singapore')
                              ),
                              
                              mainPanel(
