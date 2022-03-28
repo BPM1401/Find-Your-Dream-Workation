@@ -52,6 +52,11 @@ trial
 ```
 
 ```{r}
+ggplot_build(trial)$data
+```
+
+
+```{r}
 trial = citycomp_bar %>%
   pivot_longer(
     cols = c(Bangkok, Singapore),

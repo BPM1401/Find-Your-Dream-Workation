@@ -1034,7 +1034,7 @@ shinyServer(function(input, output) {
     g3 = g2 + geom_point(data=data.frame(x=factor(c(P)), y=c(Z2)),
                          aes(x=x, y=y, col="blue"),
                          size=4, show.legend = TRUE) + 
-      scale_color_manual(values = c("red1"="red1", "blue"="blue"), label = c(red1 = input$CityBox1, blue = input$CityBox2)) + 
+      scale_color_manual(values = c("red1"="#F8766D", "blue"="#00BFC4"), label = c(red1 = input$CityBox1, blue = input$CityBox2)) + 
       labs(color = "City") +
       labs(title = "Scaled Box Plot Across Parameters") + 
       theme(plot.title = element_text(hjust=0.5, size=30)) +
