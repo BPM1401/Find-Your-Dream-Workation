@@ -198,11 +198,15 @@ shinyServer(function(input, output) {
       arrange(desc(Your_Score)) %>%
       head(input$NumCities)
     
+    jointdataset2 = jointdataset %>%
+      mutate(Rank = 1:nrow(jointdataset))
     
    leaflet(jointdataset) %>% addTiles() %>% addCircleMarkers(data=jointdataset, layerId = jointdataset$City,
                                                                        radius=3, 
                                                                        color = "red", opacity = 0.8,
-                                                                       popup = jointdataset$City,
+                                                                       popup = paste(jointdataset$City, "<br>",
+                                                                                     "Rank:", jointdataset2$Rank, "<br>",
+                                                                                     "Index:", jointdataset$Your_Score), 
                                                                        clusterOptions = markerClusterOptions())
     
   })  
