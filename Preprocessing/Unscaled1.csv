@@ -1,0 +1,1471 @@
+"","City","Parameter","Unscaled_Values"
+"1","Abu Dhabi","Wifi",9
+"2","Abu Dhabi","Co_Work",32
+"3","Abu Dhabi","Coffee",4.52
+"4","Abu Dhabi","Taxi",0.51
+"5","Abu Dhabi","Beer",10.19
+"6","Abu Dhabi","Rent",1158.86
+"7","Abu Dhabi","Meal",7.64
+"8","Abu Dhabi","Sun",3509
+"9","Abu Dhabi","Fun",317
+"10","Abu Dhabi","Insta",31.53
+"11","Adelaide","Wifi",18
+"12","Adelaide","Co_Work",17
+"13","Adelaide","Coffee",3.04
+"14","Adelaide","Taxi",1.4
+"15","Adelaide","Beer",4.13
+"16","Adelaide","Rent",1018.37
+"17","Adelaide","Meal",11.22
+"18","Adelaide","Sun",2765
+"19","Adelaide","Fun",458
+"20","Adelaide","Insta",6.43
+"21","Amsterdam","Wifi",22
+"22","Amsterdam","Co_Work",99
+"23","Amsterdam","Coffee",3.7
+"24","Amsterdam","Taxi",2.61
+"25","Amsterdam","Beer",5.55
+"26","Amsterdam","Rent",1711.83
+"27","Amsterdam","Meal",16.65
+"28","Amsterdam","Sun",1662
+"29","Amsterdam","Fun",1782
+"30","Amsterdam","Insta",33.77
+"31","Arequipa","Wifi",9
+"32","Arequipa","Co_Work",4
+"33","Arequipa","Coffee",1.81
+"34","Arequipa","Taxi",1.18
+"35","Arequipa","Beer",1.85
+"36","Arequipa","Rent",213.76
+"37","Arequipa","Meal",2.38
+"38","Arequipa","Sun",3333
+"39","Arequipa","Fun",211
+"40","Arequipa","Insta",1.57
+"41","Athens","Wifi",12
+"42","Athens","Co_Work",29
+"43","Athens","Coffee",3.15
+"44","Athens","Taxi",0.83
+"45","Athens","Beer",4.45
+"46","Athens","Rent",452.89
+"47","Athens","Meal",11.1
+"48","Athens","Sun",2773
+"49","Athens","Fun",1149
+"50","Athens","Insta",10.18
+"51","Auckland","Wifi",34
+"52","Auckland","Co_Work",30
+"53","Auckland","Coffee",3.34
+"54","Auckland","Taxi",1.72
+"55","Auckland","Beer",6.54
+"56","Auckland","Rent",1253.42
+"57","Auckland","Meal",13.08
+"58","Auckland","Sun",2003
+"59","Auckland","Fun",1099
+"60","Auckland","Insta",5.39
+"61","Bangkok","Wifi",28
+"62","Bangkok","Co_Work",117
+"63","Bangkok","Coffee",2.03
+"64","Bangkok","Taxi",1.07
+"65","Bangkok","Beer",2
+"66","Bangkok","Rent",539.73
+"67","Bangkok","Meal",2
+"68","Bangkok","Sun",2624
+"69","Bangkok","Fun",2262
+"70","Bangkok","Insta",28.39
+"71","Barcelona","Wifi",37
+"72","Barcelona","Co_Work",136
+"73","Barcelona","Coffee",2.07
+"74","Barcelona","Taxi",1.31
+"75","Barcelona","Beer",3.33
+"76","Barcelona","Rent",999
+"77","Barcelona","Meal",13.33
+"78","Barcelona","Sun",2591
+"79","Barcelona","Fun",2739
+"80","Barcelona","Insta",62.89
+"81","Beijing","Wifi",37
+"82","Beijing","Co_Work",69
+"83","Beijing","Coffee",4.19
+"84","Beijing","Taxi",0.34
+"85","Beijing","Beer",1.44
+"86","Beijing","Rent",1014.96
+"87","Beijing","Meal",4.71
+"88","Beijing","Sun",2671
+"89","Beijing","Fun",1408
+"90","Beijing","Insta",7.29
+"91","Beirut","Wifi",4
+"92","Beirut","Co_Work",18
+"93","Beirut","Coffee",7.93
+"94","Beirut","Taxi",1.33
+"95","Beirut","Beer",6.18
+"96","Beirut","Rent",956.16
+"97","Beirut","Meal",24.83
+"98","Beirut","Sun",3534
+"99","Beirut","Fun",188
+"100","Beirut","Insta",10.24
+"101","Belfast","Wifi",26
+"102","Belfast","Co_Work",13
+"103","Belfast","Coffee",3.56
+"104","Belfast","Taxi",1.39
+"105","Belfast","Beer",5.85
+"106","Belfast","Rent",786.38
+"107","Belfast","Meal",15.57
+"108","Belfast","Sun",1868
+"109","Belfast","Fun",483
+"110","Belfast","Insta",3.39
+"111","Belgrade","Wifi",34
+"112","Belgrade","Co_Work",33
+"113","Belgrade","Coffee",1.72
+"114","Belgrade","Taxi",0.66
+"115","Belgrade","Beer",1.89
+"116","Belgrade","Rent",400.4
+"117","Belgrade","Meal",6.6
+"118","Belgrade","Sun",2112
+"119","Belgrade","Fun",535
+"120","Belgrade","Insta",4.42
+"121","Berlin","Wifi",33
+"122","Berlin","Co_Work",127
+"123","Berlin","Coffee",3.24
+"124","Berlin","Taxi",2.22
+"125","Berlin","Beer",3.24
+"126","Berlin","Rent",1053.85
+"127","Berlin","Meal",11.1
+"128","Berlin","Sun",1626
+"129","Berlin","Fun",1894
+"130","Berlin","Insta",48.46
+"131","Bordeaux","Wifi",20
+"132","Bordeaux","Co_Work",14
+"133","Bordeaux","Coffee",3.47
+"134","Bordeaux","Taxi",1.85
+"135","Bordeaux","Beer",6.66
+"136","Bordeaux","Rent",782.22
+"137","Bordeaux","Meal",14.43
+"138","Bordeaux","Sun",2713
+"139","Bordeaux","Fun",560
+"140","Bordeaux","Insta",7.92
+"141","Boston","Wifi",33
+"142","Boston","Co_Work",41
+"143","Boston","Coffee",4.16
+"144","Boston","Taxi",1.74
+"145","Boston","Beer",6.55
+"146","Boston","Rent",2440.5
+"147","Boston","Meal",18.72
+"148","Boston","Sun",2634
+"149","Boston","Fun",653
+"150","Boston","Insta",23.85
+"151","Brisbane","Wifi",22
+"152","Brisbane","Co_Work",37
+"153","Brisbane","Coffee",3.24
+"154","Brisbane","Taxi",1.52
+"155","Brisbane","Beer",5.6
+"156","Brisbane","Rent",1208.3
+"157","Brisbane","Meal",14.01
+"158","Brisbane","Sun",2968
+"159","Brisbane","Fun",668
+"160","Brisbane","Insta",11.95
+"161","Brussels","Wifi",37
+"162","Brussels","Co_Work",66
+"163","Brussels","Coffee",3.38
+"164","Brussels","Taxi",2.16
+"165","Brussels","Beer",4.45
+"166","Brussels","Rent",941.68
+"167","Brussels","Meal",16.65
+"168","Brussels","Sun",1546
+"169","Brussels","Fun",747
+"170","Brussels","Insta",7.07
+"171","Bucharest","Wifi",54
+"172","Bucharest","Co_Work",46
+"173","Bucharest","Coffee",2.31
+"174","Bucharest","Taxi",0.45
+"175","Bucharest","Beer",1.81
+"176","Bucharest","Rent",458.06
+"177","Bucharest","Meal",7.89
+"178","Bucharest","Sun",2115
+"179","Bucharest","Fun",726
+"180","Bucharest","Insta",3.38
+"181","Budapest","Wifi",37
+"182","Budapest","Co_Work",40
+"183","Budapest","Coffee",1.56
+"184","Budapest","Taxi",0.94
+"185","Budapest","Beer",1.56
+"186","Budapest","Rent",476.66
+"187","Budapest","Meal",6.25
+"188","Budapest","Sun",1988
+"189","Budapest","Fun",1468
+"190","Budapest","Insta",14.27
+"191","Buenos Aires","Wifi",17
+"192","Buenos Aires","Co_Work",67
+"193","Buenos Aires","Coffee",1.59
+"194","Buenos Aires","Taxi",0.61
+"195","Buenos Aires","Beer",1.4
+"196","Buenos Aires","Rent",298.42
+"197","Buenos Aires","Meal",6.7
+"198","Buenos Aires","Sun",2525
+"199","Buenos Aires","Fun",1660
+"200","Buenos Aires","Insta",21.29
+"201","Calgary","Wifi",24
+"202","Calgary","Co_Work",34
+"203","Calgary","Coffee",3.17
+"204","Calgary","Taxi",1.51
+"205","Calgary","Beer",5.26
+"206","Calgary","Rent",939.02
+"207","Calgary","Meal",13.52
+"208","Calgary","Sun",2396
+"209","Calgary","Fun",540
+"210","Calgary","Insta",7.32
+"211","Cancun","Wifi",7
+"212","Cancun","Co_Work",9
+"213","Cancun","Coffee",2.05
+"214","Cancun","Taxi",2.81
+"215","Cancun","Beer",1.87
+"216","Cancun","Rent",413.48
+"217","Cancun","Meal",7.49
+"218","Cancun","Sun",2525
+"219","Cancun","Fun",912
+"220","Cancun","Insta",10.01
+"221","Cape Town","Wifi",12
+"222","Cape Town","Co_Work",46
+"223","Cape Town","Coffee",1.89
+"224","Cape Town","Taxi",0.78
+"225","Cape Town","Beer",2.28
+"226","Cape Town","Rent",643.31
+"227","Cape Town","Meal",9.1
+"228","Cape Town","Sun",3094
+"229","Cape Town","Fun",1469
+"230","Cape Town","Insta",12.32
+"231","Cartagena","Wifi",11
+"232","Cartagena","Co_Work",9
+"233","Cartagena","Coffee",1.09
+"234","Cartagena","Taxi",1.76
+"235","Cartagena","Beer",2.16
+"236","Cartagena","Rent",485.21
+"237","Cartagena","Meal",2.69
+"238","Cartagena","Sun",3019
+"239","Cartagena","Fun",504
+"240","Cartagena","Insta",18.94
+"241","Chiang Mai","Wifi",26
+"242","Chiang Mai","Co_Work",25
+"243","Chiang Mai","Coffee",1.72
+"244","Chiang Mai","Taxi",0.43
+"245","Chiang Mai","Beer",2.29
+"246","Chiang Mai","Rent",392.72
+"247","Chiang Mai","Meal",2
+"248","Chiang Mai","Sun",2512
+"249","Chiang Mai","Fun",1181
+"250","Chiang Mai","Insta",6.43
+"251","Chicago","Wifi",42
+"252","Chicago","Co_Work",104
+"253","Chicago","Coffee",3.93
+"254","Chicago","Taxi",1.57
+"255","Chicago","Beer",5.15
+"256","Chicago","Rent",1729.71
+"257","Chicago","Meal",15.91
+"258","Chicago","Sun",2508
+"259","Chicago","Fun",1411
+"260","Chicago","Insta",51.6
+"261","Cologne","Wifi",33
+"262","Cologne","Co_Work",38
+"263","Cologne","Coffee",3.04
+"264","Cologne","Taxi",2.22
+"265","Cologne","Beer",4.45
+"266","Cologne","Rent",925.08
+"267","Cologne","Meal",10.54
+"268","Cologne","Sun",1504
+"269","Cologne","Fun",465
+"270","Cologne","Insta",7.66
+"271","Colombo","Wifi",9
+"272","Colombo","Co_Work",24
+"273","Colombo","Coffee",2.03
+"274","Colombo","Taxi",0.23
+"275","Colombo","Beer",1.6
+"276","Colombo","Rent",407.02
+"277","Colombo","Meal",1.89
+"278","Colombo","Sun",3007
+"279","Colombo","Fun",868
+"280","Colombo","Insta",2.58
+"281","Copenhagen","Wifi",46
+"282","Copenhagen","Co_Work",26
+"283","Copenhagen","Coffee",5.8
+"284","Copenhagen","Taxi",1.79
+"285","Copenhagen","Beer",7.46
+"286","Copenhagen","Rent",1532.61
+"287","Copenhagen","Meal",19.4
+"288","Copenhagen","Sun",1803
+"289","Copenhagen","Fun",772
+"290","Copenhagen","Insta",10.1
+"291","Dakar","Wifi",6
+"292","Dakar","Co_Work",6
+"293","Dakar","Coffee",2.6
+"294","Dakar","Taxi",1.69
+"295","Dakar","Beer",1.07
+"296","Dakar","Rent",653.82
+"297","Dakar","Meal",5.08
+"298","Dakar","Sun",3078
+"299","Dakar","Fun",70
+"300","Dakar","Insta",2.11
+"301","Doha","Wifi",12
+"302","Doha","Co_Work",13
+"303","Doha","Coffee",4.41
+"304","Doha","Taxi",0.52
+"305","Doha","Beer",11.57
+"306","Doha","Rent",1455.29
+"307","Doha","Meal",7.71
+"308","Doha","Sun",3897
+"309","Doha","Fun",203
+"310","Doha","Insta",22.18
+"311","Dresden","Wifi",35
+"312","Dresden","Co_Work",5
+"313","Dresden","Coffee",2.65
+"314","Dresden","Taxi",2.43
+"315","Dresden","Beer",3.86
+"316","Dresden","Rent",581.89
+"317","Dresden","Meal",11.04
+"318","Dresden","Sun",1581
+"319","Dresden","Fun",303
+"320","Dresden","Insta",3.64
+"321","Dubai","Wifi",15
+"322","Dubai","Co_Work",115
+"323","Dubai","Coffee",4.76
+"324","Dubai","Taxi",0.56
+"325","Dubai","Beer",11.47
+"326","Dubai","Rent",1390.84
+"327","Dubai","Meal",8.92
+"328","Dubai","Sun",3885
+"329","Dubai","Fun",1615
+"330","Dubai","Insta",110.96
+"331","Dublin","Wifi",61
+"332","Dublin","Co_Work",46
+"333","Dublin","Coffee",3.74
+"334","Dublin","Taxi",1.66
+"335","Dublin","Beer",6.11
+"336","Dublin","Rent",1868.16
+"337","Dublin","Meal",16.65
+"338","Dublin","Sun",1453
+"339","Dublin","Fun",1243
+"340","Dublin","Insta",12.94
+"341","Dubrovnik","Wifi",19
+"342","Dubrovnik","Co_Work",0
+"343","Dubrovnik","Coffee",3.28
+"344","Dubrovnik","Taxi",1.55
+"345","Dubrovnik","Beer",5.93
+"346","Dubrovnik","Rent",752.06
+"347","Dubrovnik","Meal",15.54
+"348","Dubrovnik","Sun",3322
+"349","Dubrovnik","Fun",468
+"350","Dubrovnik","Insta",2.56
+"351","Dusseldorf","Wifi",25
+"352","Dusseldorf","Co_Work",44
+"353","Dusseldorf","Coffee",3.37
+"354","Dusseldorf","Taxi",2.44
+"355","Dusseldorf","Beer",4.45
+"356","Dusseldorf","Rent",891.62
+"357","Dusseldorf","Meal",11.1
+"358","Dusseldorf","Sun",2359
+"359","Dusseldorf","Fun",312
+"360","Dusseldorf","Insta",7.24
+"361","Edinburgh","Wifi",26
+"362","Edinburgh","Co_Work",23
+"363","Edinburgh","Coffee",3.59
+"364","Edinburgh","Taxi",1.85
+"365","Edinburgh","Beer",5.53
+"366","Edinburgh","Rent",1050.83
+"367","Edinburgh","Meal",19.5
+"368","Edinburgh","Sun",1427
+"369","Edinburgh","Fun",1163
+"370","Edinburgh","Insta",9.58
+"371","Edmonton","Wifi",30
+"372","Edmonton","Co_Work",10
+"373","Edmonton","Coffee",3.5
+"374","Edmonton","Taxi",1.35
+"375","Edmonton","Beer",4.51
+"376","Edmonton","Rent",885.68
+"377","Edmonton","Meal",15.03
+"378","Edmonton","Sun",2345
+"379","Edmonton","Fun",294
+"380","Edmonton","Insta",4.77
+"381","Faro","Wifi",70
+"382","Faro","Co_Work",1
+"383","Faro","Coffee",2.04
+"384","Faro","Taxi",1.1
+"385","Faro","Beer",2.76
+"386","Faro","Rent",662.58
+"387","Faro","Meal",9.66
+"388","Faro","Sun",3036
+"389","Faro","Fun",167
+"390","Faro","Insta",1.71
+"391","Florence","Wifi",18
+"392","Florence","Co_Work",13
+"393","Florence","Coffee",1.46
+"394","Florence","Taxi",1.1
+"395","Florence","Beer",5.55
+"396","Florence","Rent",845.69
+"397","Florence","Meal",16.65
+"398","Florence","Sun",2924
+"399","Florence","Fun",1377
+"400","Florence","Insta",10.39
+"401","Frankfurt","Wifi",22
+"402","Frankfurt","Co_Work",66
+"403","Frankfurt","Coffee",3.24
+"404","Frankfurt","Taxi",2.22
+"405","Frankfurt","Beer",4.45
+"406","Frankfurt","Rent",1162.93
+"407","Frankfurt","Meal",11.1
+"408","Frankfurt","Sun",1586
+"409","Frankfurt","Fun",497
+"410","Frankfurt","Insta",11.61
+"411","Geneva","Wifi",36
+"412","Geneva","Co_Work",23
+"413","Geneva","Coffee",4.58
+"414","Geneva","Taxi",3.17
+"415","Geneva","Beer",8.18
+"416","Geneva","Rent",2035.09
+"417","Geneva","Meal",25.57
+"418","Geneva","Sun",1828
+"419","Geneva","Fun",300
+"420","Geneva","Insta",4.33
+"421","Glasgow","Wifi",26
+"422","Glasgow","Co_Work",16
+"423","Glasgow","Coffee",3.6
+"424","Glasgow","Taxi",1.38
+"425","Glasgow","Beer",4.55
+"426","Glasgow","Rent",846.6
+"427","Glasgow","Meal",19.5
+"428","Glasgow","Sun",1203
+"429","Glasgow","Fun",682
+"430","Glasgow","Insta",7.25
+"431","Hamburg","Wifi",41
+"432","Hamburg","Co_Work",65
+"433","Hamburg","Coffee",3.2
+"434","Hamburg","Taxi",2.12
+"435","Hamburg","Beer",4.72
+"436","Hamburg","Rent",1051.87
+"437","Hamburg","Meal",13.33
+"438","Hamburg","Sun",1557
+"439","Hamburg","Fun",688
+"440","Hamburg","Insta",20.16
+"441","Hannover","Wifi",38
+"442","Hannover","Co_Work",7
+"443","Hannover","Coffee",2.94
+"444","Hannover","Taxi",2.22
+"445","Hannover","Beer",3.89
+"446","Hannover","Rent",683.83
+"447","Hannover","Meal",11.1
+"448","Hannover","Sun",1501
+"449","Hannover","Fun",177
+"450","Hannover","Insta",4.63
+"451","Hanoi","Wifi",14
+"452","Hanoi","Co_Work",59
+"453","Hanoi","Coffee",1.56
+"454","Hanoi","Taxi",0.49
+"455","Hanoi","Beer",0.82
+"456","Hanoi","Rent",321.67
+"457","Hanoi","Meal",1.62
+"458","Hanoi","Sun",1585
+"459","Hanoi","Fun",1948
+"460","Hanoi","Insta",7.44
+"461","Helsinki","Wifi",36
+"462","Helsinki","Co_Work",22
+"463","Helsinki","Coffee",4.39
+"464","Helsinki","Taxi",1.1
+"465","Helsinki","Beer",6.66
+"466","Helsinki","Rent",1118.99
+"467","Helsinki","Meal",14.43
+"468","Helsinki","Sun",1858
+"469","Helsinki","Fun",624
+"470","Helsinki","Insta",7.24
+"471","Ho Chi Minh City","Wifi",13
+"472","Ho Chi Minh City","Co_Work",92
+"473","Ho Chi Minh City","Coffee",1.77
+"474","Ho Chi Minh City","Taxi",0.61
+"475","Ho Chi Minh City","Beer",0.86
+"476","Ho Chi Minh City","Rent",525.8
+"477","Ho Chi Minh City","Meal",2.04
+"478","Ho Chi Minh City","Sun",2489
+"479","Ho Chi Minh City","Fun",1357
+"480","Ho Chi Minh City","Insta",1.64
+"481","Hoi An","Wifi",12
+"482","Hoi An","Co_Work",1
+"483","Hoi An","Coffee",1.34
+"484","Hoi An","Taxi",0.61
+"485","Hoi An","Beer",0.98
+"486","Hoi An","Rent",209.12
+"487","Hoi An","Meal",1.73
+"488","Hoi An","Sun",2786
+"489","Hoi An","Fun",1176
+"490","Hoi An","Insta",2.12
+"491","Hong Kong","Wifi",78
+"492","Hong Kong","Co_Work",183
+"493","Hong Kong","Coffee",4.55
+"494","Hong Kong","Taxi",1.03
+"495","Hong Kong","Beer",6.58
+"496","Hong Kong","Rent",2055.86
+"497","Hong Kong","Meal",7.23
+"498","Hong Kong","Sun",1836
+"499","Hong Kong","Fun",1330
+"500","Hong Kong","Insta",39.82
+"501","Honolulu","Wifi",43
+"502","Honolulu","Co_Work",8
+"503","Honolulu","Coffee",5.26
+"504","Honolulu","Taxi",1.91
+"505","Honolulu","Beer",5.6
+"506","Honolulu","Rent",1778.62
+"507","Honolulu","Meal",14.01
+"508","Honolulu","Sun",3036
+"509","Honolulu","Fun",946
+"510","Honolulu","Insta",4.9
+"511","Houston","Wifi",60
+"512","Houston","Co_Work",62
+"513","Houston","Coffee",3.64
+"514","Houston","Taxi",1.34
+"515","Houston","Beer",4.68
+"516","Houston","Rent",1303.69
+"517","Houston","Meal",14.04
+"518","Houston","Sun",2578
+"519","Houston","Fun",589
+"520","Houston","Insta",27.2
+"521","Hvar","Wifi",19
+"522","Hvar","Co_Work",0
+"523","Hvar","Coffee",2.04
+"524","Hvar","Taxi",1.1
+"525","Hvar","Beer",5.55
+"526","Hvar","Rent",233.12
+"527","Hvar","Meal",16.65
+"528","Hvar","Sun",3535
+"529","Hvar","Fun",85
+"530","Hvar","Insta",0.88
+"531","Istanbul","Wifi",13
+"532","Istanbul","Co_Work",69
+"533","Istanbul","Coffee",1.6
+"534","Istanbul","Taxi",0.38
+"535","Istanbul","Beer",2.17
+"536","Istanbul","Rent",299.13
+"537","Istanbul","Meal",3.8
+"538","Istanbul","Sun",2218
+"539","Istanbul","Fun",2088
+"540","Istanbul","Insta",116.21
+"541","Jakarta","Wifi",14
+"542","Jakarta","Co_Work",104
+"543","Jakarta","Coffee",2.26
+"544","Jakarta","Taxi",0.29
+"545","Jakarta","Beer",2.59
+"546","Jakarta","Rent",439.98
+"547","Jakarta","Meal",2.59
+"548","Jakarta","Sun",3252
+"549","Jakarta","Fun",449
+"550","Jakarta","Insta",75.74
+"551","Johannesburg","Wifi",12
+"552","Johannesburg","Co_Work",49
+"553","Johannesburg","Coffee",1.85
+"554","Johannesburg","Taxi",0.78
+"555","Johannesburg","Beer",1.95
+"556","Johannesburg","Rent",426.78
+"557","Johannesburg","Meal",7.8
+"558","Johannesburg","Sun",3124
+"559","Johannesburg","Fun",390
+"560","Johannesburg","Insta",3
+"561","Kathmandu","Wifi",7
+"562","Kathmandu","Co_Work",10
+"563","Kathmandu","Coffee",1.47
+"564","Kathmandu","Taxi",0.62
+"565","Kathmandu","Beer",2.35
+"566","Kathmandu","Rent",137.2
+"567","Kathmandu","Meal",2.16
+"568","Kathmandu","Sun",2529
+"569","Kathmandu","Fun",1723
+"570","Kathmandu","Insta",1.68
+"571","Krakow","Wifi",37
+"572","Krakow","Co_Work",35
+"573","Krakow","Coffee",2.6
+"574","Krakow","Taxi",0.59
+"575","Krakow","Beer",2.44
+"576","Krakow","Rent",699.72
+"577","Krakow","Meal",7.32
+"578","Krakow","Sun",2492
+"579","Krakow","Fun",999
+"580","Krakow","Insta",5.79
+"581","Kuala Lumpur","Wifi",17
+"582","Kuala Lumpur","Co_Work",103
+"583","Kuala Lumpur","Coffee",2.52
+"584","Kuala Lumpur","Taxi",0.68
+"585","Kuala Lumpur","Beer",3.35
+"586","Kuala Lumpur","Rent",426.37
+"587","Kuala Lumpur","Meal",3.35
+"588","Kuala Lumpur","Sun",2774
+"589","Kuala Lumpur","Fun",665
+"590","Kuala Lumpur","Insta",15.15
+"591","Kuwait City","Wifi",7
+"592","Kuwait City","Co_Work",4
+"593","Kuwait City","Coffee",4.63
+"594","Kuwait City","Taxi",1.79
+"595","Kuwait City","Beer",3.11
+"596","Kuwait City","Rent",836.02
+"597","Kuwait City","Meal",6.23
+"598","Kuwait City","Sun",3940
+"599","Kuwait City","Fun",132
+"600","Kuwait City","Insta",4.13
+"601","Kyiv","Wifi",33
+"602","Kyiv","Co_Work",49
+"603","Kyiv","Coffee",1.21
+"604","Kyiv","Taxi",0.23
+"605","Kyiv","Beer",1.03
+"606","Kyiv","Rent",538.1
+"607","Kyiv","Meal",6.01
+"608","Kyiv","Sun",1955
+"609","Kyiv","Fun",87
+"610","Kyiv","Insta",6.8
+"611","Kyoto","Wifi",29
+"612","Kyoto","Co_Work",9
+"613","Kyoto","Coffee",3.96
+"614","Kyoto","Taxi",1.55
+"615","Kyoto","Beer",3.09
+"616","Kyoto","Rent",795.9
+"617","Kyoto","Meal",6.77
+"618","Kyoto","Sun",1775
+"619","Kyoto","Fun",1533
+"620","Kyoto","Insta",17.68
+"621","La Paz","Wifi",6
+"622","La Paz","Co_Work",7
+"623","La Paz","Coffee",2.48
+"624","La Paz","Taxi",1.48
+"625","La Paz","Beer",2.17
+"626","La Paz","Rent",335.26
+"627","La Paz","Meal",3.39
+"628","La Paz","Sun",2289
+"629","La Paz","Fun",211
+"630","La Paz","Insta",1.45
+"631","Las Vegas","Wifi",47
+"632","Las Vegas","Co_Work",21
+"633","Las Vegas","Coffee",4.37
+"634","Las Vegas","Taxi",1.89
+"635","Las Vegas","Beer",5.62
+"636","Las Vegas","Rent",1074.31
+"637","Las Vegas","Meal",14.04
+"638","Las Vegas","Sun",3825
+"639","Las Vegas","Fun",1420
+"640","Las Vegas","Insta",40.52
+"641","Lima","Wifi",16
+"642","Lima","Co_Work",67
+"643","Lima","Coffee",2.25
+"644","Lima","Taxi",1.42
+"645","Lima","Beer",1.89
+"646","Lima","Rent",477.61
+"647","Lima","Meal",3.07
+"648","Lima","Sun",1230
+"649","Lima","Fun",855
+"650","Lima","Insta",10.15
+"651","Lisbon","Wifi",33
+"652","Lisbon","Co_Work",95
+"653","Lisbon","Coffee",2.03
+"654","Lisbon","Taxi",0.52
+"655","Lisbon","Beer",2.22
+"656","Lisbon","Rent",957.05
+"657","Lisbon","Meal",10
+"658","Lisbon","Sun",2806
+"659","Lisbon","Fun",1969
+"660","Lisbon","Insta",10.21
+"661","Liverpool","Wifi",26
+"662","Liverpool","Co_Work",17
+"663","Liverpool","Coffee",3.46
+"664","Liverpool","Taxi",1.21
+"665","Liverpool","Beer",2.28
+"666","Liverpool","Rent",843.92
+"667","Liverpool","Meal",15.6
+"668","Liverpool","Sun",2199
+"669","Liverpool","Fun",1050
+"670","Liverpool","Insta",14.83
+"671","Ljubljana","Wifi",61
+"672","Ljubljana","Co_Work",8
+"673","Ljubljana","Coffee",1.89
+"674","Ljubljana","Taxi",1.1
+"675","Ljubljana","Beer",2.89
+"676","Ljubljana","Rent",685.91
+"677","Ljubljana","Meal",11.1
+"678","Ljubljana","Sun",1974
+"679","Ljubljana","Fun",422
+"680","Ljubljana","Insta",1.74
+"681","London","Wifi",22
+"682","London","Co_Work",318
+"683","London","Coffee",3.84
+"684","London","Taxi",2.21
+"685","London","Beer",6.5
+"686","London","Rent",2160.93
+"687","London","Meal",19.5
+"688","London","Sun",1633
+"689","London","Fun",4983
+"690","London","Insta",150.7
+"691","Los Angeles","Wifi",58
+"692","Los Angeles","Co_Work",105
+"693","Los Angeles","Coffee",4.41
+"694","Los Angeles","Taxi",1.57
+"695","Los Angeles","Beer",6.55
+"696","Los Angeles","Rent",2096.41
+"697","Los Angeles","Meal",18.72
+"698","Los Angeles","Sun",3254
+"699","Los Angeles","Fun",1375
+"700","Los Angeles","Insta",75.44
+"701","Lyon","Wifi",36
+"702","Lyon","Co_Work",21
+"703","Lyon","Coffee",3.44
+"704","Lyon","Taxi",1.96
+"705","Lyon","Beer",3.41
+"706","Lyon","Rent",775.29
+"707","Lyon","Meal",14.16
+"708","Lyon","Sun",2002
+"709","Lyon","Fun",502
+"710","Lyon","Insta",9.14
+"711","Madrid","Wifi",32
+"712","Madrid","Co_Work",125
+"713","Madrid","Coffee",2.21
+"714","Madrid","Taxi",1.22
+"715","Madrid","Beer",6.51
+"716","Madrid","Rent",977.34
+"717","Madrid","Meal",13.33
+"718","Madrid","Sun",2769
+"719","Madrid","Fun",1976
+"720","Madrid","Insta",44.17
+"721","Malaga","Wifi",26
+"722","Malaga","Co_Work",17
+"723","Malaga","Coffee",1.65
+"724","Malaga","Taxi",0.95
+"725","Malaga","Beer",2.77
+"726","Malaga","Rent",755.48
+"727","Malaga","Meal",11.1
+"728","Malaga","Sun",3365
+"729","Malaga","Fun",525
+"730","Malaga","Insta",6.99
+"731","Manchester","Wifi",33
+"732","Manchester","Co_Work",38
+"733","Manchester","Coffee",3.65
+"734","Manchester","Taxi",1.59
+"735","Manchester","Beer",5.2
+"736","Manchester","Rent",1104
+"737","Manchester","Meal",19.5
+"738","Manchester","Sun",1416
+"739","Manchester","Fun",458
+"740","Manchester","Insta",16.47
+"741","Manila","Wifi",8
+"742","Manila","Co_Work",29
+"743","Manila","Coffee",2.3
+"744","Manila","Taxi",0.25
+"745","Manila","Beer",1.59
+"746","Manila","Rent",641.93
+"747","Manila","Meal",3.73
+"748","Manila","Sun",2103
+"749","Manila","Fun",161
+"750","Manila","Insta",5.38
+"751","Marrakech","Wifi",8
+"752","Marrakech","Co_Work",5
+"753","Marrakech","Coffee",1.94
+"754","Marrakech","Taxi",0.52
+"755","Marrakech","Beer",4.43
+"756","Marrakech","Rent",376.57
+"757","Marrakech","Meal",4.58
+"758","Marrakech","Sun",3131
+"759","Marrakech","Fun",2107
+"760","Marrakech","Insta",8.67
+"761","Marseille","Wifi",24
+"762","Marseille","Co_Work",11
+"763","Marseille","Coffee",2.98
+"764","Marseille","Taxi",1.68
+"765","Marseille","Beer",6.66
+"766","Marseille","Rent",669.08
+"767","Marseille","Meal",14.43
+"768","Marseille","Sun",2858
+"769","Marseille","Fun",488
+"770","Marseille","Insta",8.06
+"771","Medellin","Wifi",9
+"772","Medellin","Co_Work",41
+"773","Medellin","Coffee",1.2
+"774","Medellin","Taxi",0.88
+"775","Medellin","Beer",0.98
+"776","Medellin","Rent",242.5
+"777","Medellin","Meal",3.67
+"778","Medellin","Sun",1892
+"779","Medellin","Fun",546
+"780","Medellin","Insta",30.9
+"781","Melbourne","Wifi",21
+"782","Melbourne","Co_Work",127
+"783","Melbourne","Coffee",3.04
+"784","Melbourne","Taxi",1.13
+"785","Melbourne","Beer",7.01
+"786","Melbourne","Rent",1202.63
+"787","Melbourne","Meal",14.01
+"788","Melbourne","Sun",2636
+"789","Melbourne","Fun",1242
+"790","Melbourne","Insta",33.95
+"791","Mexico City","Wifi",20
+"792","Mexico City","Co_Work",133
+"793","Mexico City","Coffee",2.17
+"794","Mexico City","Taxi",0.31
+"795","Mexico City","Beer",1.89
+"796","Mexico City","Rent",590.63
+"797","Mexico City","Meal",7.07
+"798","Mexico City","Sun",2555
+"799","Mexico City","Fun",969
+"800","Mexico City","Insta",6.81
+"801","Miami","Wifi",40
+"802","Miami","Co_Work",59
+"803","Miami","Coffee",4.23
+"804","Miami","Taxi",1.51
+"805","Miami","Beer",5.62
+"806","Miami","Rent",1821.04
+"807","Miami","Meal",14.98
+"808","Miami","Sun",3154
+"809","Miami","Fun",762
+"810","Miami","Insta",80.5
+"811","Milan","Wifi",17
+"812","Milan","Co_Work",87
+"813","Milan","Coffee",1.79
+"814","Milan","Taxi",1.49
+"815","Milan","Beer",5.36
+"816","Milan","Rent",1205.5
+"817","Milan","Meal",16.65
+"818","Milan","Sun",1915
+"819","Milan","Fun",1543
+"820","Milan","Insta",21.73
+"821","Minsk","Wifi",23
+"822","Minsk","Co_Work",5
+"823","Minsk","Coffee",1.42
+"824","Minsk","Taxi",0.2
+"825","Minsk","Beer",1.46
+"826","Minsk","Rent",382.14
+"827","Minsk","Meal",7.27
+"828","Minsk","Sun",1780
+"829","Minsk","Fun",352
+"830","Minsk","Insta",11.08
+"831","Montevideo","Wifi",25
+"832","Montevideo","Co_Work",10
+"833","Montevideo","Coffee",2.52
+"834","Montevideo","Taxi",1.07
+"835","Montevideo","Beer",2.55
+"836","Montevideo","Rent",411.55
+"837","Montevideo","Meal",9.14
+"838","Montevideo","Sun",2481
+"839","Montevideo","Fun",326
+"840","Montevideo","Insta",3.05
+"841","Montreal","Wifi",27
+"842","Montreal","Co_Work",60
+"843","Montreal","Coffee",3.08
+"844","Montreal","Taxi",1.31
+"845","Montreal","Beer",4.51
+"846","Montreal","Rent",959
+"847","Montreal","Meal",11.27
+"848","Montreal","Sun",2051
+"849","Montreal","Fun",793
+"850","Montreal","Insta",18.83
+"851","Moscow","Wifi",17
+"852","Moscow","Co_Work",47
+"853","Moscow","Coffee",2.21
+"854","Moscow","Taxi",0.2
+"855","Moscow","Beer",2.64
+"856","Moscow","Rent",836.36
+"857","Moscow","Meal",9.83
+"858","Moscow","Sun",1901
+"859","Moscow","Fun",4653
+"860","Moscow","Insta",58.2
+"861","Mumbai","Wifi",23
+"862","Mumbai","Co_Work",152
+"863","Mumbai","Coffee",2.04
+"864","Mumbai","Taxi",0.29
+"865","Mumbai","Beer",2.13
+"866","Mumbai","Rent",545.53
+"867","Mumbai","Meal",3.77
+"868","Mumbai","Sun",2584
+"869","Mumbai","Fun",892
+"870","Mumbai","Insta",47.2
+"871","Munich","Wifi",31
+"872","Munich","Co_Work",87
+"873","Munich","Coffee",3.51
+"874","Munich","Taxi",2.22
+"875","Munich","Beer",4.45
+"876","Munich","Rent",1450.25
+"877","Munich","Meal",15.54
+"878","Munich","Sun",1709
+"879","Munich","Fun",735
+"880","Munich","Insta",12.13
+"881","Muscat","Wifi",8
+"882","Muscat","Co_Work",7
+"883","Muscat","Coffee",4.51
+"884","Muscat","Taxi",0.66
+"885","Muscat","Beer",9.72
+"886","Muscat","Rent",582.54
+"887","Muscat","Meal",6.07
+"888","Muscat","Sun",3493
+"889","Muscat","Fun",219
+"890","Muscat","Insta",3.43
+"891","Naples","Wifi",19
+"892","Naples","Co_Work",7
+"893","Naples","Coffee",1.53
+"894","Naples","Taxi",1.13
+"895","Naples","Beer",3.33
+"896","Naples","Rent",715.04
+"897","Naples","Meal",11.1
+"898","Naples","Sun",2375
+"899","Naples","Fun",1045
+"900","Naples","Insta",8.87
+"901","New Delhi","Wifi",12
+"902","New Delhi","Co_Work",165
+"903","New Delhi","Coffee",1.85
+"904","New Delhi","Taxi",0.25
+"905","New Delhi","Beer",1.89
+"906","New Delhi","Rent",233.02
+"907","New Delhi","Meal",3.77
+"908","New Delhi","Sun",2685
+"909","New Delhi","Fun",2019
+"910","New Delhi","Insta",28.53
+"911","New Orleans","Wifi",45
+"912","New Orleans","Co_Work",16
+"913","New Orleans","Coffee",4.23
+"914","New Orleans","Taxi",2
+"915","New Orleans","Beer",3.26
+"916","New Orleans","Rent",1303.33
+"917","New Orleans","Meal",16.26
+"918","New Orleans","Sun",2649
+"919","New Orleans","Fun",1016
+"920","New Orleans","Insta",11.61
+"921","New York","Wifi",37
+"922","New York","Co_Work",272
+"923","New York","Coffee",4.52
+"924","New York","Taxi",1.74
+"925","New York","Beer",6.88
+"926","New York","Rent",2823.18
+"927","New York","Meal",18.72
+"928","New York","Sun",2535
+"929","New York","Fun",10269
+"930","New York","Insta",113.71
+"931","Oaxaca","Wifi",16
+"932","Oaxaca","Co_Work",7
+"933","Oaxaca","Coffee",2.12
+"934","Oaxaca","Taxi",1.14
+"935","Oaxaca","Beer",0.95
+"936","Oaxaca","Rent",322.24
+"937","Oaxaca","Meal",4.24
+"938","Oaxaca","Sun",2896
+"939","Oaxaca","Fun",294
+"940","Oaxaca","Insta",4.73
+"941","Osaka","Wifi",26
+"942","Osaka","Co_Work",47
+"943","Osaka","Coffee",3.03
+"944","Osaka","Taxi",3.39
+"945","Osaka","Beer",1.9
+"946","Osaka","Rent",807.4
+"947","Osaka","Meal",6.77
+"948","Osaka","Sun",1996
+"949","Osaka","Fun",790
+"950","Osaka","Insta",16.06
+"951","Oslo","Wifi",49
+"952","Oslo","Co_Work",33
+"953","Oslo","Coffee",4.71
+"954","Oslo","Taxi",1.51
+"955","Oslo","Beer",9.71
+"956","Oslo","Rent",1434.11
+"957","Oslo","Meal",19.38
+"958","Oslo","Sun",1668
+"959","Oslo","Fun",444
+"960","Oslo","Insta",8.12
+"961","Ottawa","Wifi",26
+"962","Ottawa","Co_Work",24
+"963","Ottawa","Coffee",3.37
+"964","Ottawa","Taxi",1.49
+"965","Ottawa","Beer",5.24
+"966","Ottawa","Rent",1206.49
+"967","Ottawa","Meal",14.98
+"968","Ottawa","Sun",2084
+"969","Ottawa","Fun",435
+"970","Ottawa","Insta",6.91
+"971","Palma de Mallorca","Wifi",29
+"972","Palma de Mallorca","Co_Work",15
+"973","Palma de Mallorca","Coffee",2.35
+"974","Palma de Mallorca","Taxi",1.08
+"975","Palma de Mallorca","Beer",2.77
+"976","Palma de Mallorca","Rent",958.05
+"977","Palma de Mallorca","Meal",16.6
+"978","Palma de Mallorca","Sun",2763
+"979","Palma de Mallorca","Fun",446
+"980","Palma de Mallorca","Insta",2.37
+"981","Paris","Wifi",30
+"982","Paris","Co_Work",136
+"983","Paris","Coffee",4.12
+"984","Paris","Taxi",1.66
+"985","Paris","Beer",6.92
+"986","Paris","Rent",1370.5
+"987","Paris","Meal",16.6
+"988","Paris","Sun",1662
+"989","Paris","Fun",4265
+"990","Paris","Insta",130.03
+"991","Perth","Wifi",19
+"992","Perth","Co_Work",29
+"993","Perth","Coffee",3.19
+"994","Perth","Taxi",1.18
+"995","Perth","Beer",6.2
+"996","Perth","Rent",1044.99
+"997","Perth","Meal",13.78
+"998","Perth","Sun",3230
+"999","Perth","Fun",416
+"1000","Perth","Insta",10.68
+"1001","Phnom Penh","Wifi",8
+"1002","Phnom Penh","Co_Work",27
+"1003","Phnom Penh","Coffee",2.2
+"1004","Phnom Penh","Taxi",0.94
+"1005","Phnom Penh","Beer",0.7
+"1006","Phnom Penh","Rent",439.47
+"1007","Phnom Penh","Meal",2.8
+"1008","Phnom Penh","Sun",3197
+"1009","Phnom Penh","Fun",522
+"1010","Phnom Penh","Insta",1.2
+"1011","Phoenix","Wifi",44
+"1012","Phoenix","Co_Work",35
+"1013","Phoenix","Coffee",4.32
+"1014","Phoenix","Taxi",1.3
+"1015","Phoenix","Beer",4.67
+"1016","Phoenix","Rent",1218.07
+"1017","Phoenix","Meal",14.01
+"1018","Phoenix","Sun",3872
+"1019","Phoenix","Fun",389
+"1020","Phoenix","Insta",9.83
+"1021","Phuket","Wifi",23
+"1022","Phuket","Co_Work",11
+"1023","Phuket","Coffee",2.25
+"1024","Phuket","Taxi",0.99
+"1025","Phuket","Beer",2.55
+"1026","Phuket","Rent",391.4
+"1027","Phuket","Meal",3.54
+"1028","Phuket","Sun",3450
+"1029","Phuket","Fun",1698
+"1030","Phuket","Insta",10.19
+"1031","Pokhara","Wifi",9
+"1032","Pokhara","Co_Work",3
+"1033","Pokhara","Coffee",1.08
+"1034","Pokhara","Taxi",0.59
+"1035","Pokhara","Beer",2.35
+"1036","Pokhara","Rent",107.93
+"1037","Pokhara","Meal",1.77
+"1038","Pokhara","Sun",2573
+"1039","Pokhara","Fun",344
+"1040","Pokhara","Insta",0.74
+"1041","Portland","Wifi",44
+"1042","Portland","Co_Work",31
+"1043","Portland","Coffee",3.95
+"1044","Portland","Taxi",1.51
+"1045","Portland","Beer",5.59
+"1046","Portland","Rent",1496.57
+"1047","Portland","Meal",14.91
+"1048","Portland","Sun",2341
+"1049","Portland","Fun",741
+"1050","Portland","Insta",12.33
+"1051","Porto","Wifi",29
+"1052","Porto","Co_Work",32
+"1053","Porto","Coffee",1.74
+"1054","Porto","Taxi",0.56
+"1055","Porto","Beer",2.21
+"1056","Porto","Rent",744.8
+"1057","Porto","Meal",7.75
+"1058","Porto","Sun",2468
+"1059","Porto","Fun",802
+"1060","Porto","Insta",9.73
+"1061","Prague","Wifi",36
+"1062","Prague","Co_Work",38
+"1063","Prague","Coffee",2.47
+"1064","Prague","Taxi",1.21
+"1065","Prague","Beer",2.39
+"1066","Prague","Rent",773.92
+"1067","Prague","Meal",6.51
+"1068","Prague","Sun",1668
+"1069","Prague","Fun",2342
+"1070","Prague","Insta",17.54
+"1071","Quito","Wifi",12
+"1072","Quito","Co_Work",35
+"1073","Quito","Coffee",2.22
+"1074","Quito","Taxi",1.4
+"1075","Quito","Beer",1.86
+"1076","Quito","Rent",446.95
+"1077","Quito","Meal",3.5
+"1078","Quito","Sun",2238
+"1079","Quito","Fun",493
+"1080","Quito","Insta",8.41
+"1081","Reykjavik","Wifi",26
+"1082","Reykjavik","Co_Work",9
+"1083","Reykjavik","Coffee",4.37
+"1084","Reykjavik","Taxi",2.64
+"1085","Reykjavik","Beer",9.02
+"1086","Reykjavik","Rent",1521.78
+"1087","Reykjavik","Meal",18.8
+"1088","Reykjavik","Sun",1326
+"1089","Reykjavik","Fun",629
+"1090","Reykjavik","Insta",2.06
+"1091","Riga","Wifi",23
+"1092","Riga","Co_Work",20
+"1093","Riga","Coffee",2.86
+"1094","Riga","Taxi",0.78
+"1095","Riga","Beer",3.32
+"1096","Riga","Rent",489.49
+"1097","Riga","Meal",8.85
+"1098","Riga","Sun",1754
+"1099","Riga","Fun",540
+"1100","Riga","Insta",3.6
+"1101","Rio de Janeiro","Wifi",10
+"1102","Rio de Janeiro","Co_Work",42
+"1103","Rio de Janeiro","Coffee",1.4
+"1104","Rio de Janeiro","Taxi",0.55
+"1105","Rio de Janeiro","Beer",1.47
+"1106","Rio de Janeiro","Rent",344.4
+"1107","Rio de Janeiro","Meal",5.97
+"1108","Rio de Janeiro","Sun",2187
+"1109","Rio de Janeiro","Fun",1607
+"1110","Rio de Janeiro","Insta",43.04
+"1111","Rome","Wifi",17
+"1112","Rome","Co_Work",50
+"1113","Rome","Coffee",1.39
+"1114","Rome","Taxi",1.33
+"1115","Rome","Beer",5.54
+"1116","Rome","Rent",1069.77
+"1117","Rome","Meal",16.6
+"1118","Rome","Sun",2473
+"1119","Rome","Fun",3444
+"1120","Rome","Insta",27.67
+"1121","Rotterdam","Wifi",37
+"1122","Rotterdam","Co_Work",31
+"1123","Rotterdam","Coffee",3.28
+"1124","Rotterdam","Taxi",2.22
+"1125","Rotterdam","Beer",4.42
+"1126","Rotterdam","Rent",1320.93
+"1127","Rotterdam","Meal",16.56
+"1128","Rotterdam","Sun",1745
+"1129","Rotterdam","Fun",323
+"1130","Rotterdam","Insta",6.75
+"1131","Salzburg","Wifi",30
+"1132","Salzburg","Co_Work",7
+"1133","Salzburg","Coffee",3.48
+"1134","Salzburg","Taxi",2.14
+"1135","Salzburg","Beer",4.32
+"1136","Salzburg","Rent",852.45
+"1137","Salzburg","Meal",13.83
+"1138","Salzburg","Sun",1697
+"1139","Salzburg","Fun",290
+"1140","Salzburg","Insta",3.11
+"1141","San Diego","Wifi",74
+"1142","San Diego","Co_Work",53
+"1143","San Diego","Coffee",3.98
+"1144","San Diego","Taxi",1.74
+"1145","San Diego","Beer",5.59
+"1146","San Diego","Rent",2019.93
+"1147","San Diego","Meal",13.97
+"1148","San Diego","Sun",3055
+"1149","San Diego","Fun",1118
+"1150","San Diego","Insta",29.89
+"1151","San Francisco","Wifi",75
+"1152","San Francisco","Co_Work",77
+"1153","San Francisco","Coffee",4.41
+"1154","San Francisco","Taxi",1.74
+"1155","San Francisco","Beer",6.55
+"1156","San Francisco","Rent",2793.75
+"1157","San Francisco","Meal",18.64
+"1158","San Francisco","Sun",3062
+"1159","San Francisco","Fun",1490
+"1160","San Francisco","Insta",30.78
+"1161","San Jose","Wifi",10
+"1162","San Jose","Co_Work",17
+"1163","San Jose","Coffee",2.24
+"1164","San Jose","Taxi",0.98
+"1165","San Jose","Beer",2.26
+"1166","San Jose","Rent",542.2
+"1167","San Jose","Meal",6.77
+"1168","San Jose","Sun",2081
+"1169","San Jose","Fun",305
+"1170","San Jose","Insta",5.08
+"1171","Santiago","Wifi",11
+"1172","Santiago","Co_Work",57
+"1173","Santiago","Coffee",2.87
+"1174","Santiago","Taxi",1.22
+"1175","Santiago","Beer",3.68
+"1176","Santiago","Rent",404.53
+"1177","Santiago","Meal",8.58
+"1178","Santiago","Sun",2808
+"1179","Santiago","Fun",1041
+"1180","Santiago","Insta",19.69
+"1181","São Paulo","Wifi",17
+"1182","São Paulo","Co_Work",112
+"1183","São Paulo","Coffee",1.48
+"1184","São Paulo","Taxi",1.1
+"1185","São Paulo","Beer",1.83
+"1186","São Paulo","Rent",421.11
+"1187","São Paulo","Meal",5.5
+"1188","São Paulo","Sun",1894
+"1189","São Paulo","Fun",1267
+"1190","São Paulo","Insta",32.18
+"1191","Seoul","Wifi",25
+"1192","Seoul","Co_Work",74
+"1193","Seoul","Coffee",3.87
+"1194","Seoul","Taxi",0.72
+"1195","Seoul","Beer",3.04
+"1196","Seoul","Rent",835.6
+"1197","Seoul","Meal",6.5
+"1198","Seoul","Sun",2066
+"1199","Seoul","Fun",1166
+"1200","Seoul","Insta",20.38
+"1201","Seville","Wifi",28
+"1202","Seville","Co_Work",7
+"1203","Seville","Coffee",1.57
+"1204","Seville","Taxi",1.04
+"1205","Seville","Beer",2.21
+"1206","Seville","Rent",729.66
+"1207","Seville","Meal",9.96
+"1208","Seville","Sun",2898
+"1209","Seville","Fun",932
+"1210","Seville","Insta",1.76
+"1211","Shanghai","Wifi",39
+"1212","Shanghai","Co_Work",119
+"1213","Shanghai","Coffee",3.82
+"1214","Shanghai","Taxi",0.42
+"1215","Shanghai","Beer",1.44
+"1216","Shanghai","Rent",1247.25
+"1217","Shanghai","Meal",4.33
+"1218","Shanghai","Sun",1776
+"1219","Shanghai","Fun",975
+"1220","Shanghai","Insta",10.97
+"1221","Siem Reap","Wifi",9
+"1222","Siem Reap","Co_Work",3
+"1223","Siem Reap","Coffee",1.62
+"1224","Siem Reap","Taxi",0.7
+"1225","Siem Reap","Beer",0.82
+"1226","Siem Reap","Rent",264.46
+"1227","Siem Reap","Meal",1.86
+"1228","Siem Reap","Sun",3519
+"1229","Siem Reap","Fun",1650
+"1230","Siem Reap","Insta",2.29
+"1231","Singapore","Wifi",93
+"1232","Singapore","Co_Work",117
+"1233","Singapore","Coffee",3.84
+"1234","Singapore","Taxi",0.62
+"1235","Singapore","Beer",6.2
+"1236","Singapore","Rent",1892.5
+"1237","Singapore","Meal",9.46
+"1238","Singapore","Sun",2022
+"1239","Singapore","Fun",1561
+"1240","Singapore","Insta",41.45
+"1241","Sofia","Wifi",30
+"1242","Sofia","Co_Work",53
+"1243","Sofia","Coffee",1.47
+"1244","Sofia","Taxi",0.45
+"1245","Sofia","Beer",1.66
+"1246","Sofia","Rent",407.67
+"1247","Sofia","Meal",6.8
+"1248","Sofia","Sun",2177
+"1249","Sofia","Fun",598
+"1250","Sofia","Insta",4.2
+"1251","Split","Wifi",20
+"1252","Split","Co_Work",6
+"1253","Split","Coffee",1.77
+"1254","Split","Taxi",1.47
+"1255","Split","Beer",2.95
+"1256","Split","Rent",468.51
+"1257","Split","Meal",10.32
+"1258","Split","Sun",2631
+"1259","Split","Fun",550
+"1260","Split","Insta",4.25
+"1261","St. Petersburg","Wifi",21
+"1262","St. Petersburg","Co_Work",4
+"1263","St. Petersburg","Coffee",3.13
+"1264","St. Petersburg","Taxi",1.3
+"1265","St. Petersburg","Beer",3.73
+"1266","St. Petersburg","Rent",1294.01
+"1267","St. Petersburg","Meal",11.65
+"1268","St. Petersburg","Sun",1636
+"1269","St. Petersburg","Fun",3218
+"1270","St. Petersburg","Insta",3.03
+"1271","Stockholm","Wifi",37
+"1272","Stockholm","Co_Work",50
+"1273","Stockholm","Coffee",4.36
+"1274","Stockholm","Taxi",1.47
+"1275","Stockholm","Beer",7.62
+"1276","Stockholm","Rent",1500.29
+"1277","Stockholm","Meal",13.07
+"1278","Stockholm","Sun",1803
+"1279","Stockholm","Fun",557
+"1280","Stockholm","Insta",13.63
+"1281","Stuttgart","Wifi",33
+"1282","Stuttgart","Co_Work",25
+"1283","Stuttgart","Coffee",3.26
+"1284","Stuttgart","Taxi",1.89
+"1285","Stuttgart","Beer",4.43
+"1286","Stuttgart","Rent",1041.08
+"1287","Stuttgart","Meal",13.29
+"1288","Stuttgart","Sun",1692
+"1289","Stuttgart","Fun",250
+"1290","Stuttgart","Insta",9.95
+"1291","Sydney","Wifi",28
+"1292","Sydney","Co_Work",93
+"1293","Sydney","Coffee",2.78
+"1294","Sydney","Taxi",1.62
+"1295","Sydney","Beer",5.51
+"1296","Sydney","Rent",1817.6
+"1297","Sydney","Meal",12.4
+"1298","Sydney","Sun",2636
+"1299","Sydney","Fun",1343
+"1300","Sydney","Insta",33.86
+"1301","Taipei","Wifi",19
+"1302","Taipei","Co_Work",60
+"1303","Taipei","Coffee",3.04
+"1304","Taipei","Taxi",0.83
+"1305","Taipei","Beer",2
+"1306","Taipei","Rent",678.04
+"1307","Taipei","Meal",4
+"1308","Taipei","Sun",1405
+"1309","Taipei","Fun",1031
+"1310","Taipei","Insta",14.32
+"1311","Tallinn","Wifi",37
+"1312","Tallinn","Co_Work",14
+"1313","Tallinn","Coffee",3.16
+"1314","Tallinn","Taxi",0.66
+"1315","Tallinn","Beer",4.43
+"1316","Tallinn","Rent",606.45
+"1317","Tallinn","Meal",11.08
+"1318","Tallinn","Sun",1923
+"1319","Tallinn","Fun",490
+"1320","Tallinn","Insta",2.86
+"1321","Tel Aviv","Wifi",14
+"1322","Tel Aviv","Co_Work",28
+"1323","Tel Aviv","Coffee",3.93
+"1324","Tel Aviv","Taxi",1.14
+"1325","Tel Aviv","Beer",8.63
+"1326","Tel Aviv","Rent",1492.57
+"1327","Tel Aviv","Meal",18.69
+"1328","Tel Aviv","Sun",3311
+"1329","Tel Aviv","Fun",757
+"1330","Tel Aviv","Insta",6.47
+"1331","Tokyo","Wifi",32
+"1332","Tokyo","Co_Work",163
+"1333","Tokyo","Coffee",3.44
+"1334","Tokyo","Taxi",3.58
+"1335","Tokyo","Beer",4.25
+"1336","Tokyo","Rent",1315.04
+"1337","Tokyo","Meal",8.52
+"1338","Tokyo","Sun",1881
+"1339","Tokyo","Fun",3416
+"1340","Tokyo","Insta",56.62
+"1341","Toronto","Wifi",26
+"1342","Toronto","Co_Work",113
+"1343","Toronto","Coffee",3.42
+"1344","Toronto","Taxi",1.49
+"1345","Toronto","Beer",5.24
+"1346","Toronto","Rent",1476.7
+"1347","Toronto","Meal",14.98
+"1348","Toronto","Sun",2066
+"1349","Toronto","Fun",1048
+"1350","Toronto","Insta",50.16
+"1351","Valencia","Wifi",30
+"1352","Valencia","Co_Work",39
+"1353","Valencia","Coffee",1.96
+"1354","Valencia","Taxi",1.1
+"1355","Valencia","Beer",3.32
+"1356","Valencia","Rent",773.34
+"1357","Valencia","Meal",11.08
+"1358","Valencia","Sun",2660
+"1359","Valencia","Fun",681
+"1360","Valencia","Insta",23.39
+"1361","Valletta","Wifi",10
+"1362","Valletta","Co_Work",1
+"1363","Valletta","Coffee",3.03
+"1364","Valletta","Taxi",3.32
+"1365","Valletta","Beer",3.96
+"1366","Valletta","Rent",1158.29
+"1367","Valletta","Meal",22.14
+"1368","Valletta","Sun",3054
+"1369","Valletta","Fun",144
+"1370","Valletta","Insta",0.76
+"1371","Vancouver","Wifi",40
+"1372","Vancouver","Co_Work",43
+"1373","Vancouver","Coffee",3.38
+"1374","Vancouver","Taxi",1.4
+"1375","Vancouver","Beer",5.24
+"1376","Vancouver","Rent",1516.89
+"1377","Vancouver","Meal",14.98
+"1378","Vancouver","Sun",1938
+"1379","Vancouver","Fun",729
+"1380","Vancouver","Insta",24.26
+"1381","Vienna","Wifi",42
+"1382","Vienna","Co_Work",91
+"1383","Vienna","Coffee",3.67
+"1384","Vienna","Taxi",1.57
+"1385","Vienna","Beer",4.43
+"1386","Vienna","Rent",981.5
+"1387","Vienna","Meal",12.18
+"1388","Vienna","Sun",1930
+"1389","Vienna","Fun",1149
+"1390","Vienna","Insta",14.45
+"1391","Vientiane","Wifi",5
+"1392","Vientiane","Co_Work",3
+"1393","Vientiane","Coffee",2.13
+"1394","Vientiane","Taxi",1.86
+"1395","Vientiane","Beer",1.07
+"1396","Vientiane","Rent",475.89
+"1397","Vientiane","Meal",3.26
+"1398","Vientiane","Sun",3250
+"1399","Vientiane","Fun",104
+"1400","Vientiane","Insta",0.41
+"1401","Vilnius","Wifi",25
+"1402","Vilnius","Co_Work",22
+"1403","Vilnius","Coffee",2.64
+"1404","Vilnius","Taxi",0.66
+"1405","Vilnius","Beer",3.55
+"1406","Vilnius","Rent",579.79
+"1407","Vilnius","Meal",8.85
+"1408","Vilnius","Sun",1691
+"1409","Vilnius","Fun",457
+"1410","Vilnius","Insta",3.41
+"1411","Warsaw","Wifi",23
+"1412","Warsaw","Co_Work",54
+"1413","Warsaw","Coffee",2.91
+"1414","Warsaw","Taxi",0.73
+"1415","Warsaw","Beer",2.55
+"1416","Warsaw","Rent",798.5
+"1417","Warsaw","Meal",7.27
+"1418","Warsaw","Sun",1571
+"1419","Warsaw","Fun",829
+"1420","Warsaw","Insta",11.97
+"1421","Washington DC","Wifi",68
+"1422","Washington DC","Co_Work",59
+"1423","Washington DC","Coffee",4.29
+"1424","Washington DC","Taxi",2.43
+"1425","Washington DC","Beer",5.59
+"1426","Washington DC","Rent",2166.66
+"1427","Washington DC","Meal",13.97
+"1428","Washington DC","Sun",2528
+"1429","Washington DC","Fun",778
+"1430","Washington DC","Insta",10.77
+"1431","Xi'an","Wifi",16
+"1432","Xi'an","Co_Work",4
+"1433","Xi'an","Coffee",4.32
+"1434","Xi'an","Taxi",0.29
+"1435","Xi'an","Beer",0.72
+"1436","Xi'an","Rent",304.84
+"1437","Xi'an","Meal",2.89
+"1438","Xi'an","Sun",3406
+"1439","Xi'an","Fun",242
+"1440","Xi'an","Insta",0.57
+"1441","Yangon","Wifi",10
+"1442","Yangon","Co_Work",22
+"1443","Yangon","Coffee",2.09
+"1444","Yangon","Taxi",0.94
+"1445","Yangon","Beer",0.94
+"1446","Yangon","Rent",772.23
+"1447","Yangon","Meal",3.3
+"1448","Yangon","Sun",3156
+"1449","Yangon","Fun",478
+"1450","Yangon","Insta",0.99
+"1451","Zagreb","Wifi",25
+"1452","Zagreb","Co_Work",12
+"1453","Zagreb","Coffee",1.69
+"1454","Zagreb","Taxi",0.74
+"1455","Zagreb","Beer",2.21
+"1456","Zagreb","Rent",529.96
+"1457","Zagreb","Meal",7.37
+"1458","Zagreb","Sun",1913
+"1459","Zagreb","Fun",520
+"1460","Zagreb","Insta",3.48
+"1461","Zurich","Wifi",33
+"1462","Zurich","Co_Work",42
+"1463","Zurich","Coffee",5.16
+"1464","Zurich","Taxi",3.9
+"1465","Zurich","Beer",7.19
+"1466","Zurich","Rent",2003.91
+"1467","Zurich","Meal",25.69
+"1468","Zurich","Sun",1566
+"1469","Zurich","Fun",485
+"1470","Zurich","Insta",6.9
