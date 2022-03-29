@@ -5,142 +5,142 @@ shinyServer(function(input, output) {
   
   output$slider1 <- renderUI({
     slider2.value <- input$WifiScore2
-    default.slider1 <- if (is.null(slider2.value)) 50 else slider2.value
-    sliderInput(inputId = "WifiScore", label = "Wifi Speed",
-                min = 0, max = 100, value = default.slider1)
+    default.slider1 <- if (is.null(slider2.value)) 0 else slider2.value
+    sliderInput(inputId = "WifiScore", label = "Wifi: Slow~Fast",
+                min = -5, max = 5, value = default.slider1)
   })
   
   output$slider2 <- renderUI({
     slider1.value <- input$WifiScore
-    default.slider2 <- if (is.null(slider1.value)) 50 else slider1.value
-    sliderInput(inputId = "WifiScore2", label = "Wifi Speed",
-                min = 0, max = 100, value = default.slider2)
+    default.slider2 <- if (is.null(slider1.value)) 0 else slider1.value
+    sliderInput(inputId = "WifiScore2", label = "Wifi: Slow~Fast",
+                min = -5, max = 5, value = default.slider2)
   })
   
   output$slider3 <- renderUI({
     slider4.value <- input$CoWorkScore2
-    default.slider3 <- if (is.null(slider4.value)) 50 else slider4.value
-    sliderInput(inputId = "CoWorkScore", label = "Co-Working Spaces",
-                min = 0, max = 100, value = default.slider3)
+    default.slider3 <- if (is.null(slider4.value)) 0 else slider4.value
+    sliderInput(inputId = "CoWorkScore", label = "Co-Work: Less~More",
+                min = -5, max = 5, value = default.slider3)
   })
   
   output$slider4 <- renderUI({
     slider3.value <- input$CoWorkScore
-    default.slider4 <- if (is.null(slider3.value)) 50 else slider3.value
-    sliderInput(inputId = "CoWorkScore2", label = "Co-Working Spaces",
-                min = 0, max = 100, value = default.slider4)
+    default.slider4 <- if (is.null(slider3.value)) 0 else slider3.value
+    sliderInput(inputId = "CoWorkScore2", label = "Co-Work: Less~More",
+                min = -5, max = 5, value = default.slider4)
   })
   
   output$slider5 <- renderUI({
     slider6.value <- input$CoffeeScore2
-    default.slider5 <- if (is.null(slider6.value)) 50 else slider6.value
-    sliderInput(inputId = "CoffeeScore", label = "Coffee",
-                min = 0, max = 100, value = default.slider5)
+    default.slider5 <- if (is.null(slider6.value)) 0 else slider6.value
+    sliderInput(inputId = "CoffeeScore", label = "Coffee: Cheap~Exp",
+                min = -5, max = 5, value = default.slider5)
   })
   
   output$slider6 <- renderUI({
     slider5.value <- input$CoffeeScore
-    default.slider6 <- if (is.null(slider5.value)) 50 else slider5.value
-    sliderInput(inputId = "CoffeeScore2", label = "Coffee",
-                min = 0, max = 100, value = default.slider6)
+    default.slider6 <- if (is.null(slider5.value)) 0 else slider5.value
+    sliderInput(inputId = "CoffeeScore2", label = "Coffee: Cheap~Exp",
+                min = -5, max = 5, value = default.slider6)
   })
   
   output$slider7 <- renderUI({
     slider8.value <- input$TaxiScore2
-    default.slider7 <- if (is.null(slider8.value)) 50 else slider8.value
-    sliderInput(inputId = "TaxiScore", label = "Taxi",
-                min = 0, max = 100, value = default.slider7)
+    default.slider7 <- if (is.null(slider8.value)) 0 else slider8.value
+    sliderInput(inputId = "TaxiScore", label = "Taxi: Cheap~Exp",
+                min = -5, max = 5, value = default.slider7)
   })
   
   output$slider8 <- renderUI({
     slider7.value <- input$TaxiScore
-    default.slider8 <- if (is.null(slider7.value)) 50 else slider7.value
-    sliderInput(inputId = "TaxiScore2", label = "Taxi",
-                min = 0, max = 100, value = default.slider8)
+    default.slider8 <- if (is.null(slider7.value)) 0 else slider7.value
+    sliderInput(inputId = "TaxiScore2", label = "Taxi: Cheap~Exp",
+                min = -5, max = 5, value = default.slider8)
   })
   
   output$slider9 <- renderUI({
     slider10.value <- input$BeerScore2
-    default.slider9 <- if (is.null(slider10.value)) 50 else slider10.value
-    sliderInput(inputId = "BeerScore", label = "Beer",
-                min = 0, max = 100, value = default.slider9)
+    default.slider9 <- if (is.null(slider10.value)) 0 else slider10.value
+    sliderInput(inputId = "BeerScore", label = "Beer: Cheap~Exp",
+                min = -5, max = 5, value = default.slider9)
   })
   
   output$slider10 <- renderUI({
     slider9.value <- input$BeerScore
-    default.slider10 <- if (is.null(slider9.value)) 50 else slider9.value
-    sliderInput(inputId = "BeerScore2", label = "Beer",
-                min = 0, max = 100, value = default.slider10)
+    default.slider10 <- if (is.null(slider9.value)) 0 else slider9.value
+    sliderInput(inputId = "BeerScore2", label = "Beer: Cheap~Exp",
+                min = -5, max = 5, value = default.slider10)
   })
   
   output$slider11 <- renderUI({
     slider12.value <- input$RentScore2
-    default.slider11 <- if (is.null(slider12.value)) 50 else slider12.value
-    sliderInput(inputId = "RentScore", label = "Rent",
-                min = 0, max = 100, value = default.slider11)
+    default.slider11 <- if (is.null(slider12.value)) 0 else slider12.value
+    sliderInput(inputId = "RentScore", label = "Rent: Cheap~Exp",
+                min = -5, max = 5, value = default.slider11)
   })
   
   output$slider12 <- renderUI({
     slider11.value <- input$RentScore
-    default.slider12 <- if (is.null(slider11.value)) 50 else slider11.value
-    sliderInput(inputId = "RentScore2", label = "Rent",
-                min = 0, max = 100, value = default.slider12)
+    default.slider12 <- if (is.null(slider11.value)) 0 else slider11.value
+    sliderInput(inputId = "RentScore2", label = "Rent: Cheap~Exp",
+                min = -5, max = 5, value = default.slider12)
   })
   
   output$slider13 <- renderUI({
     slider14.value <- input$MealScore2
-    default.slider13 <- if (is.null(slider14.value)) 50 else slider14.value
-    sliderInput(inputId = "MealScore", label = "Meals",
-                min = 0, max = 100, value = default.slider13)
+    default.slider13 <- if (is.null(slider14.value)) 0 else slider14.value
+    sliderInput(inputId = "MealScore", label = "Meals: Cheap~Exp",
+                min = -5, max = 5, value = default.slider13)
   })
   
   output$slider14 <- renderUI({
     slider13.value <- input$MealScore
-    default.slider14 <- if (is.null(slider13.value)) 50 else slider13.value
-    sliderInput(inputId = "MealScore2", label = "Meals",
-                min = 0, max = 100, value = default.slider14)
+    default.slider14 <- if (is.null(slider13.value)) 0 else slider13.value
+    sliderInput(inputId = "MealScore2", label = "Meals: Cheap~Exp",
+                min = -5, max = 5, value = default.slider14)
   })
   
   output$slider15 <- renderUI({
     slider16.value <- input$SunScore2
-    default.slider15 <- if (is.null(slider16.value)) 50 else slider16.value
-    sliderInput(inputId = "SunScore", label = "Sunshine Hours",
-                min = 0, max = 100, value = default.slider15)
+    default.slider15 <- if (is.null(slider16.value)) 0 else slider16.value
+    sliderInput(inputId = "SunScore", label = "Sunshine: Less~More",
+                min = -5, max = 5, value = default.slider15)
   })
   
   output$slider16 <- renderUI({
     slider15.value <- input$SunScore
-    default.slider16 <- if (is.null(slider15.value)) 50 else slider15.value
-    sliderInput(inputId = "SunScore2", label = "Sunshine Hours",
-                min = 0, max = 100, value = default.slider16)
+    default.slider16 <- if (is.null(slider15.value)) 0 else slider15.value
+    sliderInput(inputId = "SunScore2", label = "Sunshine: Less~More",
+                min = -5, max = 5, value = default.slider16)
   })
   
   output$slider17 <- renderUI({
     slider18.value <- input$FunScore2
-    default.slider17 <- if (is.null(slider18.value)) 50 else slider18.value
-    sliderInput(inputId = "FunScore", label = "Tripadvisor Attractions",
-                min = 0, max = 100, value = default.slider17)
+    default.slider17 <- if (is.null(slider18.value)) 0 else slider18.value
+    sliderInput(inputId = "FunScore", label = "Tripadvisor: Less~More",
+                min = -5, max = 5, value = default.slider17)
   })
   
   output$slider18 <- renderUI({
     slider17.value <- input$FunScore
-    default.slider18 <- if (is.null(slider17.value)) 50 else slider17.value
-    sliderInput(inputId = "FunScore2", label = "Tripadvisor Attractions",
-                min = 0, max = 100, value = default.slider18)
+    default.slider18 <- if (is.null(slider17.value)) 0 else slider17.value
+    sliderInput(inputId = "FunScore2", label = "Tripadvisor: Less~More",
+                min = -5, max = 5, value = default.slider18)
   })
   
   output$slider19 <- renderUI({
     slider20.value <- input$InstaScore2
-    default.slider19 <- if (is.null(slider20.value)) 50 else slider20.value
-    sliderInput(inputId = "InstaScore", label = "Instagrammability",
-                min = 0, max = 100, value = default.slider19)
+    default.slider19 <- if (is.null(slider20.value)) 0 else slider20.value
+    sliderInput(inputId = "InstaScore", label = "Insta: Less~More",
+                min = -5, max = 5, value = default.slider19)
   })
   
   output$slider20 <- renderUI({
     slider19.value <- input$InstaScore
-    default.slider20 <- if (is.null(slider19.value)) 50 else slider19.value
-    sliderInput(inputId = "InstaScore2", label = "Instagrammability",
-                min = 0, max = 100, value = default.slider20)
+    default.slider20 <- if (is.null(slider19.value)) 0 else slider19.value
+    sliderInput(inputId = "InstaScore2", label = "Insta: Less~More",
+                min = -5, max = 5, value = default.slider20)
   })
   
   
@@ -158,19 +158,19 @@ shinyServer(function(input, output) {
       select(Co_Work)*input$CoWorkScore2
     
     P3 = index %>%
-      select(Coffee)*input$CoffeeScore2
+      select(Coffee)*input$CoffeeScore2*-1
     
     P4 = index %>%
-      select(Taxi)*input$TaxiScore2
+      select(Taxi)*input$TaxiScore2*-1
     
     P5 = index %>%
-      select(Beer)*input$BeerScore2
+      select(Beer)*input$BeerScore2*-1
     
     P6 = index %>%
-      select(Rent)*input$RentScore2
+      select(Rent)*input$RentScore2*-1
     
     P7 = index %>%
-      select(Meal)*input$MealScore2
+      select(Meal)*input$MealScore2*-1
     
     P8 = index %>%
       select(Sun)*input$SunScore2
@@ -220,19 +220,19 @@ shinyServer(function(input, output) {
       select(Co_Work)*input$CoWorkScore2
     
     P3 = index %>%
-      select(Coffee)*input$CoffeeScore2
+      select(Coffee)*input$CoffeeScore2*-1
     
     P4 = index %>%
-      select(Taxi)*input$TaxiScore2
+      select(Taxi)*input$TaxiScore2*-1
     
     P5 = index %>%
-      select(Beer)*input$BeerScore2
+      select(Beer)*input$BeerScore2*-1
     
     P6 = index %>%
-      select(Rent)*input$RentScore2
+      select(Rent)*input$RentScore2*-1
     
     P7 = index %>%
-      select(Meal)*input$MealScore2
+      select(Meal)*input$MealScore2*-1
     
     P8 = index %>%
       select(Sun)*input$SunScore2
