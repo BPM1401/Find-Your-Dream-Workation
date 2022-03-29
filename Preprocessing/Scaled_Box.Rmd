@@ -59,6 +59,25 @@ names = colnames(pre_scale[c(5:14)])
 names
 ```
 
+```{r}
+unscaled = pre_scale[c(5:14)]
+unscaled = cbind(x=pre_scale[,3], y=pre_scale[c(5:14)])
+
+library(data.table)
+wrong_names = colnames(unscaled[c(2:11)])
+setnames(unscaled, old = c(wrong_names), new = c(names))
+View(unscaled)
+unscaled
+
+unscaled_longer = pivot_longer(unscaled, cols=2:11, names_to = 'Parameter', values_to = "Unscaled_Values")
+unscaled_longer
+View(unscaled_longer)
+
+write.csv(unscaled_longer, 'Unscaled1.csv')
+```
+
+
+
 
 
 ```{r}
