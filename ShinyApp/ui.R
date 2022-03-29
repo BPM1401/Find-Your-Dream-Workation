@@ -350,32 +350,8 @@ shinyUI(
                         
                         ))),
      
-     
-            tabPanel("Your City vs Median",
-                  mainPanel(
-                  
-                      fluidRow(
-                          align = "center",
-                        h3("CLICK On Your City!"),
-                        width=12),
-                  
-                     fluidRow(
-                          column(width=12, align='center',
-                                 leafletOutput(outputId = "Geo2", width="100%"))),
-                  
-                      fluidRow(
-                          column(width=12, align='center',
-                                 selectizeInput(inputId = "Para2",
-                                                label = "Parameter",
-                                                choices = rownames(t(df))[5:14])),
-                          column(width=3, align='center',
-                                 tableOutput(outputId = "MapTable")),
-                        column(width=9, align='center',
-                                 plotOutput(outputId = "Dist2")))
-                  )),
-     
             
-                tabPanel("Secret Sauce",
+                tabPanel("Z-Scaling",
                          sidebarLayout(
                              sidebarPanel(
                                  
@@ -388,10 +364,62 @@ shinyUI(
                                                 label = 'City2',
                                                 choices = colnames(citycomp)[3:149],
                                                 select = 'Singapore')
+                                 
+                                 
                              ),
                              
                              mainPanel(
-                                 plotOutput(outputId = "Box"))
+                                 plotOutput(outputId = "Box"),
                                  
-                                ))
+                                 checkboxInput("ZSC", label = "Z-Score Scaling",
+                                               value=FALSE, width='600px'),
+                                 
+                                 conditionalPanel(
+                                     condition = "input.ZSC == true",
+                                     fluidRow(h2("What is Z-Score Scaling?"),
+                                              htmlOutput("Z2"))),
+                                 
+                                 checkboxInput("Unscaled", label = "View Non-Scaled Box Plots",
+                                               value=FALSE, width='600px'),  
+                                 
+                                 conditionalPanel(
+                                     condition = "input.Unscaled == true",
+                                     fluidRow(plotOutput(outputId = "UnscaledBox")))
+                                 )
+                             
+                                 
+                                )),
+     
+     tabPanel("Your City vs Median",
+              mainPanel(
+                  
+                  fluidRow(
+                      align = "center",
+                      h3("CLICK On Your City!"),
+                      width=12),
+                  
+                  fluidRow(
+                      column(width=12, align='center',
+                             leafletOutput(outputId = "Geo2", width="100%"))),
+                  
+                  fluidRow(
+                      column(width=12, align='center',
+                             selectizeInput(inputId = "Para2",
+                                            label = "Parameter",
+                                            choices = rownames(t(df))[5:14])),
+                      column(width=3, align='center',
+                             tableOutput(outputId = "MapTable")),
+                      column(width=9, align='center',
+                             plotOutput(outputId = "Dist2")))
+              ))
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
 )))
