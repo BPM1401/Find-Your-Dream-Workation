@@ -53,7 +53,7 @@ shinyUI(
                          
                          fluidRow(
                          column(4,
-                                checkboxInput("Prior", label = "Set Your Priorities",
+                                checkboxInput("Prior", label = "Set Your Priorities (0 = Neutral)",
                                               value=FALSE, width='600px'),
                                 align='center'),
                          
