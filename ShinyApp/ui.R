@@ -162,7 +162,7 @@ shinyUI(
                          
                          )),
             
-            tabPanel("Your Dream Workation",
+            tabPanel("Map Your Options",
                      mainPanel(
                          fluidRow(leafletOutput(outputId = "Geo3")),
                          
@@ -215,143 +215,7 @@ shinyUI(
                          )),
                         
             
-            
-            
-                                    
-     #       tabPanel("1 City vs 1 Parameter",
-     #                sidebarLayout(
-     #                    sidebarPanel(
-     #                        
-     #                        selectizeInput(inputId = 'Ci',
-     #                                       label = 'City',
-     #                                       choices = df$City),
-     #                        
-     #                        selectizeInput(inputId = "Para",
-     #                                       label = "Parameter",
-     #                                       choices = rownames(t(df))[5:14]),
-     #                        
-     #                        checkboxInput("CRank1", "Rank Cities By Parameter", value=FALSE),
-     #                        
-     #                        conditionalPanel(
-     #                            condition = "input.CRank1 == true",
-     #                        
-     #                        numericInput(inputId = 'Top',
-     #                                     label = 'Ranking: High To Low',
-     #                                     value=10, 
-     #                                     min=1, 
-     #                                    max=75, 
-     #                                     step=1),
-     #                        
-     #                        numericInput(inputId = 'Bot',
-     #                                     label = 'Ranking: Low To High',
-     #                                    value = 10, 
-     #                                     min = 1, 
-     #                                     max = 75, 
-     #                                     step = 1)
-     #                    )),
-     #                    
-     #                    mainPanel(
-     #                            plotOutput(outputId = "Dist"),
-     #                            fluidPage(
-     #                                checkboxInput("CRank", "Show Ranking", value=FALSE),
-     #                                
-     #                                conditionalPanel(
-     #                                    condition = "input.CRank == true",
-     #               
-     #                               fluidRow(
-     #                                   column(width=6, align="center", h3("Ranking: High To Low"), 
-     #                                           tableOutput(outputId = "View")),
-     #                                   column(width=3, align="center", h3("Ranking: Low To High"), 
-     #                                           tableOutput(outputId = "View2")))
-     #                               
-     #                               ))
-     #                            
-     #                            ))),
-                     
-                   
-            tabPanel("Zone In: 2 Cities",
-                     sidebarLayout(
-                         sidebarPanel(
-                             
-        
-                selectizeInput(inputId = 'CityComp1',
-                               label = 'City1',
-                               choices = colnames(citycomp)[3:149],
-                               select = 'New York'),
-                
-                selectizeInput(inputId = 'CityComp2',
-                               label = 'City2',
-                               choices = colnames(citycomp)[3:149],
-                               select = 'Singapore'),
-                
-                checkboxGroupInput("my_choices", "Parameter (Select 1 or All)",
-                                   choices = c("Wifi", "Co-Working", "Coffee", "Taxi",
-                                               "Beer", "Rentals", "Meals", "Sun",
-                                               "Fun", 'Insta', 'All'))),
-                
-                mainPanel(
-                    
-                        fluidRow(h2("Comparing 2 Cities Across Parameters", align='center'),
-                            column(width = 3, align='center',
-                                   conditionalPanel(
-                                       condition = "input.my_choices == 'Wifi' || input.my_choices == 'All'",
-                                   plotOutput(outputId = "Bar1", width="90%"))),
-                                   
-                            column(width = 3, align='center',
-                                   conditionalPanel(
-                                       condition = "input.my_choices == 'Co-Working' || input.my_choices == 'All'",
-                                   plotOutput(outputId = "Bar2", width="90%"))),
-                            
-                            column(width = 3, align='center',
-                                   conditionalPanel(
-                                       condition = "input.my_choices == 'Coffee' || input.my_choices == 'All'",
-                                   plotOutput(outputId = "Bar3", width="90%"))),
-                                   
-                            column(width = 3, align='center',
-                                   conditionalPanel(
-                                       condition = "input.my_choices == 'Taxi' || input.my_choices == 'All'",
-                                   plotOutput(outputId = "Bar4", width="90%")))),
-                        
-                        fluidRow( 
-                            column(width = 3, align='center',
-                                   conditionalPanel(
-                                       condition = "input.my_choices == 'Beer' || input.my_choices == 'All'",
-                                   plotOutput(outputId = "Bar5", width="90%"))),
-                            
-                            column(width = 6, align='center', 
-                                   tableOutput(outputId = "CityComps")),
-                            
-                            
-                            column(width = 3, align='center',
-                                   conditionalPanel(
-                                       condition = "input.my_choices == 'Rentals' || input.my_choices == 'All'",
-                                   plotOutput(outputId = "Bar6", width="90%")))),
-                        
-                        fluidRow(
-                            column(width = 3, align='center',
-                                   conditionalPanel(
-                                       condition = "input.my_choices == 'Meals' || input.my_choices == 'All'",
-                                   plotOutput(outputId = "Bar7", width="90%"))),
-                            
-                            column(width = 3, align='center',
-                                   conditionalPanel(
-                                       condition = "input.my_choices == 'Sun' || input.my_choices == 'All'",
-                                   plotOutput(outputId = "Bar8", width="90%"))),
-                            
-                            column(width = 3, align='center',
-                                   conditionalPanel(
-                                       condition = "input.my_choices == 'Fun' || input.my_choices == 'All'",
-                                   plotOutput(outputId = "Bar9", width="90%"))),
-                            
-                            column(width = 3, align='center',
-                                   conditionalPanel(
-                                       condition = "input.my_choices == 'Insta' || input.my_choices == 'All'",
-                                   plotOutput(outputId = "Bar10", width="90%")))),
-                        
-                        ))),
-     
-            
-                tabPanel("Z-Scaling",
+                tabPanel("Compare 2 Cities",
                          sidebarLayout(
                              sidebarPanel(
                                  
@@ -363,7 +227,19 @@ shinyUI(
                                  selectizeInput(inputId = 'CityBox2',
                                                 label = 'City2',
                                                 choices = colnames(citycomp)[3:149],
-                                                select = 'Singapore')
+                                                select = 'Singapore'),
+                                 
+                                 checkboxInput("ZSC", label = "What is Z-Score Scaling?",
+                                               value=FALSE, width='600px'),
+                                 
+                                 checkboxInput("Unscaled", label = "Unscaled Box Plots",
+                                               value=FALSE, width='600px'), 
+                                 
+                                 checkboxInput("Bars", label = "Bar Plots",
+                                               value=FALSE, width='600px'),
+                                 
+                                 checkboxInput("TableComps", label = "Table",
+                                               value=FALSE, width='600px')
                                  
                                  
                              ),
@@ -371,26 +247,66 @@ shinyUI(
                              mainPanel(
                                  plotOutput(outputId = "Box"),
                                  
-                                 checkboxInput("ZSC", label = "Z-Score Scaling",
-                                               value=FALSE, width='600px'),
-                                 
                                  conditionalPanel(
                                      condition = "input.ZSC == true",
-                                     fluidRow(h2("What is Z-Score Scaling?"),
-                                              htmlOutput("Z2"))),
-                                 
-                                 checkboxInput("Unscaled", label = "View Non-Scaled Box Plots",
-                                               value=FALSE, width='600px'),  
+                                     fluidRow(
+                                         column(width = 12, align='left',
+                                                h2("What is Z-Score Scaling?"),
+                                                 htmlOutput("Z2")))),
                                  
                                  conditionalPanel(
                                      condition = "input.Unscaled == true",
-                                     fluidRow(plotOutput(outputId = "UnscaledBox")))
-                                 )
-                             
+                                     fluidRow(plotOutput(outputId = "UnscaledBox"))),
                                  
+                                 conditionalPanel(
+                                     condition = "input.Bars == true",
+                                 fluidRow(
+                                          column(width = 1),
+                                          column(width = 1, align='center',
+                                                 plotOutput(outputId = "Bar1", width="100%")),
+                                          
+                                          column(width = 1, align='center',
+                                                 plotOutput(outputId = "Bar2", width="100%")),
+                                          
+                                          column(width = 1, align='center',
+                                                 plotOutput(outputId = "Bar3", width="100%")),
+                                          
+                                          column(width = 1, align='center',
+                                                 plotOutput(outputId = "Bar4", width="100%")),
+                                        
+                                          column(width = 1, align='center',
+                                                 plotOutput(outputId = "Bar5", width="100%")),
+                                          
+                                          column(width = 1, align='center',
+                                                 plotOutput(outputId = "Bar6", width="100%")),
+                                          
+                                          column(width = 1, align='center',
+                                                 plotOutput(outputId = "Bar7", width="100%")),
+                                          
+                                          column(width = 1, align='center',
+                                                 plotOutput(outputId = "Bar8", width="100%")),
+                                          
+                                          column(width = 1, align='center',
+                                                 plotOutput(outputId = "Bar9", width="100%")),
+                                          
+                                          column(width = 1, align='center',
+                                                 plotOutput(outputId = "Bar10", width="100%"))
+                                          
+                                                 
+                                 )),
+                                 
+                                 
+                                 
+                                 conditionalPanel(
+                                     condition = "input.TableComps == true",
+                                     fluidRow(
+                                         column(width = 12, align='center',
+                                         tableOutput(outputId = "CityComps"))))
+                             
+                                 )
                                 )),
      
-     tabPanel("Your City vs Median",
+     tabPanel("Your Dream Workation",
               mainPanel(
                   
                   fluidRow(
@@ -412,14 +328,5 @@ shinyUI(
                       column(width=9, align='center',
                              plotOutput(outputId = "Dist2")))
               ))
-     
-     
-     
-     
-     
-     
-     
-     
-     
      
 )))

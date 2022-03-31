@@ -787,218 +787,229 @@ shinyServer(function(input, output) {
   
   output$CityComps <- renderTable({
     citycomp = citycomp %>%
-      select(Parameter, input$CityComp1, input$CityComp2) %>%
-      mutate('Absolute Diff (City1 - City2)' = .data[[input$CityComp1]] - .data[[input$CityComp2]]) %>%
-      mutate('Ratio (City1 / City2)' = (.data[[input$CityComp1]]/.data[[input$CityComp2]]))
+      select(Parameter, input$CityBox1, input$CityBox2) %>%
+      mutate('Absolute Diff (City1 - City2)' = .data[[input$CityBox1]] - .data[[input$CityBox2]]) %>%
+      mutate('Ratio (City1 / City2)' = (.data[[input$CityBox1]]/.data[[input$CityBox2]]))
     
   })
 
   output$Bar1 <- renderPlot({
+    
     citycomp_bar = citycomp %>%
-      select(Parameter, .data[[input$CityComp1]], .data[[input$CityComp2]]) %>%
+      select(Parameter, .data[[input$CityBox1]], .data[[input$CityBox2]]) %>%
       filter(row_number()==1) 
     
     citycomp_bar %>%
       pivot_longer(
-        cols = c(input$CityComp1, input$CityComp2),
+        cols = c(input$CityBox1, input$CityBox2),
         names_to = "City",
         values_to = "Wifi_Speed_Mbps"
       ) %>%
+      mutate(City = factor(City, levels=unique(City))) %>%
       ggplot((aes(fill=City, y=Wifi_Speed_Mbps, x=City))) + 
       geom_bar(position='dodge', stat='identity') + 
-      ggtitle(citycomp_bar$Parameter[1]) +
+      ggtitle("Wifi") +
       theme_bw() +
       theme(plot.title = element_text(hjust = 0.5),
-            legend.title = element_text(size=15),
-            legend.text = element_text(size=15))
-      
+            legend.position = "none",
+            axis.text.x = element_text(angle=45, hjust=1))
+    
   })
     
   output$Bar2 <- renderPlot({
     citycomp_bar = citycomp %>%
-      select(Parameter, .data[[input$CityComp1]], .data[[input$CityComp2]]) %>%
+      select(Parameter, .data[[input$CityBox1]], .data[[input$CityBox2]]) %>%
       filter(row_number()==2) 
     
     citycomp_bar %>%
       pivot_longer(
-        cols = c(input$CityComp1, input$CityComp2),
+        cols = c(input$CityBox1, input$CityBox2),
         names_to = "City",
         values_to = "Number_Of_Spaces"
       ) %>%
+      mutate(City = factor(City, levels=unique(City))) %>%
       ggplot((aes(fill=City, y=Number_Of_Spaces, x=City))) + 
       geom_bar(position='dodge', stat='identity') + 
-      ggtitle(citycomp_bar$Parameter[1]) +
+      ggtitle("Co-Work") +
       theme_bw() +
       theme(plot.title = element_text(hjust = 0.5),
-            legend.title = element_text(size=15),
-            legend.text = element_text(size=15))
+            legend.position = "none",
+            axis.text.x = element_text(angle=45, hjust=1))
+            
   })
     
   output$Bar3 <- renderPlot({
     citycomp_bar = citycomp %>%
-      select(Parameter, .data[[input$CityComp1]], .data[[input$CityComp2]]) %>%
+      select(Parameter, .data[[input$CityBox1]], .data[[input$CityBox2]]) %>%
       filter(row_number()==3) 
     
     citycomp_bar %>%
       pivot_longer(
-        cols = c(input$CityComp1, input$CityComp2),
+        cols = c(input$CityBox1, input$CityBox2),
         names_to = "City",
         values_to = "Price_Per_Cup_USD"
       ) %>%
+      mutate(City = factor(City, levels=unique(City))) %>%
       ggplot((aes(fill=City, y=Price_Per_Cup_USD, x=City))) + 
       geom_bar(position='dodge', stat='identity') + 
-      ggtitle(citycomp_bar$Parameter[1]) +
+      ggtitle("Coffee") +
       theme_bw() +
       theme(plot.title = element_text(hjust = 0.5),
-            legend.title = element_text(size=15),
-            legend.text = element_text(size=15)) 
+            legend.position = "none",
+            axis.text.x = element_text(angle=45, hjust=1))
     
   })
   
   output$Bar4 <- renderPlot({
     citycomp_bar = citycomp %>%
-      select(Parameter, .data[[input$CityComp1]], .data[[input$CityComp2]]) %>%
+      select(Parameter, .data[[input$CityBox1]], .data[[input$CityBox2]]) %>%
       filter(row_number()==4) 
     
     citycomp_bar %>%
       pivot_longer(
-        cols = c(input$CityComp1, input$CityComp2),
+        cols = c(input$CityBox1, input$CityBox2),
         names_to = "City",
         values_to = "Fare_Per_Km_USD"
       ) %>%
+      mutate(City = factor(City, levels=unique(City))) %>%
       ggplot((aes(fill=City, y=Fare_Per_Km_USD, x=City))) + 
       geom_bar(position='dodge', stat='identity') + 
-      ggtitle(citycomp_bar$Parameter[1]) +
+      ggtitle("Taxi") +
       theme_bw() +
       theme(plot.title = element_text(hjust = 0.5),
-            legend.title = element_text(size=15),
-            legend.text = element_text(size=15)) 
-    
+            legend.position = "none",
+            axis.text.x = element_text(angle=45, hjust=1))
+        
   })
   
   output$Bar5 <- renderPlot({
     citycomp_bar = citycomp %>%
-      select(Parameter, .data[[input$CityComp1]], .data[[input$CityComp2]]) %>%
+      select(Parameter, .data[[input$CityBox1]], .data[[input$CityBox2]]) %>%
       filter(row_number()==5) 
     
     citycomp_bar %>%
       pivot_longer(
-        cols = c(input$CityComp1, input$CityComp2),
+        cols = c(input$CityBox1, input$CityBox2),
         names_to = "City",
         values_to = "Price_Per_Glass_USD"
       ) %>%
+      mutate(City = factor(City, levels=unique(City))) %>%
       ggplot((aes(fill=City, y=Price_Per_Glass_USD, x=City))) + 
       geom_bar(position='dodge', stat='identity') + 
-      ggtitle(citycomp_bar$Parameter[1]) +
+      ggtitle("Beer") +
       theme_bw() +
       theme(plot.title = element_text(hjust = 0.5),
-            legend.title = element_text(size=15),
-            legend.text = element_text(size=15)) 
+            legend.position = "none",
+            axis.text.x = element_text(angle=45, hjust=1))
     
   })
   
   output$Bar6 <- renderPlot({
     citycomp_bar = citycomp %>%
-      select(Parameter, .data[[input$CityComp1]], .data[[input$CityComp2]]) %>%
+      select(Parameter, .data[[input$CityBox1]], .data[[input$CityBox2]]) %>%
       filter(row_number()==6) 
     
     citycomp_bar %>%
       pivot_longer(
-        cols = c(input$CityComp1, input$CityComp2),
+        cols = c(input$CityBox1, input$CityBox2),
         names_to = "City",
         values_to = "Monthly_Rental_USD"
       ) %>%
+      mutate(City = factor(City, levels=unique(City))) %>%
       ggplot((aes(fill=City, y=Monthly_Rental_USD, x=City))) + 
       geom_bar(position='dodge', stat='identity') + 
-      ggtitle(citycomp_bar$Parameter[1]) +
+      ggtitle("Rent") +
       theme_bw() +
       theme(plot.title = element_text(hjust = 0.5),
-            legend.title = element_text(size=15),
-            legend.text = element_text(size=15)) 
-    
+            legend.position = "none",
+            axis.text.x = element_text(angle=45, hjust=1))
   })
   
   output$Bar7 <- renderPlot({
     citycomp_bar = citycomp %>%
-      select(Parameter, .data[[input$CityComp1]], .data[[input$CityComp2]]) %>%
+      select(Parameter, .data[[input$CityBox1]], .data[[input$CityBox2]]) %>%
       filter(row_number()==7) 
     
     citycomp_bar %>%
       pivot_longer(
-        cols = c(input$CityComp1, input$CityComp2),
+        cols = c(input$CityBox1, input$CityBox2),
         names_to = "City",
         values_to = "Price_Per_Meal_USD"
       ) %>%
+      mutate(City = factor(City, levels=unique(City))) %>%
       ggplot((aes(fill=City, y=Price_Per_Meal_USD, x=City))) + 
       geom_bar(position='dodge', stat='identity') + 
-      ggtitle(citycomp_bar$Parameter[1]) +
+      ggtitle("Meal") +
       theme_bw() +
       theme(plot.title = element_text(hjust = 0.5),
-            legend.title = element_text(size=15),
-            legend.text = element_text(size=15)) 
+            legend.position = "none",
+            axis.text.x = element_text(angle=45, hjust=1))
     
   })
   
   output$Bar8 <- renderPlot({
     citycomp_bar = citycomp %>%
-      select(Parameter, .data[[input$CityComp1]], .data[[input$CityComp2]]) %>%
+      select(Parameter, .data[[input$CityBox1]], .data[[input$CityBox2]]) %>%
       filter(row_number()==8) 
     
     citycomp_bar %>%
       pivot_longer(
-        cols = c(input$CityComp1, input$CityComp2),
+        cols = c(input$CityBox1, input$CityBox2),
         names_to = "City",
         values_to = "Annual_Hours"
       ) %>%
+      mutate(City = factor(City, levels=unique(City))) %>%
       ggplot((aes(fill=City, y=Annual_Hours, x=City))) + 
       geom_bar(position='dodge', stat='identity') + 
-      ggtitle(citycomp_bar$Parameter[1]) +
+      ggtitle("Sun") +
       theme_bw() +
       theme(plot.title = element_text(hjust = 0.5),
-            legend.title = element_text(size=15),
-            legend.text = element_text(size=15)) 
+            legend.position = "none",
+            axis.text.x = element_text(angle=45, hjust=1))
     
   })
   
   output$Bar9 <- renderPlot({
     citycomp_bar = citycomp %>%
-      select(Parameter, .data[[input$CityComp1]], .data[[input$CityComp2]]) %>%
+      select(Parameter, .data[[input$CityBox1]], .data[[input$CityBox2]]) %>%
       filter(row_number()==9) 
     
     citycomp_bar %>%
       pivot_longer(
-        cols = c(input$CityComp1, input$CityComp2),
+        cols = c(input$CityBox1, input$CityBox2),
         names_to = "City",
         values_to = "Number_Of_Attractions"
       ) %>%
+      mutate(City = factor(City, levels=unique(City))) %>%
       ggplot((aes(fill=City, y=Number_Of_Attractions, x=City))) + 
       geom_bar(position='dodge', stat='identity') + 
-      ggtitle(citycomp_bar$Parameter[1]) +
+      ggtitle("Fun") +
       theme_bw() +
       theme(plot.title = element_text(hjust = 0.5),
-            legend.title = element_text(size=15),
-            legend.text = element_text(size=15)) 
+            legend.position = "none",
+            axis.text.x = element_text(angle=45, hjust=1))
     
   })
   
   output$Bar10 <- renderPlot({
     citycomp_bar = citycomp %>%
-      select(Parameter, .data[[input$CityComp1]], .data[[input$CityComp2]]) %>%
+      select(Parameter, .data[[input$CityBox1]], .data[[input$CityBox2]]) %>%
       filter(row_number()==10) 
     
     citycomp_bar %>%
       pivot_longer(
-        cols = c(input$CityComp1, input$CityComp2),
+        cols = c(input$CityBox1, input$CityBox2),
         names_to = "City",
         values_to = "Number_Of_Hashtags_in_Millions"
       ) %>%
+      mutate(City = factor(City, levels=unique(City))) %>%
       ggplot((aes(fill=City, y=Number_Of_Hashtags_in_Millions, x=City))) + 
       geom_bar(position='dodge', stat='identity') + 
-      ggtitle(citycomp_bar$Parameter[1]) +
+      ggtitle("Insta") +
       theme_bw() +
       theme(plot.title = element_text(hjust = 0.5),
-            legend.title = element_text(size=15),
-            legend.text = element_text(size=15)) 
+            legend.position = "none",
+            axis.text.x = element_text(angle=45, hjust=1))
     
   })
   
@@ -1036,14 +1047,15 @@ shinyServer(function(input, output) {
                          size=4, show.legend = TRUE) + 
       scale_color_manual(values = c("red1"="#F8766D", "blue"="#00BFC4"), label = c(red1 = input$CityBox1, blue = input$CityBox2)) + 
       labs(color = "City") +
-      labs(title = "Z-Scaled Box Plots Across Parameters") + 
-      theme(plot.title = element_text(hjust=0.5, size=30)) +
-      theme(legend.text=element_text(size=24)) + 
-      theme(legend.title=element_text(size=27)) +
+      labs(title = "Z-Scaled Box Plots") + 
+      theme(plot.title = element_text(hjust=0.5, size=32)) +
+      theme(legend.text = element_text(size=24)) + 
+      theme(legend.title = element_text(hjust=0.5, size=25)) +
       theme(axis.title.x = element_text(size=25)) +
       theme(axis.title.y = element_text(size=25)) + 
       theme(axis.text.x = element_text(size=20)) +
-      theme(axis.text.y = element_text(size=20))
+      theme(axis.text.y = element_text(size=20)) +
+      theme(legend.position = c(0.5,0.8), legend.direction = "vertical")
       
     
     g3
@@ -1086,27 +1098,20 @@ shinyServer(function(input, output) {
       scale_color_manual(values = c("red1"="#F8766D", "blue"="#00BFC4"), label = c(red1 = input$CityBox1, blue = input$CityBox2)) + 
       labs(color = "City") +
       labs(title = "Unscaled Box Plots") + 
-      theme(plot.title = element_text(hjust=0.5, size=30)) +
+      theme(plot.title = element_text(hjust=0.5, size=32)) +
       theme(legend.text=element_text(size=24)) + 
-      theme(legend.title=element_text(size=27)) +
+      theme(legend.title=element_text(hjust=0.5, size=25)) +
       theme(axis.title.x = element_text(size=25)) +
       theme(axis.title.y = element_text(size=25)) + 
       theme(axis.text.x = element_text(size=20)) +
-      theme(axis.text.y = element_text(size=20))
-    
+      theme(axis.text.y = element_text(size=20)) +
+      theme(legend.position = c(0.5,0.8), legend.direction = "vertical")
     
     g3
     
   })
   
   
-  
-  
-  
-  
-  
-  
-
   output$Index_Ranking <- renderTable({
     
     P1 = index %>%
@@ -1160,7 +1165,7 @@ shinyServer(function(input, output) {
           "(i) Mean = 0",
           "(ii) Standard Deviation = 1",
           "The Z-Score represents the number of standard deviations away from the mean.",
-          "For this particular data set, Z-scaling was useful when comparing cities across parameters.",
+          "For this particular data set, Z-scaling was useful when comparing multiple cities across parameters.",
           "",
           "",
           sep = "<br/>"
