@@ -28,6 +28,13 @@ clean_col_names = colnames(clean)[2:14]
 clean_col_names
 ```
 
+```{r}
+clean_col_names[5] = "Co_Work"
+clean_col_names
+```
+
+
+
 Apply Clean Col Names to Original DF, Alphabetize by City, Save as "clean_columns.csv"
 ```{r}
 colnames(df) = clean_col_names
@@ -127,9 +134,9 @@ View Changes:
 View(dfUSD)
 ```
 
-Save to USD3. 
+Save to USD4. 
 ```{r}
-write.csv(dfUSD, 'clean_USD3.csv')
+write.csv(dfUSD, 'clean_USD4.csv')
 ```
 
 Make same changes to CityComp3:

@@ -100,9 +100,15 @@ write.csv(x_axis, 'x_axis5.csv')
   
 ```
 
-View it:
 ```{r}
 View(x_axis['Co_Work'])
+```
+
+
+
+View it:
+```{r}
+View(x_axis['Co-Work'])
 ```
 
 ```{r}
