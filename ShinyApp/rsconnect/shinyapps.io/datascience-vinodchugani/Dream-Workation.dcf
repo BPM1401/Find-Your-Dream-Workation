@@ -5,9 +5,9 @@ account: datascience-vinodchugani
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 5944168
-bundleId: 5732340
+bundleId: 5751597
 url: https://datascience-vinodchugani.shinyapps.io/Dream-Workation/
-when: 1648391210.90333
-lastSyncTime: 1648391210.90335
+when: 1648762361.935
+lastSyncTime: 1648762361.93502
 asMultiple: FALSE
 asStatic: FALSE
