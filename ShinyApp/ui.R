@@ -10,24 +10,26 @@ shinyUI(
             tabPanel("Motivation",
                      mainPanel(
                          HTML('<center><img src="W1.png" width="50%"></center>'),
-                     column(6,
+                     column(12,
                         checkboxInput("F", label = "Remote-Work: Biggest Legacy Of Covid-19 (Forbes)",
-                                      value=FALSE, width='700px'), align='center'),
-                     column(6,
-                        checkboxInput("McK", label = "No Loss In Productivity Across Sector (McKinsey)",
-                                      value=FALSE, width='600px'), align='center', 
+                                      value=FALSE, width='700px'), align='center',
                                       tags$style(type = 'text/css', "label {font-size:25px}")),
+        #             column(6,
+        #                checkboxInput("McK", label = "No Loss In Productivity Across Sector (McKinsey)",
+        #                              value=FALSE, width='600px'), align='center', 
+        #                              tags$style(type = 'text/css', "label {font-size:25px}")),
                      
                      fluidRow(
-                         column(width = 6, align = 'center',
+                         column(width = 12, align = 'center',
                                 conditionalPanel(
                                     condition = "input.F == true",
-                                    HTML('<center><img src="F.png" width="70%" height="300px"></center>'))),
-                         
-                         column(width = 6, align = 'center',
-                                conditionalPanel(
-                                    condition = "input.McK == true",
-                                    HTML('<center><img src="McK.png" width="60%" height="600px"></center>'))))
+                                    HTML('<center><img src="F.png" width="70%" height="600px"></center>')))),
+                     
+           #          fluidRow(
+        #                 column(width = 6, align = 'center',
+        #                        conditionalPanel(
+        #                            condition = "input.McK == true",
+        #                            HTML('<center><img src="McK.png" width="60%" height="600px"></center>'))))
                      )
                      ),
             

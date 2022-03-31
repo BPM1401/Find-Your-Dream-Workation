@@ -341,6 +341,7 @@ shinyServer(function(input, output) {
       theme(axis.title.y = element_blank())
   }, height = 500, width = 750)
   
+  
   output$Box_Para <- renderPlot({
     
     box_title = x_axis %>%
@@ -742,35 +743,7 @@ shinyServer(function(input, output) {
     
   })
   
-#  output$Dist <- renderPlot({
-#    
-#    x = df %>%
-#      filter(df$City == input$Ci) %>%
-#      select(input$Para) %>%
-#      pull()
-#    
-#    ggplot(df, aes(df[,input$Para])) +
-#      geom_density() + 
-#      geom_vline(aes(xintercept=median(df[,input$Para]), color="Median"),
-#                 linetype='dashed', size=1.5) +
-#      geom_vline(aes(xintercept=x, color='City'), linetype='dashed', size=1.5) +
-#      annotate("label",x=median(df[,input$Para]), y=-Inf, label=median(df[,input$Para]), 
-#               size=7, vjust='inward') +
-#      annotate("label",x=x, y=Inf, label=paste0(input$Ci, " = ", as.character(x)), size=7, vjust='inward') +
-#      labs(title=x_axis[1,input$Para], x=x_axis[2,input$Para], y='Density') +
-#      scale_color_manual(name="Vertical Markers", values=c(Median='blue', City='red')) +
-#      theme(plot.title = element_text(hjust=0.5, size=24)) +
-#      theme(legend.text=element_text(size=19)) + 
-#      theme(legend.title=element_text(size=19)) +
-#      theme(axis.title.x = element_text(size=17)) +
-#      theme(axis.title.y = element_text(size=17)) + 
-#      theme(axis.text.x = element_text(size=13)) +
-#      scale_x_discrete(expand=c(0.09,0.09))
-#      #theme(plot.margin = margin(0,-0.5,0,0, "cm"))
-#    }
-#  )
 
-    
   output$View <- renderTable({
     df %>%
       select(City, .data[[input$Para]]) %>%
