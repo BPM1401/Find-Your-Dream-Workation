@@ -22,7 +22,7 @@ shinyUI(
                          column(width = 6, align = 'center',
                                 conditionalPanel(
                                     condition = "input.F == true",
-                                    HTML('<center><img src="S.png" width="70%" height="600px"></center>'))),
+                                    HTML('<center><img src="F.png" width="70%" height="300px"></center>'))),
                          
                          column(width = 6, align = 'center',
                                 conditionalPanel(
@@ -32,7 +32,7 @@ shinyUI(
                      ),
             
                     
-            tabPanel("Your Priorities",
+            tabPanel("Your Preferences",
                      mainPanel(
                          fluidRow(
                                  column(width = 12, align='center',
@@ -53,7 +53,7 @@ shinyUI(
                          
                          fluidRow(
                          column(4,
-                                checkboxInput("Prior", label = "Set Your Priorities (0 = Neutral)",
+                                checkboxInput("Prior", label = "Select Your Preferences (0 = Neutral)",
                                               value=FALSE, width='600px'),
                                 align='center'),
                          
