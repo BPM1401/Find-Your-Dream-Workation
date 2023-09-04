@@ -7,21 +7,30 @@ shinyUI(
         
         tabsetPanel(
             
-            tabPanel("Motivation",
-                     mainPanel(
-                         HTML('<center><img src="W1.png" width="50%"></center>'),
-                     column(12,
-                        checkboxInput("F", label = "Remote-Work: Biggest Legacy Of Covid-19 (Forbes)",
-                                      value=FALSE, width='700px'), align='center',
-                                      tags$style(type = 'text/css', "label {font-size:25px}")),
-                     
-                     fluidRow(
-                         column(width = 12, align = 'center',
-                                conditionalPanel(
-                                    condition = "input.F == true",
-                                    HTML('<center><img src="F.png" width="70%" height="600px"></center>')))),
-                     )
+          tabPanel("Motivation",
+                   mainPanel(
+                     HTML('<center><img src="W1.png" width="100%"></center>'),
+                     column(12, align = 'center',  # Center-align the column
+                            tags$label(tags$input(type="checkbox", id="revealWord", name="revealWord"),
+                                       style="font-size: 25px; font-weight: bold; text-align: center;",
+                                       "The Economist's Word Of 2022 is..."),
+                            
+                            tags$p("[Click to Reveal]", style = "font-size: 16px; text-align: center;"), 
+                            
+                            tags$style(type = 'text/css', 
+                                       "label {font-size: 25px; font-weight: bold; text-align: center;}")  # Add text centering to the style
                      ),
+                     fluidRow(
+                       column(width = 12, align = 'center',  # Center-align the column
+                              conditionalPanel(
+                                condition = "input.revealWord == true",
+                                tags$div(style = "font-size: 45px; font-weight: bold; text-align: center;",  # Add text centering to the style
+                                         "Hybrid Work")
+                              )
+                       )
+                     )
+                   )
+          ),
             
             tabPanel("Your Preferences",
                      mainPanel(
