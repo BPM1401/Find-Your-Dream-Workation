@@ -25,7 +25,7 @@ shinyUI(
                               conditionalPanel(
                                 condition = "input.revealWord == true",
                                 tags$div(style = "font-size: 45px; font-weight: bold; text-align: center;",  # Add text centering to the style
-                                         "Hybrid Work")
+                                         "Hybrid Work!")
                               )
                        )
                      )
